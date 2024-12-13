@@ -23,6 +23,8 @@
 
 /* semantic color variables for this project */
 :root {
+  accent-color: #43cc8e;
+  --accent-color: #43cc8e;
   --color-background: var(--vt-c-white);
   --color-background-soft: var(--vt-c-white-soft);
   --color-background-mute: var(--vt-c-white-mute);

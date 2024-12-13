@@ -1,12 +1,9 @@
 <script setup>
-import MainHeader from './components/header/MainHeader.vue';
-
-// import { ref } from 'vue';
 // import { useRouter } from 'vue-router';
-// import LoginButton from './components/LoginButton.vue';
-// import LoginForm from './views/LoginForm.vue';
-// import CheckoutForm from './views/CheckoutForm.vue';
-// import FormSummary from './components/FormSummary.vue';
+import LoginButton from '../components/LoginButton.vue';
+// import LoginForm from './LoginForm.vue';
+// import CheckoutForm from './CheckoutForm.vue';
+// import FormSummary from '../components/FormSummary.vue';
 
 // const router = useRouter();
 
@@ -40,12 +37,27 @@ import MainHeader from './components/header/MainHeader.vue';
 </script>
 
 <template>
-  <header>
-    <MainHeader />
-  </header>
-  <main>
-    <router-view></router-view>
-  </main>
+  <div id="home-view">
+    <LoginButton />
+    <p>This is the brand new website for the company!</p>
+    <p>
+      Our hope is that it is here you will come to fulfill all of your needs
+      from now on.
+    </p>
+    <!-- <LoginButton>
+      v-if="!showLoginForm"
+      @showLoginForm="handleShowLoginForm"
+      @showCheckoutForm="handleShowCheckoutForm"
+    /> -->
+    <!-- <LoginForm v-if="showLoginForm" />
+
+    <CheckoutForm @formData="handleFormData" v-if="showCheckoutForm" />
+    <FormSummary
+      v-if="showFormSummary"
+      :formData="formData"
+      @cancel="handleCancel"
+    /> -->
+  </div>
 </template>
 
 <style scoped></style>
