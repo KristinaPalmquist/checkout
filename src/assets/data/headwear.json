@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "name": "Product 1",
+    "category": "Headwear",
+    "description": "This is a description of Product 1",
+    "image": "/src/assets/images/headwear/angelo-pantazis-h0AnGGgseio-unsplash.jpg",
+    "price": 29.99
+  },
+  {
+    "id": 2,
+    "name": "Product 2",
+    "category": "Headwear",
+    "description": "This is a description of Product 1",
+    "image": "/src/assets/images/headwear/bluewater-sweden-iKWTVPLk-VY-unsplash.jpg",
+    "price": 49.99
+  },
+  {
+    "id": 3,
+    "name": "Product 3",
+    "category": "Headwear",
+    "description": "This is a description of Product 1",
+    "image": "/src/assets/images/headwear/giorgi-iremadze-abe5NW1aqvw-unsplash.jpg",
+    "price": 99.99
+  },
+  {
+    "id": 4,
+    "name": "Product 4",
+    "category": "Headwear",
+    "description": "This is a description of Product 1",
+    "image": "/src/assets/images/headwear/giovanna-gomes-xbSFDSlw2Yc-unsplash.jpg",
+    "price": 199.99
+  },
+  {
+    "id": 5,
+    "name": "Product 5",
+    "category": "Headwear",
+    "description": "This is a description of Product 1",
+    "image": "/src/assets/images/headwear/mindy-sabiston-4fy6N_ijF7U-unsplash.jpg",
+    "price": 299.99
+  },
+  {
+    "id": 6,
+    "name": "Product 6",
+    "category": "Headwear",
+    "description": "This is a description of Product 1",
+    "image": "/src/assets/images/headwear/mykyta-martynenko-9z5ZLLAsxJk-unsplash.jpg",
+    "price": 399.99
+  },
+  {
+    "id": 7,
+    "name": "Product 7",
+    "category": "Headwear",
+    "description": "This is a description of Product 1",
+    "image": "/src/assets/images/headwear/nice-m-nshuti-hhBk5iSqRE0-unsplash.jpg",
+    "price": 499.99
+  }
+]

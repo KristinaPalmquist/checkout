@@ -89,7 +89,7 @@ const handleLogin = () => {
         required
       />
       <p class="error" v-show="showPasswordError">{{ passwordError }}</p>
-
+<div class="btn-div">
       <BasicButton
         :btnType="'button'"
         :btnText="'Create Account'"
@@ -101,7 +101,7 @@ const handleLogin = () => {
         :btnText="'Login'"
         :btnFunction="handleLogin"
         :btnClass="loginBtnClass"
-      />
+      /></div>
 
       <p>Output: {{ output }}</p>
     </form>

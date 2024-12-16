@@ -6,14 +6,10 @@ import BasicButton from './BasicButton.vue';
 const router = useRouter();
 
 const btnText = ref('Login');
-// const emit = defineEmits(['showLoginForm', 'showCheckoutForm']);
 
 const handleLogin = () => {
-router.push('/login');
-  // emit('showLoginForm', true);
-  // emit('showCheckoutForm', false);
+  router.push('/login');
 };
-
 </script>
 
 <template>

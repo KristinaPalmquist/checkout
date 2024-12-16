@@ -1,0 +1,93 @@
+[
+  {
+    "id": 1,
+    "name": "Product 1",
+    "category": "Jackets",
+    "description": "This is a description of Product 1",
+    "image": "/src/assets/images/jackets/apostolos-vamvouras-mFyvoh63PvM-unsplash.jpg",
+    "price": 29.99,
+    "specifications": {
+      "color": "Black",
+      "size": "M",
+      "material": "Cotton"
+    },
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "This is a great product",
+        "author": "John Doe"
+      },
+      {
+        "rating": 4,
+        "comment": "This is a good product",
+        "author": "Jane Doe"
+      },
+      {
+        "rating": 2,
+        "comment": "This is a product",
+        "author": "Sam Doe"
+      },
+      {
+        "rating": 1,
+        "comment": "This is a bad product",
+        "author": "Samantha Doe"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Product 2",
+    "category": "Jackets",
+    "description": "This is a description of Product 1",
+    "image": "/src/assets/images/jackets/kyle-peyton-HI-375qob7M-unsplash.jpg",
+    "price": 49.99
+  },
+  {
+    "id": 3,
+    "name": "Product 3",
+    "category": "Jackets",
+    "description": "This is a description of Product 1",
+    "image": "/src/assets/images/jackets/leonard-reeb-HXADYXS-fLo-unsplash.jpg",
+    "price": 99.99
+  },
+  {
+    "id": 4,
+    "name": "Product 4",
+    "category": "Jackets",
+    "description": "This is a description of Product 1",
+    "image": "/src/assets/images/jackets/marek-mucha-idYihyvB3XA-unsplash.jpg",
+    "price": 199.99
+  },
+  {
+    "id": 5,
+    "name": "Product 5",
+    "category": "Jackets",
+    "description": "This is a description of Product 1",
+    "image": "/src/assets/images/jackets/marek-mucha-rSxKm3e97v8-unsplash.jpg",
+    "price": 299.99
+  },
+  {
+    "id": 6,
+    "name": "Product 6",
+    "category": "Jackets",
+    "description": "This is a description of Product 1",
+    "image": "/src/assets/images/jackets/santosh-verma-i49yJtWD57w-unsplash.jpg",
+    "price": 399.99
+  },
+  {
+    "id": 7,
+    "name": "Product 7",
+    "category": "Jackets",
+    "description": "This is a description of Product 1",
+    "image": "/src/assets/images/jackets/sebastian-pociecha--JUoxG4sp88-unsplash.jpg",
+    "price": 499.99
+  },
+  {
+    "id": 8,
+    "name": "Product 8",
+    "category": "Jackets",
+    "description": "This is a description of Product 1",
+    "image": "/src/assets/images/jackets/tiko-giorgadze-nBerkf7sLRM-unsplash.jpg",
+    "price": 599.99
+  }
+]

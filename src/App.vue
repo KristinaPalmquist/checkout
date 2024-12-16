@@ -1,51 +1,20 @@
 <script setup>
+import CustomCursor from './components/cursor/CustomCursor.vue';
 import MainHeader from './components/header/MainHeader.vue';
-
-// import { ref } from 'vue';
-// import { useRouter } from 'vue-router';
-// import LoginButton from './components/LoginButton.vue';
-// import LoginForm from './views/LoginForm.vue';
-// import CheckoutForm from './views/CheckoutForm.vue';
-// import FormSummary from './components/FormSummary.vue';
-
-// const router = useRouter();
-
-// const showLoginForm = ref(false);
-// const showCheckoutForm = ref(true);
-// const showFormSummary = ref(false);
-// const formData = ref([]);
-
-// const handleFormData = (data) => {
-//   formData.value = data;
-//   showCheckoutForm.value = false;
-//   showFormSummary.value = true;
-// };
-
-// const handleCancel = () => {
-//   showCheckoutForm.value = true;
-//   showFormSummary.value = false;
-// };
-
-// const handleShowLoginForm = (value) => {
-//   showLoginForm.value = value;
-//   if (showLoginForm.value) {
-//     showCheckoutForm.value = false;
-//     showFormSummary.value = false;
-//   }
-// };
-
-// const handleShowCheckoutForm = (value) => {
-//   showCheckoutForm.value = value;
-// };
 </script>
 
 <template>
+  <div id="app">
+  <CustomCursor />
   <header>
     <MainHeader />
   </header>
   <main>
     <router-view></router-view>
-  </main>
+  </main></div>
 </template>
 
-<style scoped></style>
+<style scoped>
+
+
+</style>

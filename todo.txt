@@ -1,0 +1,20 @@
+TODO & IDEAS
+Color Scheme
+Images
+Searchfunction
+Categories
+Product
+Products
+Cart
+Database
+    users
+    products
+    orders
+
+
+
+
+DONE 
+Custom Pointer
+Navbar
+Fonts

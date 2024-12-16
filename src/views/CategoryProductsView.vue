@@ -1,0 +1,136 @@
+<script setup>
+import { ref, onMounted } from 'vue';
+import { useRoute, useRouter } from 'vue-router';
+
+const route = useRoute();
+const router = useRouter();
+const { categoryName } = route.params;
+
+const products = ref([]);
+
+const fetchProducts = async () => {
+  console.log(categoryName);
+  try {
+    const module = await import(`../assets/data/${categoryName}.json`);
+    products.value = module.default;
+    console.log(products.value);
+  } catch (error) {
+    console.error('Error loading products: ', error);
+  }
+  console.log(products.value);
+  console.log(products.value[0].image);
+};
+
+const formatCurrency = (value) => {
+  return new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+  }).format(value);
+};
+
+const navigateToProduct = (productName) => {
+  router.push({
+    name: 'ProductDetails',
+    params: { categoryName, productName },
+  });
+};
+
+onMounted(() => {
+  fetchProducts();
+});
+</script>
+
+<template>
+  <div class="products">
+    <h1>Products in {{ categoryName }}</h1>
+    <!-- <img :src="products[0].image" :alt="categoryName" class="category-image" /> -->
+    <div class="product-list">
+      <div
+        v-for="product in products"
+        :key="product.id"
+        class="product-item"
+        @click="navigateToProduct(product.name)"
+      >
+        <img :src="product.image" :alt="product.name" />
+        <h2>{{ product.name }}</h2>
+        <p>{{ formatCurrency(product.price) }}</p>
+      </div>
+    </div>
+  </div>
+</template>
+
+<style scoped>
+.products {
+  padding: 2rem;
+  text-align: center;
+}
+
+.category-image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 2rem;
+}
+
+.product-list {
+  padding-top: 2rem;
+  column-count: 4;
+  column-gap: 15px;
+}
+
+.product-item {
+  display: inline-block;
+  width: 100%;
+  padding-bottom: 15px;
+  /* width: 200px;
+  transition: transform 0.3s ease; */
+}
+
+.product-item:hover {
+  transform: scale(1.05);
+}
+
+.product-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.product-item h2 {
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.product-item p {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: #888;
+}
+
+@media only screen and (min-width: 1200px) {
+  .product-list {
+    column-count: 5;
+    column-gap: 15px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .product-list {
+    column-count: 3;
+    column-gap: 15px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .product-list {
+    column-count: 2;
+    column-gap: 15px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .product-list {
+    column-count: 1;
+    column-gap: 15px;
+  }
+}
+</style>
