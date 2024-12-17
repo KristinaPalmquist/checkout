@@ -2,7 +2,7 @@
 import { ref, onMounted, onUnmounted } from 'vue';
 import MainNavbar from './MainNavbar.vue';
 
-const companyName = ref('The Company');
+const companyName = ref('Retro Retreat');
 const isScrolled = ref(false);
 const header = ref(null);
 const isOpen = ref(false);
@@ -14,7 +14,6 @@ const handleScroll = () => {
     isScrolled.value = false;
   }
 };
-
 
 onMounted(() => {
   window.addEventListener('scroll', handleScroll);
