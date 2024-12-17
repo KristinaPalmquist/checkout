@@ -1,18 +1,20 @@
 <script setup>
 import LoginButton from '../components/LoginButton.vue';
+
+const companyName = 'Retro Retreat'
 </script>
 
 <template>
   <div id="home-view">
     <LoginButton />
-    <h1>Welcome to The Company</h1>
+    <h1>Welcome to {{ companyName }}</h1>
     <p>
       Welcome to our brand new website! We are thrilled to have you here. Our mission is to provide you with the best products and services to meet all your needs.
     </p>
     <section class="introduction">
       <h2>About Us</h2>
       <p>
-        At The Company, we are dedicated to delivering top-notch solutions to our customers. With years of experience in the industry, we pride ourselves on our commitment to quality and customer satisfaction.
+        At {{ companyName }}, we are dedicated to delivering top-notch solutions to our customers. With years of experience in the industry, we pride ourselves on our commitment to quality and customer satisfaction.
       </p>
     </section>
     <section class="features">

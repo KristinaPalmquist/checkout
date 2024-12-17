@@ -139,7 +139,7 @@ onUnmounted(() => {
   padding: 0;
 }
 
-button.hamburger:focus:not(:active) {
+.hamburger:focus:not(:active) {
   box-shadow: none;
 }
 

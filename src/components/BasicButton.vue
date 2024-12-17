@@ -1,5 +1,7 @@
 <script setup>
-import { onBeforeMount, ref } from 'vue';
+import { ref } from 'vue';
+
+// import { onBeforeMount, ref } from 'vue';
 
 const props = defineProps([
   'btnType',
@@ -18,12 +20,12 @@ const btnTextColor = ref(props.btnTextColor || '');
 const btnFunction =
   props.btnFunction || (() => console.log('No function provided'));
 
-onBeforeMount(() => {
-  if (!btnClass.value) {
-    btnColor.value = '#fff';
-    btnTextColor.value = '#000';
-  }
-});
+// onBeforeMount(() => {
+//   if (!btnClass.value) {
+//     btnColor.value = '#fff';
+//     btnTextColor.value = '#000';
+//   }
+// });
 </script>
 
 <template>
@@ -40,21 +42,12 @@ onBeforeMount(() => {
 </template>
 
 <style scoped>
-#basic-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1;
-}
-
 button {
   appearance: none;
   background-color: #fafbfc;
   background-image: linear-gradient(1deg, #c4c4c4, #fafbfc 99%);
   background-size: calc(100% + 20px) calc(100% + 20px);
-  /* border-radius: 6px; */
   border-radius: 24px;
-  /* border-radius: 100px; */
   border: 0.5px solid rgba(72, 77, 73, 0.15);
   box-sizing: border-box;
   color: #24292e;
@@ -64,7 +57,6 @@ button {
   line-height: 20px;
   list-style: none;
   padding: 0.5rem 1.2rem;
-  position: relative;
   transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1),
     background-position 0.2s;
   user-select: none;
@@ -79,7 +71,7 @@ button {
 }
 
 button:hover {
-  background-position: -20px -20px; /*  */
+  background-position: -20px -20px;
 }
 
 button:disabled {
@@ -91,17 +83,12 @@ button:disabled {
 
 button:active {
   background-color: #edeff2;
-  /* box-shadow: rgba(225, 228, 232, 0.2) 0 1px 0 inset; */
   transition: none 0s;
 }
 
 button:focus {
   outline: 1px transparent;
 }
-
-/* button:before {
-  display: none;
-} */
 
 button:-webkit-details-marker {
   display: none;

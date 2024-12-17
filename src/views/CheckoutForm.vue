@@ -261,7 +261,7 @@ const onSubmit = () => {
   justify-content: center;
   flex-direction: column;
   gap: 1rem;
-  margin: 1rem auto;
+  margin: 3rem auto 1rem;
   border: 1px solid #ccc;
   color: #000;
 }
