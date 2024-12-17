@@ -5,7 +5,34 @@
     "category": "Headwear",
     "description": "This is a description of Product 1",
     "image": "/src/assets/images/headwear/angelo-pantazis-h0AnGGgseio-unsplash.jpg",
-    "price": 29.99
+    "price": 29.99,
+    "specifications": {
+      "Color": "Olive",
+      "Size": "L",
+      "Material": "Cotton"
+    },
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "This is a great product",
+        "author": "John Doe"
+      },
+      {
+        "rating": 4,
+        "comment": "This is a good product",
+        "author": "Jane Doe"
+      },
+      {
+        "rating": 2,
+        "comment": "This is a product",
+        "author": "Sam Doe"
+      },
+      {
+        "rating": 1,
+        "comment": "This is a bad product",
+        "author": "Samantha Doe"
+      }
+    ]
   },
   {
     "id": 2,
@@ -13,7 +40,34 @@
     "category": "Headwear",
     "description": "This is a description of Product 1",
     "image": "/src/assets/images/headwear/bluewater-sweden-iKWTVPLk-VY-unsplash.jpg",
-    "price": 49.99
+    "price": 49.99,
+    "specifications": {
+      "Color": "Olive",
+      "Size": "L",
+      "Material": "Cotton"
+    },
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "This is a great product",
+        "author": "John Doe"
+      },
+      {
+        "rating": 4,
+        "comment": "This is a good product",
+        "author": "Jane Doe"
+      },
+      {
+        "rating": 2,
+        "comment": "This is a product",
+        "author": "Sam Doe"
+      },
+      {
+        "rating": 1,
+        "comment": "This is a bad product",
+        "author": "Samantha Doe"
+      }
+    ]
   },
   {
     "id": 3,
@@ -21,7 +75,34 @@
     "category": "Headwear",
     "description": "This is a description of Product 1",
     "image": "/src/assets/images/headwear/giorgi-iremadze-abe5NW1aqvw-unsplash.jpg",
-    "price": 99.99
+    "price": 99.99,
+    "specifications": {
+      "Color": "Olive",
+      "Size": "L",
+      "Material": "Cotton"
+    },
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "This is a great product",
+        "author": "John Doe"
+      },
+      {
+        "rating": 4,
+        "comment": "This is a good product",
+        "author": "Jane Doe"
+      },
+      {
+        "rating": 2,
+        "comment": "This is a product",
+        "author": "Sam Doe"
+      },
+      {
+        "rating": 1,
+        "comment": "This is a bad product",
+        "author": "Samantha Doe"
+      }
+    ]
   },
   {
     "id": 4,
@@ -29,7 +110,34 @@
     "category": "Headwear",
     "description": "This is a description of Product 1",
     "image": "/src/assets/images/headwear/giovanna-gomes-xbSFDSlw2Yc-unsplash.jpg",
-    "price": 199.99
+    "price": 199.99,
+    "specifications": {
+      "Color": "Olive",
+      "Size": "L",
+      "Material": "Cotton"
+    },
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "This is a great product",
+        "author": "John Doe"
+      },
+      {
+        "rating": 4,
+        "comment": "This is a good product",
+        "author": "Jane Doe"
+      },
+      {
+        "rating": 2,
+        "comment": "This is a product",
+        "author": "Sam Doe"
+      },
+      {
+        "rating": 1,
+        "comment": "This is a bad product",
+        "author": "Samantha Doe"
+      }
+    ]
   },
   {
     "id": 5,
@@ -37,7 +145,34 @@
     "category": "Headwear",
     "description": "This is a description of Product 1",
     "image": "/src/assets/images/headwear/mindy-sabiston-4fy6N_ijF7U-unsplash.jpg",
-    "price": 299.99
+    "price": 299.99,
+    "specifications": {
+      "Color": "Olive",
+      "Size": "L",
+      "Material": "Cotton"
+    },
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "This is a great product",
+        "author": "John Doe"
+      },
+      {
+        "rating": 4,
+        "comment": "This is a good product",
+        "author": "Jane Doe"
+      },
+      {
+        "rating": 2,
+        "comment": "This is a product",
+        "author": "Sam Doe"
+      },
+      {
+        "rating": 1,
+        "comment": "This is a bad product",
+        "author": "Samantha Doe"
+      }
+    ]
   },
   {
     "id": 6,
@@ -45,7 +180,34 @@
     "category": "Headwear",
     "description": "This is a description of Product 1",
     "image": "/src/assets/images/headwear/mykyta-martynenko-9z5ZLLAsxJk-unsplash.jpg",
-    "price": 399.99
+    "price": 399.99,
+    "specifications": {
+      "Color": "Olive",
+      "Size": "L",
+      "Material": "Cotton"
+    },
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "This is a great product",
+        "author": "John Doe"
+      },
+      {
+        "rating": 4,
+        "comment": "This is a good product",
+        "author": "Jane Doe"
+      },
+      {
+        "rating": 2,
+        "comment": "This is a product",
+        "author": "Sam Doe"
+      },
+      {
+        "rating": 1,
+        "comment": "This is a bad product",
+        "author": "Samantha Doe"
+      }
+    ]
   },
   {
     "id": 7,
@@ -53,6 +215,33 @@
     "category": "Headwear",
     "description": "This is a description of Product 1",
     "image": "/src/assets/images/headwear/nice-m-nshuti-hhBk5iSqRE0-unsplash.jpg",
-    "price": 499.99
+    "price": 499.99,
+    "specifications": {
+      "Color": "Olive",
+      "Size": "L",
+      "Material": "Cotton"
+    },
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "This is a great product",
+        "author": "John Doe"
+      },
+      {
+        "rating": 4,
+        "comment": "This is a good product",
+        "author": "Jane Doe"
+      },
+      {
+        "rating": 2,
+        "comment": "This is a product",
+        "author": "Sam Doe"
+      },
+      {
+        "rating": 1,
+        "comment": "This is a bad product",
+        "author": "Samantha Doe"
+      }
+    ]
   }
 ]

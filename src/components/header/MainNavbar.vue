@@ -1,16 +1,18 @@
 <script setup>
-import { ref } from 'vue';
+import { computed, ref, onMounted, onUnmounted } from 'vue';
 import { useRouter } from 'vue-router';
 
+const emit = defineEmits(['update:isOpen']);
 const router = useRouter();
 const isOpen = ref(false);
+const windowHeight = ref(window.innerHeight);
 
 const routes = [
   { name: 'Home', path: '/' },
   { name: 'About', path: '/about' },
   { name: 'Contact', path: '/contact' },
   { name: 'Categories', path: '/categories' },
-  { name: 'Products', path: '/products' },
+  // { name: 'Products', path: '/products' },
   { name: 'Cart', path: '/cart' },
   { name: 'Checkout', path: '/checkout' },
   { name: 'Login', path: '/login' },
@@ -18,21 +20,66 @@ const routes = [
 
 const handleRouting = (event, path) => {
   event.preventDefault();
-  //   const route = event.target.getAttribute('href');
   router.push(path);
   isOpen.value = false;
+  emit('update:isOpen', isOpen.value);
 };
 
 const toggleNavbar = () => {
   isOpen.value = !isOpen.value;
+  emit('update:isOpen', isOpen.value);
 };
+
+const updateWindowHeight = () => {
+  windowHeight.value = window.innerHeight;
+};
+
+const navbarItemStyle = computed(() => {
+  const backgroundHeight = windowHeight.value - 30;
+  const itemHeight = backgroundHeight / routes.length;
+  const fontSize = Math.min(itemHeight * 0.5, 50);
+  const padding = Math.min(itemHeight * 0.05, 3);
+  return {
+    fontSize: `${fontSize}px`,
+    padding: `${padding}px`,
+  };
+});
+
+const navbarNumbersStyle = computed(() => {
+  const itemHeight = windowHeight.value / routes.length;
+  const fontSize = Math.min(itemHeight * 0.3, 32);
+  const padding = Math.min(itemHeight * 0.05, 4);
+  return {
+    fontSize: `${fontSize}px`,
+    padding: `${padding}px`,
+  };
+});
+
+const navbarBackgroundStyle = computed(() => {
+  const itemHeight = windowHeight.value / routes.length;
+  const paddingMargin = 33;
+  const totalHeight = itemHeight * routes.length - paddingMargin;
+  return {
+    height: `${totalHeight}px`,
+  };
+});
+
+onMounted(() => {
+  window.addEventListener('resize', updateWindowHeight);
+});
+
+onUnmounted(() => {
+  window.removeEventListener('resize', updateWindowHeight);
+});
 </script>
 
 <template>
-  <div id="main-navbar" :class="{ 'navbar-background': isOpen }">
+  <div
+    id="main-navbar"
+    :class="{ 'navbar-background': isOpen }"
+    :style="isOpen ? navbarBackgroundStyle : {}"
+  >
     <button @click="toggleNavbar" class="hamburger">
-      <!-- <span v-if="!isOpen">☰</span>
-      <span v-else>✖</span> -->
       <span :class="{ line: true, line1: true, open: isOpen }"></span>
       <span :class="{ line: true, line2: true, open: isOpen }"></span>
       <span :class="{ line: true, line3: true, open: isOpen }"></span>
@@ -43,8 +90,11 @@ const toggleNavbar = () => {
         :key="index"
         :href="route.path"
         @click="(event) => handleRouting(event, route.path)"
+        :style="navbarItemStyle"
       >
-        <span class="numbers navbar-numbers">0{{ index + 1 }}. </span>
+        <span class="numbers navbar-numbers" :style="navbarNumbersStyle"
+          >0{{ index + 1 }}.
+        </span>
 
         {{ route.name }}</a
       >
@@ -56,11 +106,26 @@ const toggleNavbar = () => {
 #main-navbar {
   position: relative;
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .navbar-background {
-  background-color: white;
+  position: fixed;
+  background-color: rgba(249, 184, 184, 0.9);
+  border-radius: 1rem;
   height: calc(120px * 8);
+  width: 100%;
+  margin: 0.2rem 0.2rem;
+  z-index: 100;
+}
+
+.navbar-background .hamburger {
+  position: absolute;
+  top: 0.8rem;
+  right: 0.8rem;
+  z-index: 101;
 }
 
 .hamburger {
@@ -72,13 +137,17 @@ const toggleNavbar = () => {
   background: none;
   border: none;
   padding: 0;
-  z-index: 10;
+}
+
+button.hamburger:focus:not(:active) {
+  box-shadow: none;
 }
 
 .line {
   width: 30px;
   height: 3px;
-  background: var(--accent-color);
+  background: #33eb39;
+  /* background: var(--accent-color); */
   transition: all 0.3s ease;
 }
 
@@ -99,11 +168,7 @@ const toggleNavbar = () => {
   flex-direction: column;
   align-items: center;
   position: absolute;
-  top: 3rem;
-  left: 0;
-  /* background-color: white; */
-  width: 100%;
-  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  padding-top: 2rem;
 }
 
 .navbar a {
@@ -111,11 +176,10 @@ const toggleNavbar = () => {
   align-items: center;
   gap: 1rem;
   width: 60%;
-
-  padding: 1rem 1rem 1rem 10%;
+  padding: 0.5rem;
+  margin-left: -20rem;
   text-decoration: none;
   color: black;
-  /* border-bottom: 1px solid #ddd; */
   font-size: 3rem;
   text-align: center;
 }

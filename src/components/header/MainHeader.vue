@@ -1,18 +1,49 @@
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted, onUnmounted } from 'vue';
 import MainNavbar from './MainNavbar.vue';
-// import { useRouter } from 'vue-router';
 
-// const router = useRouter();
 const companyName = ref('The Company');
+const isScrolled = ref(false);
+const header = ref(null);
+const isOpen = ref(false);
 
+const handleScroll = () => {
+  if (window.scrollY > 50) {
+    isScrolled.value = true;
+  } else {
+    isScrolled.value = false;
+  }
+};
+
+
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll);
+});
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll);
+});
 </script>
 
 <template>
-  <div id="main-header">
-    <h1>{{ companyName }}</h1>
-  <MainNavbar/>
-  </div>
+  <header id="main-header" :class="{ scrolled: isScrolled }" ref="header">
+    <h1 v-if="!isOpen">{{ companyName }}</h1>
+    <MainNavbar @update:isOpen="isOpen = $event" />
+  </header>
 </template>
 
-<style scoped></style>
+<style scoped>
+#main-header {
+  position: fixed;
+  width: calc(100% - 2rem);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#main-header.scrolled {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+}
+</style>

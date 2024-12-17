@@ -4,17 +4,13 @@ import MainHeader from './components/header/MainHeader.vue';
 </script>
 
 <template>
-  <div id="app">
-  <CustomCursor />
-  <header>
-    <MainHeader />
-  </header>
-  <main>
-    <router-view></router-view>
-  </main></div>
+  <!-- <div> -->
+    <CustomCursor />
+      <MainHeader />
+    <main>
+      <router-view></router-view>
+    </main>
+  <!-- </div> -->
 </template>
 
-<style scoped>
-
-
-</style>
+<style scoped></style>

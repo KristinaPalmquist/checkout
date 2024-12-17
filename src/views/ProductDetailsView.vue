@@ -1,11 +1,17 @@
 <script setup>
 import { computed, ref, onMounted } from 'vue';
-import { useRoute } from 'vue-router';
+import { useRoute, useRouter } from 'vue-router';
+import { useStore } from 'vuex';
+import BasicButton from '../components/BasicButton.vue';
 
 const route = useRoute();
+const router = useRouter();
+const store = useStore();
 const { categoryName, productName } = route.params;
 
 const product = ref(null);
+const message = ref('');
+const showMessage = ref(false);
 
 const fetchProduct = async () => {
   try {
@@ -35,6 +41,20 @@ const averageRating = computed(() => {
   return (totalRating / product.value.reviews.length).toFixed(1);
 });
 
+const addToCart = () => {
+  store.dispatch('addToCart', product.value);
+  store.dispatch('saveCart');
+
+  const items = store.getters.cartProducts;
+  console.log(items);
+  message.value = 'Product added to cart!';
+  showMessage.value = true;
+};
+
+const goToCart = () => {
+  router.push('/cart');
+};
+
 const renderStars = (rating) => {
   const fullStar = '★';
   const emptyStar = '☆';
@@ -48,7 +68,9 @@ onMounted(() => {
 
 <template>
   <div v-if="product" class="product-details">
-    <img :src="product.image" :alt="product.name" class="product-image" />
+    <div class="product-image">
+      <img :src="product.image" :alt="product.name" />
+    </div>
     <div class="product-info">
       <h1>{{ product.name }}</h1>
       <p>{{ product.description }}</p>
@@ -78,8 +100,17 @@ onMounted(() => {
           </li>
         </ul>
       </details>
-
-      <button class="buy-now cta-btn">Buy Now</button>
+      <div class="message-div">
+        <p class="message" v-show="showMessage">{{ message }}</p>
+      </div>
+      <div class="btn-div">
+        <BasicButton :btnText="'Go to Cart'" :btnFunction="goToCart" />
+        <BasicButton
+          :btnText="'Add to Cart'"
+          :btnFunction="addToCart"
+          :btnClass="'cta-btn'"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -87,22 +118,39 @@ onMounted(() => {
 <style scoped>
 .product-details {
   width: 90vw;
+  margin: 0 auto;
   padding: 2rem;
   text-align: center;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 2rem;
+  height: calc(100vh - 2rem);
 }
 .product-info {
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
   width: 100%;
 }
 .product-image {
   width: 100%;
-  /* width: 50%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: auto;
-  margin-bottom: 2rem;
+  /* margin-bottom: 2rem; */
+}
+.product-image img {
+  /* width: 100%; */
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  /* max-width: 300px;
+  max-height: 300px; */
+  border-radius: 2rem;
+  margin: auto;
+  border: 16px solid transparent;
+  outline: 3px solid hotpink
 }
 
 .product-info h1 {
@@ -121,7 +169,7 @@ onMounted(() => {
 
 .specifications,
 .reviews {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .specifications h2,
@@ -142,12 +190,12 @@ onMounted(() => {
 }
 
 .reviews summary {
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   /* display: flex;*/
   align-items: center;
-  justify-content: center; 
+  justify-content: center;
 }
 
 .reviews summary::after {
@@ -156,11 +204,13 @@ onMounted(() => {
   font-size: 1rem;
   transition: transform 0.3s ease;
   margin-left: 2rem;
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
 }
 
 details[open] summary::after {
   content: 'Close ▲';
   transform: rotate(3600deg);
 }
+
+
 </style>

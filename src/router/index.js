@@ -8,6 +8,7 @@ import ContactUs from '@/views/ContactUs.vue';
 import MainCategories from '@/views/CategoriesView.vue';
 import CategoryProductsView from '@/views/CategoryProductsView.vue';
 import ProductDetailsView from '@/views/ProductDetailsView.vue';
+import ShowCart from '@/views/ShowCart.vue';
 
 const routes = [
   {
@@ -19,10 +20,10 @@ const routes = [
     path: '/about',
     component: AboutUs,
   },
-  // {
-  //   path: '/cart',
-  //   component: ShowCart,
-  // },
+  {
+    path: '/cart',
+    component: ShowCart,
+  },
   { path: '/categories', component: MainCategories },
   {
     path: '/categories/:categoryName',
@@ -34,11 +35,11 @@ const routes = [
     }),
   },
   {
-path: '/categories/:categoryName/:productName',
-name: 'ProductDetails',    
-component: ProductDetailsView,
+    path: '/categories/:categoryName/:productName',
+    name: 'ProductDetails',
+    component: ProductDetailsView,
 
-props: true
+    props: true,
   },
   {
     path: '/checkout',

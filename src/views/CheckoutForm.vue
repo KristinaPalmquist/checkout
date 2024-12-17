@@ -4,6 +4,7 @@ import DeliveryAddress from '../components/checkout/DeliveryAddress.vue';
 import UserInfo from '../components/checkout/UserInfo.vue';
 import PaymentMethod from '../components/checkout/PaymentMethod.vue';
 import { ref } from 'vue';
+import BasicButton from '@/components/BasicButton.vue';
 
 const userInfo = ref([]);
 const billingAddress = ref([]);
@@ -211,18 +212,18 @@ const onSubmit = () => {
       v-if="showOrientationBtns"
       v-bind:style="showUserInfo ? { position: 'relative' } : ''"
     >
-      <button
-        type="button"
-        @click="previousSection('billingAddress')"
+      <BasicButton
+        :btnType="button"
+        :btnText="'Back'"
+        :btnFunction="() => previousSection('billingAddress')"
         v-if="showBillingAddress || showDeliveryAddress"
-      >
-        Back
-      </button>
+      />
 
-      <button
-        type="button"
-        class="cta-btn"
-        @click="nextSection()"
+      <BasicButton
+        :btnType="button"
+        :btnText="'Next'"
+        :btnFunction="nextSection"
+        :btnClass="'cta-btn'"
         v-if="showUserInfo || showBillingAddress || showDeliveryAddress"
         v-bind:style="
           showUserInfo
@@ -233,14 +234,16 @@ const onSubmit = () => {
               }
             : ''
         "
-      >
-        Next
-      </button>
+      />
     </div>
 
     <div class="btn-div" v-if="showPaymentMethod">
-      <button type="button" @click="clearForm">Clear form</button>
-      <button type="submit" class="cta-btn">Submit</button>
+      <BasicButton :btnText="'Clear form'" :btnFunction="clearForm" />
+      <BasicButton
+        :btnText="'Submit'"
+        :btnFunction="onSubmit"
+        :btnClass="'cta-btn'"
+      />
     </div>
   </form>
 </template>
@@ -262,9 +265,13 @@ const onSubmit = () => {
   border: 1px solid #ccc;
   color: #000;
 }
-
-#checkout-form div:not(:nth-of-type(1)) {
+/* 
+#checkout-form div {
   width: 100%;
+} */
+
+#checkout-form div:not(.section-headers-wrapper) {
+  width: 90%;
 }
 
 #checkout-form .section-headers-wrapper {
@@ -307,7 +314,8 @@ const onSubmit = () => {
 
 #checkout-form .section-header.active,
 #checkout-form .section-header.active:after {
-  background: #edf1f5;
+  background: #dcf7ba;
+  /* background: #edf1f5; */
 }
 
 #checkout-form input {
