@@ -1,7 +1,7 @@
 <script setup>
 import LoginButton from '../components/LoginButton.vue';
 
-const companyName = 'Retro Retreat'
+const companyName = 'Retro Retreat';
 </script>
 
 <template>
@@ -9,35 +9,39 @@ const companyName = 'Retro Retreat'
     <LoginButton />
     <h1>Welcome to {{ companyName }}</h1>
     <p>
-      Welcome to our brand new website! We are thrilled to have you here. Our mission is to provide you with the best products and services to meet all your needs.
+      Discover a treasure trove of preworn fashion, second-hand, and vintage
+      clothing. We are delighted to have you here at {{ companyName }}.
     </p>
     <section class="introduction">
       <h2>About Us</h2>
       <p>
-        At {{ companyName }}, we are dedicated to delivering top-notch solutions to our customers. With years of experience in the industry, we pride ourselves on our commitment to quality and customer satisfaction.
+        At {{ companyName }}, we are passionate about sustainable fashion. Our
+        curated collection of pre-loved clothing offers unique styles and
+        timeless pieces that you won't find anywhere else.
       </p>
     </section>
     <section class="features">
       <h2>Our Features</h2>
       <ul>
-        <li><strong>High-Quality Products:</strong> We offer a wide range of products that meet the highest standards of quality.</li>
-        <li><strong>Exceptional Customer Service:</strong> Our customer service team is here to assist you with any questions or concerns you may have.</li>
-        <li><strong>Innovative Solutions:</strong> We continuously innovate to bring you the latest and most effective solutions.</li>
-        <li><strong>Global Reach:</strong> Our services are available to customers worldwide, ensuring that you can benefit from our offerings no matter where you are.</li>
+        <li>
+          <strong>Curated Selection:</strong> Each item is carefully selected to
+          ensure quality and style.
+        </li>
+        <li>
+          <strong>Sustainable Fashion:</strong> By choosing second-hand, you're
+          making a positive impact on the environment.
+        </li>
+        <li>
+          <strong>Exceptional Customer Service:</strong> Our team is here to
+          help you find the perfect piece and answer any questions you may have.
+        </li>
       </ul>
     </section>
-    <section class="call-to-action">
-      <h2>Get Started</h2>
-      <p>
-        Ready to experience the best in the industry? Click the button below to get started!
-      </p>
-      <LoginButton />
-    </section>
   </div>
+
 </template>
 
 <style scoped>
-
 #home-view {
   padding: 2rem;
   max-width: 800px;
