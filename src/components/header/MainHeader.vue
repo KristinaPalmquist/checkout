@@ -47,7 +47,7 @@ onUnmounted(() => {
 <style scoped>
 #main-header {
   position: fixed;
-  width: calc(100% - 2rem);
+  width: 100%;
 
   display: flex;
   align-items: center;
