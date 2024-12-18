@@ -16,7 +16,6 @@ organize json-files
     misc
     tops
     dresses
-    jackets
 
 
 styling for class component-container
@@ -39,5 +38,6 @@ Cart
 organize json-files
     bags
     sunglasses
+    jackets
     
 Make company name in header clickable => home

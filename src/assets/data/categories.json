@@ -7,7 +7,7 @@
   {
     "id": 2,
     "name": "Dresses",
-    "image": "/src/assets/images/dresses/graca-assane-oWVOmCtTvwk-unsplash.jpg"
+    "image": "/src/assets/images/dresses/banana.jpg"
   },
   {
     "id": 3,
@@ -22,7 +22,7 @@
   {
     "id": 5,
     "name": "Jackets",
-    "image": "/src/assets/images/jackets/sebastian-pociecha--JUoxG4sp88-unsplash.jpg"
+    "image": "/src/assets/images/jackets/moana.jpg"
   },
   {
     "id": 6,
@@ -32,12 +32,12 @@
   {
     "id": 7,
     "name": "Sunglasses",
-    "image": "/src/assets/images/sunglasses/s-o-c-i-a-l-c-u-t-_hwL-LeytRc-unsplash.jpg"
+    "image": "/src/assets/images/sunglasses/marilyn.jpg"
   },
   {
     "id": 8,
     "name": "Tops",
-    "image": "/src/assets/images/tops/diva.jpg"
+    "image": "/src/assets/images/tops/collins-lesulie-QNJo7NRczlU-unsplash.jpg"
   },
   {
     "id": 9,

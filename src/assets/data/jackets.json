@@ -4,7 +4,7 @@
     "name": "Selena",
     "category": "Jackets",
     "description": "This is a lovely mustard jacket for any ocassion. Wear it to work or for dinner in a nice restaurant. Will look lovely with a pair of jeans or a nice skirt or even over a summer dress.",
-    "image": "/src/assets/images/jackets/apostolos-vamvouras-mFyvoh63PvM-unsplash.jpg",
+    "image": "/src/assets/images/jackets/selena.jpg",
     "price": 29.99,
     "specifications": {
       "Color": "Mustard",
@@ -39,7 +39,7 @@
     "name": "Nature",
     "category": "Jackets",
     "description": "A great outdoor jacket for any tpe of weather. Will look great on anyone. A must have for any wardrobe.",
-    "image": "/src/assets/images/jackets/kyle-peyton-HI-375qob7M-unsplash.jpg",
+    "image": "/src/assets/images/jackets/nature.jpg",
     "price": 39.99,
     "specifications": {
       "Color": "Olive",
@@ -49,23 +49,18 @@
     "reviews": [
       {
         "rating": 5,
-        "comment": "This is a great product",
+        "comment": "This is great for outdoors activities",
         "author": "John Doe"
       },
       {
         "rating": 4,
-        "comment": "This is a good product",
-        "author": "Jane Doe"
+        "comment": "beautiful jacket",
+        "author": "x"
       },
       {
         "rating": 2,
-        "comment": "This is a product",
-        "author": "Sam Doe"
-      },
-      {
-        "rating": 1,
-        "comment": "This is a bad product",
-        "author": "Samantha Doe"
+        "comment": "This is a jacket",
+        "author": "Dorrie"
       }
     ]
   },
@@ -74,7 +69,7 @@
     "name": "Steel",
     "category": "Jackets",
     "description": "Percing blue jacket for the winter season. Will keep you warm and looking great.",
-    "image": "/src/assets/images/jackets/leonard-reeb-HXADYXS-fLo-unsplash.jpg",
+    "image": "/src/assets/images/jackets/steel.jpg",
     "price": 49.99,
     "specifications": {
       "Color": "Blue",
@@ -84,23 +79,13 @@
     "reviews": [
       {
         "rating": 5,
-        "comment": "This is a great product",
+        "comment": "Warm",
         "author": "John Doe"
       },
       {
         "rating": 4,
-        "comment": "This is a good product",
-        "author": "Jane Doe"
-      },
-      {
-        "rating": 2,
-        "comment": "This is a product",
-        "author": "Sam Doe"
-      },
-      {
-        "rating": 1,
-        "comment": "This is a bad product",
-        "author": "Samantha Doe"
+        "comment": "Comfortable",
+        "author": "Janne Svensson"
       }
     ]
   },
@@ -109,7 +94,7 @@
     "name": "Max",
     "category": "Jackets",
     "description": "All of the patches makes this one special",
-    "image": "/src/assets/images/jackets/marek-mucha-idYihyvB3XA-unsplash.jpg",
+    "image": "/src/assets/images/jackets/max.jpg",
     "price": 199.99,
     "specifications": {
       "Color": "Green",
@@ -118,24 +103,9 @@
     },
     "reviews": [
       {
-        "rating": 5,
-        "comment": "This is a great product",
-        "author": "John Doe"
-      },
-      {
-        "rating": 4,
-        "comment": "This is a good product",
-        "author": "Jane Doe"
-      },
-      {
-        "rating": 2,
-        "comment": "This is a product",
-        "author": "Sam Doe"
-      },
-      {
         "rating": 1,
-        "comment": "This is a bad product",
-        "author": "Samantha Doe"
+        "comment": "-",
+        "author": "Olof Skötkonung"
       }
     ]
   },
@@ -144,7 +114,7 @@
     "name": "Varsity",
     "category": "Jackets",
     "description": "American sports jacket. You can't go wrong with this one. Will pair with almost anything.",
-    "image": "/src/assets/images/jackets/marek-mucha-rSxKm3e97v8-unsplash.jpg",
+    "image": "/src/assets/images/jackets/varsity.jpg",
     "price": 99.99,
     "specifications": {
       "Color": "Red / White",
@@ -179,7 +149,7 @@
     "name": "Dream",
     "category": "Jackets",
     "description": "Jean jacket for the summer. Will look great with a pair of shorts or a skirt.",
-    "image": "/src/assets/images/jackets/santosh-verma-i49yJtWD57w-unsplash.jpg",
+    "image": "/src/assets/images/jackets/dream.jpg",
     "price": 39.99,
     "specifications": {
       "Color": "Gray",
@@ -188,24 +158,19 @@
     },
     "reviews": [
       {
-        "rating": 5,
-        "comment": "This is a great product",
-        "author": "John Doe"
+        "rating": 3,
+        "comment": "This is a good look",
+        "author": "Hubert"
       },
       {
         "rating": 4,
-        "comment": "This is a good product",
-        "author": "Jane Doe"
-      },
-      {
-        "rating": 2,
-        "comment": "This is a product",
-        "author": "Sam Doe"
+        "comment": "-",
+        "author": "Jane"
       },
       {
         "rating": 1,
-        "comment": "This is a bad product",
-        "author": "Samantha Doe"
+        "comment": "Love it!",
+        "author": "Amanda"
       }
     ]
   },
@@ -213,8 +178,8 @@
     "id": 7,
     "name": "Rocket",
     "category": "Jackets",
-    "description": "Stone washed denim. The wear just adds to the charm.",
-    "image": "/src/assets/images/jackets/sebastian-pociecha--JUoxG4sp88-unsplash.jpg",
+    "description": "Classic denim. The wear just adds to the charm.",
+    "image": "/src/assets/images/jackets/rocket.jpg",
     "price": 499.99,
     "specifications": {
       "Color": "Blue",
@@ -223,24 +188,14 @@
     },
     "reviews": [
       {
-        "rating": 5,
-        "comment": "This is a great product",
-        "author": "John Doe"
-      },
-      {
-        "rating": 4,
-        "comment": "This is a good product",
-        "author": "Jane Doe"
-      },
-      {
         "rating": 2,
-        "comment": "This is a product",
-        "author": "Sam Doe"
+        "comment": "This is not good",
+        "author": "Alex"
       },
       {
         "rating": 1,
-        "comment": "This is a bad product",
-        "author": "Samantha Doe"
+        "comment": "Looks broken",
+        "author": "Rastaman"
       }
     ]
   },
@@ -249,7 +204,7 @@
     "name": "Moana",
     "category": "Jackets",
     "description": "Pink, fluffy dream that would make anyone jealous",
-    "image": "/src/assets/images/jackets/tiko-giorgadze-nBerkf7sLRM-unsplash.jpg",
+    "image": "/src/assets/images/jackets/moana.jpg",
     "price": 99.99,
     "specifications": {
       "Color": "Pink",
@@ -259,23 +214,18 @@
     "reviews": [
       {
         "rating": 5,
-        "comment": "This is a great product",
-        "author": "John Doe"
+        "comment": "This is so hairy!",
+        "author": "Johnathan"
       },
       {
         "rating": 4,
-        "comment": "This is a good product",
-        "author": "Jane Doe"
+        "comment": "Would love to own",
+        "author": "Carl"
       },
       {
-        "rating": 2,
-        "comment": "This is a product",
-        "author": "Sam Doe"
-      },
-      {
-        "rating": 1,
-        "comment": "This is a bad product",
-        "author": "Samantha Doe"
+        "rating": 5,
+        "comment": "Glamorous",
+        "author": "Fifi"
       }
     ]
   }
