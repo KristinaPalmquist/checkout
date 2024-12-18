@@ -4,7 +4,7 @@
     "name": "Selena",
     "category": "Jackets",
     "description": "This is a lovely mustard jacket for any ocassion. Wear it to work or for dinner in a nice restaurant. Will look lovely with a pair of jeans or a nice skirt or even over a summer dress.",
-    "image": "/src/assets/images/jackets/selena.jpg",
+    "image": "@/assets/images/jackets/selena.jpg",
     "price": 29.99,
     "specifications": {
       "Color": "Mustard",
@@ -39,7 +39,7 @@
     "name": "Nature",
     "category": "Jackets",
     "description": "A great outdoor jacket for any tpe of weather. Will look great on anyone. A must have for any wardrobe.",
-    "image": "/src/assets/images/jackets/nature.jpg",
+    "image": "@/assets/images/jackets/nature.jpg",
     "price": 39.99,
     "specifications": {
       "Color": "Olive",
@@ -69,7 +69,7 @@
     "name": "Steel",
     "category": "Jackets",
     "description": "Percing blue jacket for the winter season. Will keep you warm and looking great.",
-    "image": "/src/assets/images/jackets/steel.jpg",
+    "image": "@/assets/images/jackets/steel.jpg",
     "price": 49.99,
     "specifications": {
       "Color": "Blue",
@@ -94,7 +94,7 @@
     "name": "Max",
     "category": "Jackets",
     "description": "All of the patches makes this one special",
-    "image": "/src/assets/images/jackets/max.jpg",
+    "image": "@/assets/images/jackets/max.jpg",
     "price": 199.99,
     "specifications": {
       "Color": "Green",
@@ -114,7 +114,7 @@
     "name": "Varsity",
     "category": "Jackets",
     "description": "American sports jacket. You can't go wrong with this one. Will pair with almost anything.",
-    "image": "/src/assets/images/jackets/varsity.jpg",
+    "image": "@/assets/images/jackets/varsity.jpg",
     "price": 99.99,
     "specifications": {
       "Color": "Red / White",
@@ -149,7 +149,7 @@
     "name": "Dream",
     "category": "Jackets",
     "description": "Jean jacket for the summer. Will look great with a pair of shorts or a skirt.",
-    "image": "/src/assets/images/jackets/dream.jpg",
+    "image": "@/assets/images/jackets/dream.jpg",
     "price": 39.99,
     "specifications": {
       "Color": "Gray",
@@ -179,7 +179,7 @@
     "name": "Rocket",
     "category": "Jackets",
     "description": "Classic denim. The wear just adds to the charm.",
-    "image": "/src/assets/images/jackets/rocket.jpg",
+    "image": "@/assets/images/jackets/rocket.jpg",
     "price": 499.99,
     "specifications": {
       "Color": "Blue",
@@ -204,7 +204,7 @@
     "name": "Moana",
     "category": "Jackets",
     "description": "Pink, fluffy dream that would make anyone jealous",
-    "image": "/src/assets/images/jackets/moana.jpg",
+    "image": "@/assets/images/jackets/moana.jpg",
     "price": 99.99,
     "specifications": {
       "Color": "Pink",

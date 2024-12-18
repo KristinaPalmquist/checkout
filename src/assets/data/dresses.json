@@ -4,7 +4,7 @@
     "name": "Product 1",
     "category": "Dresses",
     "description": "You'll look stunning in this dress! Just like a happy banana in a tree.",
-    "image": "/src/assets/images/dresses/banana.jpg",
+    "image": "@/assets/images/dresses/banana.jpg",
     "price": 29.99,
     "specifications": {
       "Color": "Yellow",
@@ -35,7 +35,7 @@
     "name": "Butterfly",
     "category": "Dresses",
     "description": "Long dress with multicolor pattern. This dress will make you feel like a butterfly. It's light and airy.",
-    "image": "/src/assets/images/dresses/butterfly.jpg",
+    "image": "@/assets/images/dresses/butterfly.jpg",
     "price": 39.99,
     "specifications": {
       "Color": "Multi",

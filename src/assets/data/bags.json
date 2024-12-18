@@ -4,7 +4,7 @@
     "name": "Leather",
     "category": "Bags",
     "description": "Brown leather shoulder bag",
-    "image": "/src/assets/images/bags/leather.jpg",
+    "image": "@/assets/images/bags/leather.jpg",
     "price": 29.99,
 
     "specifications": {
@@ -41,7 +41,7 @@
 
     "category": "Bags",
     "description": "Lovely pink leather bag",
-    "image": "/src/assets/images/bags/auntie.jpg",
+    "image": "@/assets/images/bags/auntie.jpg",
     "price": 49.99,
 
     "specifications": {
@@ -77,7 +77,7 @@
     "name": "Anabel",
     "category": "Bags",
     "description": "Red handbag with a unique design. Comes with a shoulder strap",
-    "image": "/src/assets/images/bags/anabel.jpg",
+    "image": "@/assets/images/bags/anabel.jpg",
     "price": 99.99,
 
     "specifications": {
@@ -114,7 +114,7 @@
 
     "category": "Bags",
     "description": "The fearcest bag you'll ever own. Made from real snakeskin with accents in pink adn gold",
-    "image": "/src/assets/images/bags/snake.jpg",
+    "image": "@/assets/images/bags/snake.jpg",
     "price": 99.99,
 
     "specifications": {
@@ -151,7 +151,7 @@
 
     "category": "Bags",
     "description": "This is a yellow backpack that will take all of your school supplies, work supplies, and even your lunch. Also great as a carry-on bag",
-    "image": "/src/assets/images/bags/school.jpg",
+    "image": "@/assets/images/bags/school.jpg",
     "price": 29.99,
 
     "specifications": {
@@ -187,7 +187,7 @@
     "name": "Duffel",
     "category": "Bags",
     "description": "Will swallow all of your clothes and shoes. Great for a weekend getaway or just for packing your gym clothes",
-    "image": "/src/assets/images/bags/duffel.jpg",
+    "image": "@/assets/images/bags/duffel.jpg",
     "price": 129.99,
 
     "specifications": {
@@ -224,7 +224,7 @@
 
     "category": "Bags",
     "description": "Great looking clutch bag. Perfect for a night out on the town. Comes with a chain strap",
-    "image": "/src/assets/images/bags/clutch.jpg",
+    "image": "@/assets/images/bags/clutch.jpg",
     "price": 49.99,
 
     "specifications": {
@@ -261,7 +261,7 @@
 
     "category": "Bags",
     "description": "Glamorous black suede bag with a multitude of chain straps",
-    "image": "/src/assets/images/bags/mob.jpg",
+    "image": "@/assets/images/bags/mob.jpg",
     "price": 159.99,
 
     "specifications": {
@@ -298,7 +298,7 @@
 
     "category": "Bags",
     "description": "Goes with any outfit. Great for a day out shopping or a day at the beach. Will swallow all of your essentials",
-    "image": "/src/assets/images/bags/elephant.jpg",
+    "image": "@/assets/images/bags/elephant.jpg",
     "price": 69.99,
 
     "specifications": {

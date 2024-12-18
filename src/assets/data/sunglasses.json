@@ -4,7 +4,7 @@
     "name": "Diva",
     "category": "Sunglasses",
     "description": "This is sunglasses that will make you look like a diva. You're definitely going to turn heads with these on.",
-    "image": "/src/assets/images/sunglasses/diva.jpg",
+    "image": "@/assets/images/sunglasses/diva.jpg",
     "price": 29.99,
     "specifications": {
       "Color": "Pink",
@@ -34,7 +34,7 @@
     "name": "Cool",
     "category": "Sunglasses",
     "description": "Classic look, cool shades. You can't go wrong with these.",
-    "image": "/src/assets/images/sunglasses/cool.jpg",
+    "image": "@/assets/images/sunglasses/cool.jpg",
     "price": 49.99,
     "specifications": {
       "Color": "Gold",
@@ -64,7 +64,7 @@
     "name": "Aviator",
     "category": "Sunglasses",
     "description": "Classic aviator style sunglasses. Cool yellow mirror lenses.",
-    "image": "/src/assets/images/sunglasses/aviator.jpg",
+    "image": "@/assets/images/sunglasses/aviator.jpg",
     "price": 9.99,
     "specifications": {
       "Color": "Gold",
@@ -84,7 +84,7 @@
     "name": "Turtoise",
     "category": "Sunglasses",
     "description": "Old lady glasses. You'll look like a turtle with these on.",
-    "image": "/src/assets/images/sunglasses/turtoise.jpg",
+    "image": "@/assets/images/sunglasses/turtoise.jpg",
     "price": 39.99,
     "specifications": {
       "Color": "Brown",
@@ -114,7 +114,7 @@
     "name": "Marilyn",
     "category": "Sunglasses",
     "description": "These are the sunglasses that Marilyn Monroe wore. You'll look like a movie star with these on. Come with a practical case.",
-    "image": "/src/assets/images/sunglasses/marilyn.jpg",
+    "image": "@/assets/images/sunglasses/marilyn.jpg",
     "price": 299.99,
     "specifications": {
       "Color": "Powder",
