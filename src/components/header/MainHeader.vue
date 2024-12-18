@@ -1,16 +1,19 @@
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue';
-import MainNavbar from '/src/components/header/MainNavbar.vue';
-
+import { computed, ref, onMounted, onUnmounted } from 'vue';
 import { useRouter } from 'vue-router';
+import { useStore } from 'vuex';
+import MainNavbar from '/src/components/header/MainNavbar.vue';
+import LoginButton from '../LoginButton.vue';
 
 const router = useRouter();
 const route = { name: 'Home', path: '/' };
+const store = useStore();
 
 const companyName = ref('Retro Retreat');
 const isScrolled = ref(false);
 const header = ref(null);
 const isOpen = ref(false);
+const showLoginBtn = computed(() => !isAuthenticated.value && !isOpen.value);
 
 const handleScroll = () => {
   if (window.scrollY > 50) {
@@ -33,6 +36,10 @@ onMounted(() => {
 onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll);
 });
+
+const isAuthenticated = computed(
+  () => store.getters['auth/IS_USER_AUTHENTICATED']
+);
 </script>
 
 <template>
@@ -40,7 +47,10 @@ onUnmounted(() => {
     <a :href="route.path" @click="(event) => handleRouting(event, route.path)">
       <h1 v-if="!isOpen">{{ companyName }}</h1></a
     >
-    <MainNavbar @update:isOpen="isOpen = $event" />
+    <div class="nav-btns">
+      <LoginButton v-if="showLoginBtn" />
+      <MainNavbar @update:isOpen="isOpen = $event" />
+    </div>
   </header>
 </template>
 
@@ -48,12 +58,16 @@ onUnmounted(() => {
 #main-header {
   position: fixed;
   width: 100%;
-padding: 1rem 0;
+  padding: 0 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
+#main-header.scrolled {
+  background-color: var(--color-background-transparent);
+  color: white;
+}
 #main-header a {
   color: var(--color-text);
 }
@@ -62,9 +76,10 @@ padding: 1rem 0;
   background-color: transparent;
 }
 
-#main-header.scrolled {
-  background-color: var(--color-background-transparent);
-  /* background-color: rgba(0, 0, 0, 0.8); */
-  color: white;
+#main-header .nav-btns {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  gap: 1rem;
 }
 </style>
