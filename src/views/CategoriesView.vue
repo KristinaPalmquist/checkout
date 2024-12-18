@@ -10,16 +10,7 @@ categories.value = productCategories;
 
 const resolvedCategories = ref([]);
 
-// const resolveImages = async () => {
-//   resolvedCategories.value = await Promise.all(
-//     categories.value.map(async (category) => {
-//       const images = await import(`/src/assets/images/${category}`);
-//       const image = images[0];
-//       // const image = await import(`../assets/images/${category}`);
-//       return { ...category, image: image };
-//     })
-//   );
-// };
+
 const resolveImages = async () => {
   resolvedCategories.value = await Promise.all(
     categories.value.map(async (category) => {
@@ -74,16 +65,6 @@ const navigateToCategory = (categoryName) => {
   display: block;
   width: 100%;
 }
-/* 
-
-.category-list {
-
-
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 300px);
-  grid-auto-rows: 20px;
-  grid-gap: 10px;
-}*/
 
 .category-item {
   transition: transform 0.3s ease;

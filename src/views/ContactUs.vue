@@ -59,7 +59,7 @@ const handleSubmit = () => {
         </div>
         <div>
           <label for="message">Message</label>
-          <textarea id="message" v-model="message" required></textarea>
+          <textarea id="message" v-model="message" rows="7" required></textarea>
         </div>
         <div class="btn-div">
           <BasicButton
@@ -102,10 +102,7 @@ const handleSubmit = () => {
 #contact-us {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 2rem;
   height: calc(100vh - 3rem);
-  margin-top: 3rem;
 }
 
 .contact-form {
@@ -116,6 +113,17 @@ const handleSubmit = () => {
   justify-content: center;
   gap: 1rem;
   width: 100%;
+}
+.contact-form form {
+  width: 100%;
+}
+
+.contact-form label,
+.contact-form input,
+.contact-form textarea {
+  display: block;
+  width: 90%;
+  margin: auto;
 }
 
 .contact-messages {
@@ -128,6 +136,7 @@ const handleSubmit = () => {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+  padding-bottom: 15%;
   gap: 1rem;
 }
 
@@ -143,6 +152,7 @@ const handleSubmit = () => {
   align-items: flex-start;
   justify-content: space-evenly;
   text-align: left;
+  padding-left: 15%;
 }
 
 .message-item {

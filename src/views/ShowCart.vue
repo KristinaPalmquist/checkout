@@ -30,9 +30,8 @@ const decreaseQuantity = (index, quantity) => {
 onMounted(() => {
   store.dispatch('loadCart').then(() => {
     console.log('Cart products from Vuex store:', cartProducts.value);
-    cartProducts.value.forEach(element => {
+    cartProducts.value.forEach((element) => {
       console.log(element);
-      
     });
   });
 });
@@ -55,7 +54,7 @@ const goToCheckout = () => {
 </script>
 
 <template>
-  <div id="show-cart">
+  <div id="show-cart" class="component-container">
     <h1>Your Cart</h1>
     <ul>
       <li
@@ -94,10 +93,7 @@ const goToCheckout = () => {
     </ul>
 
     <div class="total">
-      <p>
-        <strong>Total:</strong>
-        {{ formatCurrency(totalPrice) }}
-      </p>
+      <h2>Total: {{ formatCurrency(totalPrice) }}</h2>
     </div>
 
     <div class="btn-div">
@@ -115,13 +111,13 @@ const goToCheckout = () => {
 </template>
 
 <style scoped>
-#show-cart {
+/* #show-cart {
   width: 90vw;
   padding: 2rem;
   text-align: center;
   display: grid;
   gap: 1rem;
-}
+} */
 
 #show-cart ul {
   list-style-type: none;
@@ -137,10 +133,18 @@ const goToCheckout = () => {
 }
 
 #show-cart .total {
-  text-align: right;
-  margin-top: 1rem;
-  margin-right: 15vw;
-  font-size: 1.2rem;
+  width: max-content;
+  position: relative;
+  left: 75%;
+  transform: translateX(-50%);
+  padding-top: 2rem;
+}
+
+#show-cart .total h2 {
+  display: inline;
+  /* text-align: right; */
+  /* margin-top: 1rem;
+  margin-right: 15vw; */
 }
 
 #show-cart .product-image {

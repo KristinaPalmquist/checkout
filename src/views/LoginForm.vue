@@ -63,10 +63,10 @@ const handleLogin = () => {
 </script>
 
 <template>
-  <div>
-    <h3>Login Form</h3>
+  <div id="login-form" class="component-container">
+    <h1>Login Form</h1>
     <form @submit.prevent="handleLogin">
-      <label for="username">Username:</label>
+      <label for="username">Username</label>
       <input
         type="text"
         id="userName"
@@ -78,7 +78,7 @@ const handleLogin = () => {
       />
       <p class="error" v-show="showUserNameError">{{ userNameError }}</p>
 
-      <label for="password">Password:</label>
+      <label for="password">Password</label>
       <input
         type="password"
         id="password"
@@ -89,23 +89,29 @@ const handleLogin = () => {
         required
       />
       <p class="error" v-show="showPasswordError">{{ passwordError }}</p>
-<div class="btn-div">
-      <BasicButton
-        :btnType="'button'"
-        :btnText="'Create Account'"
-        :btnColor="createBtnColor"
-        :btnTextColor="createBtnTextColor"
-      />
-      <BasicButton
-        :btnType="'submit'"
-        :btnText="'Login'"
-        :btnFunction="handleLogin"
-        :btnClass="loginBtnClass"
-      /></div>
+      <div class="btn-div">
+        <BasicButton
+          :btnType="'button'"
+          :btnText="'Create Account'"
+          :btnColor="createBtnColor"
+          :btnTextColor="createBtnTextColor"
+        />
+        <BasicButton
+          :btnType="'submit'"
+          :btnText="'Login'"
+          :btnFunction="handleLogin"
+          :btnClass="loginBtnClass"
+        />
+      </div>
 
       <p>Output: {{ output }}</p>
     </form>
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+#login-form form {
+  width: clamp(300px, 50%, 800px);
+  margin: 0 auto;
+}
+</style>

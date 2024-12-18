@@ -257,9 +257,6 @@ const onSubmit = () => {
 <style>
 #checkout-form {
   width: clamp(300px, 70%, 1000px);
-  background-color: #eee;
-  padding: 2rem;
-  border-radius: 0.5rem;
   font-size: 1.2rem;
   font-size: 1rem;
   display: flex;
@@ -268,21 +265,14 @@ const onSubmit = () => {
   flex-direction: column;
   gap: 1rem;
   margin: 1rem auto;
-  margin-top: 5rem;
-  border: 1px solid #ccc;
-  color: #000;
 }
-/* 
-#checkout-form div {
-  width: 100%;
-} */
 
 #checkout-form div:not(.section-headers-wrapper) {
   width: 90%;
 }
 
 #checkout-form .section-headers-wrapper {
-  border: 1px solid #cbd2d9;
+  /* border: 1px solid #cbd2d9; */
   border-radius: 0.3rem;
   display: inline-flex;
   overflow: hidden;
@@ -294,7 +284,7 @@ const onSubmit = () => {
   color: #333;
   outline: none;
   padding: 0.25em 0.75em 0.25em 1.25em;
-  position: relative;
+  /* position: relative; */
 }
 
 #checkout-form .section-header:after,

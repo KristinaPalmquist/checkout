@@ -43,7 +43,6 @@ onMounted(() => {
 <template>
   <div id="category-products" class="component-container">
     <h1>Products in {{ categoryName }}</h1>
-    <!-- <img :src="products[0].image" :alt="categoryName" class="category-image" /> -->
     <div class="product-list">
       <div
         v-for="product in products"

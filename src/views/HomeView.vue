@@ -5,7 +5,7 @@ const companyName = 'Retro Retreat';
 </script>
 
 <template>
-  <div id="home-view">
+  <div id="home-view" class="component-container">
     <LoginButton />
     <h1>Welcome to {{ companyName }}</h1>
     <p>
@@ -42,25 +42,9 @@ const companyName = 'Retro Retreat';
 </template>
 
 <style scoped>
-#home-view {
-  padding: 2rem;
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
-}
 
-h1 {
-  margin-bottom: 1rem;
-}
 
-h2 {
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-}
 
-p {
-  line-height: 1.6;
-}
 
 ul {
   list-style-type: none;
@@ -76,12 +60,4 @@ li strong {
   width: 200px;
 }
 
-.call-to-action {
-  margin-top: 2rem;
-  align-items: center;
-}
-
-.call-to-action p {
-  margin-bottom: 1rem;
-}
 </style>

@@ -1,16 +1,30 @@
 TODO & IDEAS
 Color Scheme
-Images
 Searchfunction
-Categories
-Product
 Products
-Cart
+components 
+    card
+    input
 Database
     users
     products
     orders
-
+organize json-files
+    trousers
+    headwear
+    footwear
+    misc
+    tops
+    dresses
+    jackets
+    sunglasses
+    bags
+Make company name in header clickable => home
+styling for class component-container
+add cta-section at bottom of home-views
+add images to home and about views
+functionality for login & create account
+welcome view - user details, recommended items, 
 
 
 
@@ -18,3 +32,8 @@ DONE
 Custom Pointer
 Navbar
 Fonts
+Categories
+Product
+Images
+Cart
+organize json-files

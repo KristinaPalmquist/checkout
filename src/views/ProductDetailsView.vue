@@ -67,49 +67,49 @@ onMounted(() => {
 </script>
 
 <template>
-  <div v-if="product" class="product-details">
-    <div class="product-image">
-      <img :src="product.image" :alt="product.name" />
-    </div>
-    <div class="product-info">
-      <h1>{{ product.name }}</h1>
-      <p>{{ product.description }}</p>
-      <p>{{ formatCurrency(product.price) }}</p>
-      <div class="average-rating">
-        <!-- <h2>Average Rating</h2> -->
-        <p>
-          {{ renderStars(Math.round(averageRating)) }} ({{ averageRating }})
-        </p>
+  <div v-if="product" id="product-details" class="component-container">
+    <div class="product-details">
+      <div class="product-image">
+        <img :src="product.image" :alt="product.name" />
       </div>
-      <div class="specifications">
-        <!-- <h2>Specifications</h2> -->
-        <ul>
-          <li v-for="(value, key) in product.specifications" :key="key">
-            <strong>{{ key }}:</strong> {{ value }}
-          </li>
-        </ul>
-      </div>
-      <details class="reviews">
-        <summary>
-          <h2>Reviews</h2>
-        </summary>
-        <ul>
-          <li v-for="review in product.reviews" :key="review.id">
-            <strong>{{ review.author }}:</strong> {{ review.comment }}
-            <p>{{ renderStars(review.rating) }}</p>
-          </li>
-        </ul>
-      </details>
-      <div class="message-div">
-        <p class="message" v-show="showMessage">{{ message }}</p>
-      </div>
-      <div class="btn-div">
-        <BasicButton :btnText="'Go to Cart'" :btnFunction="goToCart" />
-        <BasicButton
-          :btnText="'Add to Cart'"
-          :btnFunction="addToCart"
-          :btnClass="'cta-btn'"
-        />
+      <div class="product-info">
+        <h1>{{ product.name }}</h1>
+        <p>{{ product.description }}</p>
+        <p>{{ formatCurrency(product.price) }}</p>
+        <div class="average-rating">
+          <p>
+            {{ renderStars(Math.round(averageRating)) }} ({{ averageRating }})
+          </p>
+        </div>
+        <div class="specifications">
+          <ul>
+            <li v-for="(value, key) in product.specifications" :key="key">
+              <strong>{{ key }}:</strong> {{ value }}
+            </li>
+          </ul>
+        </div>
+        <details class="reviews">
+          <summary>
+            <h3>Reviews</h3>
+          </summary>
+          <ul>
+            <li v-for="review in product.reviews" :key="review.id">
+              <strong>{{ review.author }}:</strong> {{ review.comment }}
+              <p>{{ renderStars(review.rating) }}</p>
+            </li>
+          </ul>
+        </details>
+        <div class="message-div">
+          <p class="message" v-show="showMessage">{{ message }}</p>
+        </div>
+        <div class="btn-div">
+          <BasicButton :btnText="'Go to Cart'" :btnFunction="goToCart" />
+          <BasicButton
+            :btnText="'Add to Cart'"
+            :btnFunction="addToCart"
+            :btnClass="'cta-btn'"
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -119,12 +119,10 @@ onMounted(() => {
 .product-details {
   width: 90vw;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 2rem;
-  height: calc(100vh - 2rem);
 }
 .product-info {
   display: flex;
@@ -150,7 +148,7 @@ onMounted(() => {
   border-radius: 2rem;
   margin: auto;
   border: 16px solid transparent;
-  outline: 3px solid hotpink
+  outline: 3px solid hotpink;
 }
 
 .product-info h1 {
@@ -204,13 +202,10 @@ onMounted(() => {
   font-size: 1rem;
   transition: transform 0.3s ease;
   margin-left: 2rem;
-  margin-bottom: 1rem;
 }
 
 details[open] summary::after {
   content: 'Close ▲';
   transform: rotate(3600deg);
 }
-
-
 </style>
