@@ -41,7 +41,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="products">
+  <div id="category-products" class="component-container">
     <h1>Products in {{ categoryName }}</h1>
     <!-- <img :src="products[0].image" :alt="categoryName" class="category-image" /> -->
     <div class="product-list">
@@ -60,10 +60,7 @@ onMounted(() => {
 </template>
 
 <style scoped>
-.products {
-  padding: 2rem;
-  text-align: center;
-}
+
 
 .category-image {
   width: 100%;

@@ -138,114 +138,120 @@ const onSubmit = () => {
 </script>
 
 <template>
-  <form id="checkout-form" @submit.prevent="onSubmit">
-    <h2>Checkout</h2>
-
-    <div class="section-headers-wrapper">
-      <h3
-        :class="{ active: showUserInfo, inactive: !showUserInfo }"
-        class="section-header"
-      >
-        User
-      </h3>
-      <h3
-        :class="{ active: showBillingAddress, inactive: !showBillingAddress }"
-        class="section-header"
-      >
-        Billing
-      </h3>
-      <h3
-        :class="{ active: showDeliveryAddress, inactive: !showDeliveryAddress }"
-        class="section-header"
-      >
-        Delivery
-      </h3>
-      <h3
-        :class="{ active: showPaymentMethod, inactive: !showPaymentMethod }"
-        class="section-header"
-      >
-        Payment
-      </h3>
-    </div>
-
-    <UserInfo
-      @userInfo="handleUserInfo"
-      v-if="showUserInfo"
-      :userInfo="userInfo"
-    />
-    <BillingAddress
-      @billingAddress="handleBillingAddress"
-      v-if="showBillingAddress"
-      :billingAddress="billingAddress"
-    />
-    <div id="same-address-checkbox" v-if="showDeliveryAddress">
-      <div v-if="useSameAddress">
-        <input
-          type="checkbox"
-          name="sameAddress"
-          id="sameAddress"
-          v-model="useSameAddress"
-          @click="handleSameAdress"
-        />
-        <label for="sameAddress">Use Billing Address as Delivery Address</label>
+  <div id="checkout" class="component-container">
+    <h1>Checkout</h1>
+    <form id="checkout-form" @submit.prevent="onSubmit">
+      <div class="section-headers-wrapper">
+        <h3
+          :class="{ active: showUserInfo, inactive: !showUserInfo }"
+          class="section-header"
+        >
+          User
+        </h3>
+        <h3
+          :class="{ active: showBillingAddress, inactive: !showBillingAddress }"
+          class="section-header"
+        >
+          Billing
+        </h3>
+        <h3
+          :class="{
+            active: showDeliveryAddress,
+            inactive: !showDeliveryAddress,
+          }"
+          class="section-header"
+        >
+          Delivery
+        </h3>
+        <h3
+          :class="{ active: showPaymentMethod, inactive: !showPaymentMethod }"
+          class="section-header"
+        >
+          Payment
+        </h3>
       </div>
 
-      <DeliveryAddress
-        @deliveryAddress="handleDeliveryAddress"
-        v-else
-        :deliveryAddress="deliveryAddress"
+      <UserInfo
+        @userInfo="handleUserInfo"
+        v-if="showUserInfo"
+        :userInfo="userInfo"
       />
-    </div>
-
-    <PaymentMethod
-      @paymentMethod="handlePaymentMethod"
-      v-if="showPaymentMethod"
-      :paymentMethod="paymentMethod"
-      :telephoneNumber="userInfo[3]"
-    />
-    <div class="error" v-if="error">
-      <p>{{ error }}</p>
-    </div>
-
-    <div
-      class="btn-div"
-      v-if="showOrientationBtns"
-      v-bind:style="showUserInfo ? { position: 'relative' } : ''"
-    >
-      <BasicButton
-        :btnType="button"
-        :btnText="'Back'"
-        :btnFunction="() => previousSection('billingAddress')"
-        v-if="showBillingAddress || showDeliveryAddress"
+      <BillingAddress
+        @billingAddress="handleBillingAddress"
+        v-if="showBillingAddress"
+        :billingAddress="billingAddress"
       />
+      <div id="same-address-checkbox" v-if="showDeliveryAddress">
+        <div v-if="useSameAddress">
+          <input
+            type="checkbox"
+            name="sameAddress"
+            id="sameAddress"
+            v-model="useSameAddress"
+            @click="handleSameAdress"
+          />
+          <label for="sameAddress"
+            >Use Billing Address as Delivery Address</label
+          >
+        </div>
 
-      <BasicButton
-        :btnType="button"
-        :btnText="'Next'"
-        :btnFunction="nextSection"
-        :btnClass="'cta-btn'"
-        v-if="showUserInfo || showBillingAddress || showDeliveryAddress"
-        v-bind:style="
-          showUserInfo
-            ? {
-                position: 'absolute',
-                left: '75%',
-                transform: 'translateX(-50%)',
-              }
-            : ''
-        "
-      />
-    </div>
+        <DeliveryAddress
+          @deliveryAddress="handleDeliveryAddress"
+          v-else
+          :deliveryAddress="deliveryAddress"
+        />
+      </div>
 
-    <div class="btn-div" v-if="showPaymentMethod">
-      <BasicButton :btnText="'Clear form'" :btnFunction="clearForm" />
-      <BasicButton
-        :btnText="'Submit'"
-        :btnFunction="onSubmit"
-        :btnClass="'cta-btn'"
+      <PaymentMethod
+        @paymentMethod="handlePaymentMethod"
+        v-if="showPaymentMethod"
+        :paymentMethod="paymentMethod"
+        :telephoneNumber="userInfo[3]"
       />
-    </div>
-  </form>
+      <div class="error" v-if="error">
+        <p>{{ error }}</p>
+      </div>
+
+      <div
+        class="btn-div"
+        v-if="showOrientationBtns"
+        v-bind:style="showUserInfo ? { position: 'relative' } : ''"
+      >
+        <BasicButton
+          :btnType="button"
+          :btnText="'Back'"
+          :btnFunction="() => previousSection('billingAddress')"
+          v-if="showBillingAddress || showDeliveryAddress"
+        />
+
+        <BasicButton
+          :btnType="button"
+          :btnText="'Next'"
+          :btnFunction="nextSection"
+          :btnClass="'cta-btn'"
+          v-if="showUserInfo || showBillingAddress || showDeliveryAddress"
+          v-bind:style="
+            showUserInfo
+              ? {
+                  position: 'absolute',
+                  left: '75%',
+                  transform: 'translateX(-50%)',
+                }
+              : ''
+          "
+        />
+      </div>
+
+      <div class="btn-div" v-if="showPaymentMethod">
+        <BasicButton :btnText="'Clear form'" :btnFunction="clearForm" />
+        <BasicButton
+          :btnText="'Submit'"
+          :btnFunction="onSubmit"
+          :btnClass="'cta-btn'"
+        />
+      </div>
+    </form>
+  </div>
 </template>
 
 <style>

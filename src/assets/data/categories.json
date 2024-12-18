@@ -2,46 +2,46 @@
   {
     "id": 1,
     "name": "Bags",
-    "image": "../assets/images/bags/alvaro-serrano-pFLNV4gkXsc-unsplash.jpg"
+    "image": "/src/assets/images/bags/alvaro-serrano-pFLNV4gkXsc-unsplash.jpg"
   },
   {
     "id": 2,
     "name": "Dresses",
-    "image": "../assets/images/dresses/graca-assane-oWVOmCtTvwk-unsplash.jpg"
+    "image": "/src/assets/images/dresses/graca-assane-oWVOmCtTvwk-unsplash.jpg"
   },
   {
     "id": 3,
     "name": "Footwear",
-    "image": "../assets/images/footwear/joan-mm-EHuyA_oUCok-unsplash.jpg"
+    "image": "/src/assets/images/footwear/joan-mm-EHuyA_oUCok-unsplash.jpg"
   },
   {
     "id": 4,
     "name": "Headwear",
-    "image": "../assets/images/headwear/giovanna-gomes-xbSFDSlw2Yc-unsplash.jpg"
+    "image": "/src/assets/images/headwear/giovanna-gomes-xbSFDSlw2Yc-unsplash.jpg"
   },
   {
     "id": 5,
     "name": "Jackets",
-    "image": "../assets/images/jackets/sebastian-pociecha--JUoxG4sp88-unsplash.jpg"
+    "image": "/src/assets/images/jackets/sebastian-pociecha--JUoxG4sp88-unsplash.jpg"
   },
   {
     "id": 6,
     "name": "Miscellaneous",
-    "image": "../assets/images/miscellaneous/xyzcharlize-nMaynn82WZ0-unsplash.jpg"
+    "image": "/src/assets/images/miscellaneous/coffee-cup.jpg"
   },
   {
     "id": 7,
     "name": "Sunglasses",
-    "image": "../assets/images/sunglasses/s-o-c-i-a-l-c-u-t-_hwL-LeytRc-unsplash.jpg"
+    "image": "/src/assets/images/sunglasses/s-o-c-i-a-l-c-u-t-_hwL-LeytRc-unsplash.jpg"
   },
   {
     "id": 8,
     "name": "Tops",
-    "image": "../assets/images/tops/collins-lesulie-QNJo7NRczlU-unsplash.jpg"
+    "image": "/src/assets/images/tops/collins-lesulie-QNJo7NRczlU-unsplash.jpg"
   },
   {
     "id": 9,
     "name": "Trousers",
-    "image": "../assets/images/trousers/nick-fewings-VfL8c53nscM-unsplash.jpg"
+    "image": "/src/assets/images/trousers/jeans.jpg"
   }
 ]

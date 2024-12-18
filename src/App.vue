@@ -5,12 +5,19 @@ import MainHeader from './components/header/MainHeader.vue';
 
 <template>
   <!-- <div> -->
-    <CustomCursor />
-      <MainHeader />
-    <main>
-      <router-view></router-view>
-    </main>
+  <CustomCursor />
+  <MainHeader />
+  <main>
+    <router-view></router-view>
+  </main>
   <!-- </div> -->
 </template>
 
-<style scoped></style>
+<style scoped>
+main {
+  padding-top: 70px;
+  min-height: 100vh;
+  background-color: #f9f9f9;
+  transition: background-color 0.3s;
+}
+</style>

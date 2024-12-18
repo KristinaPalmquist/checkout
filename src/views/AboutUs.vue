@@ -1,34 +1,51 @@
 <script setup></script>
 
 <template>
-  <div class="about-us">
+  <div id="about-us" class="component-container">
     <section class="introduction">
-      <h2>About Us</h2>
+      <h1>About Us</h1>
       <p>
-        Welcome to Retro Retreat, your go-to destination for preworn fashion, second-hand, and vintage clothing. Our mission is to promote sustainable fashion by offering a curated selection of unique and timeless pieces.
+        Welcome to Retro Retreat, your go-to destination for preworn fashion,
+        second-hand, and vintage clothing. Our mission is to promote sustainable
+        fashion by offering a curated selection of unique and timeless pieces.
       </p>
       <p>
-        Over the years, we have expanded our collection and services, reaching eco-conscious customers worldwide.
+        Over the years, we have expanded our collection and services, reaching
+        eco-conscious customers worldwide.
       </p>
     </section>
     <section class="team">
-      <h3>Our Team</h3>
+      <h2>Our Team</h2>
       <p>
-        Our team is composed of dedicated professionals who are passionate about sustainable fashion. From our customer service representatives to our product curators, everyone plays a crucial role in our mission to make fashion more sustainable.
+        Our team is composed of dedicated professionals who are passionate about
+        sustainable fashion. From our customer service representatives to our
+        product curators, everyone plays a crucial role in our mission to make
+        fashion more sustainable.
       </p>
     </section>
     <section class="values">
-      <h3>Our Values</h3>
+      <h2>Our Values</h2>
       <ul>
-        <li><strong>Customer Satisfaction:</strong> We prioritize our customers' needs and strive to exceed their expectations with every purchase.</li>
-        <li><strong>Sustainability:</strong> We are committed to reducing fashion waste by promoting the reuse and recycling of clothing.</li>
-        <li><strong>Integrity:</strong> We conduct our business with honesty and transparency, building trust with our customers and partners.</li>
-        <li><strong>Teamwork:</strong> We believe in the power of collaboration and work together to achieve our sustainability goals.</li>
+        <li>
+          <strong>Customer Satisfaction:</strong> We prioritize our customers'
+          needs and strive to exceed their expectations with every purchase.
+        </li>
+        <li>
+          <strong>Sustainability:</strong> We are committed to reducing fashion
+          waste by promoting the reuse and recycling of clothing.
+        </li>
+        <li>
+          <strong>Integrity:</strong> We conduct our business with honesty and
+          transparency, building trust with our customers and partners.
+        </li>
+        <li>
+          <strong>Teamwork:</strong> We believe in the power of collaboration
+          and work together to achieve our sustainability goals.
+        </li>
       </ul>
     </section>
   </div>
-  
-  
+
   <!-- <div class="about-us">
 
 
@@ -64,30 +81,6 @@
 </template>
 
 <style scoped>
-
-.about-us {
-  padding: 2rem;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-h2 {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-section {
-  margin-bottom: 2rem;
-}
-
-h3 {
-  margin-bottom: 1rem;
-}
-
-p {
-  line-height: 1.6;
-}
-
 ul {
   list-style-type: none;
   padding: 0;
@@ -101,5 +94,4 @@ li strong {
   display: inline-block;
   width: 150px;
 }
-
 </style>

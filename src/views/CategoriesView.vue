@@ -5,16 +5,21 @@ import productCategories from '../assets/data/categories.json';
 
 const router = useRouter();
 
-// categories = [
-// bags, dresses, footwear, headwear, jackets, miscellaneous, sunglasses, tops, trousers
-// ];
-
 const categories = ref([]);
 categories.value = productCategories;
 
-
 const resolvedCategories = ref([]);
 
+// const resolveImages = async () => {
+//   resolvedCategories.value = await Promise.all(
+//     categories.value.map(async (category) => {
+//       const images = await import(`/src/assets/images/${category}`);
+//       const image = images[0];
+//       // const image = await import(`../assets/images/${category}`);
+//       return { ...category, image: image };
+//     })
+//   );
+// };
 const resolveImages = async () => {
   resolvedCategories.value = await Promise.all(
     categories.value.map(async (category) => {
@@ -29,18 +34,12 @@ onMounted(() => {
 });
 
 const navigateToCategory = (categoryName) => {
-  // router.push({
-  //   name: 'CategoryProducts',
-  //   params: { categoryName: category.name.toLowerCase() }, // Ensure the category name is in lowercase
-  //   query: { image: category.image },
-  // });
-
   router.push(`/categories/${categoryName.toLowerCase()}`);
 };
 </script>
 
 <template>
-  <div class="categories">
+  <div id="categories-view" class="component-container">
     <h1>Shop by Category</h1>
     <div class="category-list">
       <div
@@ -61,11 +60,6 @@ const navigateToCategory = (categoryName) => {
 </template>
 
 <style scoped>
-.categories {
-  padding: 2rem;
-  text-align: center;
-}
-
 .category-list {
   padding-top: 2rem;
   column-count: 4;
