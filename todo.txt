@@ -1,7 +1,8 @@
 TODO & IDEAS
 Color Scheme
-Searchfunction
-Products
+Search function
+View for all Products
+Make categories clickable from each product detail view
 components 
     card
     input
@@ -16,14 +17,15 @@ organize json-files
     misc
     tops
     dresses
-
-
 styling for class component-container
-add cta-section at bottom of home-views
+add cta-section at bottom of home-view
 add images to home and about views
 functionality for login & create account
 welcome view - user details, recommended items, 
 implement light/dark theme colors
+possibility to leave a review when logged in
+show more clearly which comment is associated to each ranking
+
 
 
 
