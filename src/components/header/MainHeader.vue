@@ -1,11 +1,11 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
-import MainNavbar from './MainNavbar.vue';
+import MainNavbar from '/src/components/header/MainNavbar.vue';
 
 import { useRouter } from 'vue-router';
 
 const router = useRouter();
-const route = { name: 'Home', path: '/' }
+const route = { name: 'Home', path: '/' };
 
 const companyName = ref('Retro Retreat');
 const isScrolled = ref(false);
@@ -37,10 +37,9 @@ onUnmounted(() => {
 
 <template>
   <header id="main-header" :class="{ scrolled: isScrolled }" ref="header">
-    <a 
-        :href="route.path"
-        @click="(event) => handleRouting(event, route.path)">
-    <h1 v-if="!isOpen">{{ companyName }}</h1></a>
+    <a :href="route.path" @click="(event) => handleRouting(event, route.path)">
+      <h1 v-if="!isOpen">{{ companyName }}</h1></a
+    >
     <MainNavbar @update:isOpen="isOpen = $event" />
   </header>
 </template>
@@ -59,9 +58,9 @@ onUnmounted(() => {
   color: var(--color-text);
 }
 
-#main-header  a:hover {
-    background-color: transparent;
-  }
+#main-header a:hover {
+  background-color: transparent;
+}
 
 #main-header.scrolled {
   background-color: var(--color-background-transparent);
