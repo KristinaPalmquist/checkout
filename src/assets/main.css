@@ -1,13 +1,12 @@
 @import './base.css';
-:root {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
+
 
 #app {
   width: 100vw;  
   font-weight: normal;
+  /* background-color: var(--color-background);
+  color: var(--color-text); */
+
 }
 
 h1 {
@@ -16,6 +15,7 @@ h1 {
   font-style: normal;
   text-align: center;
   margin: 0.7rem 0;
+  color: var(--color-text)
 }
 
 h2,
@@ -27,6 +27,7 @@ button {
   font-style: normal;
   text-align: center;
   margin: 0.5rem 0;
+  color: var(--color-text)
 }
 
 p {

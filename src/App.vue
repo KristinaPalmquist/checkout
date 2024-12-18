@@ -17,7 +17,5 @@ import MainHeader from './components/header/MainHeader.vue';
 main {
   padding-top: 70px;
   min-height: 100vh;
-  background-color: #f9f9f9;
-  transition: background-color 0.3s;
 }
 </style>
