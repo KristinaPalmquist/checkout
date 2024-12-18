@@ -116,17 +116,9 @@ onUnmounted(() => {
   top: 1rem;
   left: 0;
   width: calc(100vw - 7rem);
-  /* margin: auto; */
-  /* margin-left: -2rem; */
-  /* margin: 0.2rem 0.2rem 0.2rem -3rem; */
-
-  /* position: fixed; */
   background-color: rgba(249, 184, 184, 0.9);
   border-radius: 1rem;
   height: calc(120px * 8);
-  /* width: 100%; */
-  /* margin: 0.2rem 0.2rem; */
-  /* z-index: 100; */
 }
 
 .navbar-background .hamburger {
