@@ -1,72 +1,157 @@
 [
   {
     "id": 1,
-    "name": "Product 1",
-    "description": "This is a description of Product 1",
-    "image": "path/to/product1.jpg",
-    "price": 29.99
+    "name": "Diva",
+    "category": "Sunglasses",
+    "description": "This is sunglasses that will make you look like a diva. You're definitely going to turn heads with these on.",
+    "image": "/src/assets/images/sunglasses/diva.jpg",
+    "price": 29.99,
+    "specifications": {
+      "Color": "Pink",
+      "Size": "n/a",
+      "Material": "Plastic / Metal"
+    },
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "This is a great product",
+        "author": "John Diamond"
+      },
+      {
+        "rating": 2,
+        "comment": "My favourite shades, but they broke after a week",
+        "author": "Sam Gold"
+      },
+      {
+        "rating": 1,
+        "comment": "This is a bad product",
+        "author": "x"
+      }
+    ]
   },
   {
     "id": 2,
-    "name": "Product 2",
-    "description": "This is a description of Product 1",
-    "image": "path/to/product2.jpg",
-    "price": 49.99
+    "name": "Cool",
+    "category": "Sunglasses",
+    "description": "Classic look, cool shades. You can't go wrong with these.",
+    "image": "/src/assets/images/sunglasses/cool.jpg",
+    "price": 49.99,
+    "specifications": {
+      "Color": "Gold",
+      "Size": "n/a",
+      "Material": "Metal"
+    },
+    "reviews": [
+      {
+        "rating": 3,
+        "comment": "This is a great product",
+        "author": "John Doe"
+      },
+      {
+        "rating": 4,
+        "comment": "They are glasses",
+        "author": "anonymous"
+      },
+      {
+        "rating": 3,
+        "comment": "Never took them out of the box",
+        "author": "Anabelle"
+      }
+    ]
   },
   {
     "id": 3,
-    "name": "Product 3",
-    "description": "This is a description of Product 1",
-    "image": "path/to/product3.jpg",
-    "price": 99.99
+    "name": "Aviator",
+    "category": "Sunglasses",
+    "description": "Classic aviator style sunglasses. Cool yellow mirror lenses.",
+    "image": "/src/assets/images/sunglasses/aviator.jpg",
+    "price": 9.99,
+    "specifications": {
+      "Color": "Gold",
+      "Size": "n/a",
+      "Material": "Metal"
+    },
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "Best sunglasses ever!",
+        "author": "John Doe"
+      }
+    ]
   },
   {
     "id": 4,
-    "name": "Product 4",
-    "description": "This is a description of Product 1",
-    "image": "path/to/product4.jpg",
-    "price": 199.99
+    "name": "Turtoise",
+    "category": "Sunglasses",
+    "description": "Old lady glasses. You'll look like a turtle with these on.",
+    "image": "/src/assets/images/sunglasses/turtoise.jpg",
+    "price": 39.99,
+    "specifications": {
+      "Color": "Brown",
+      "Size": "n/a",
+      "Material": "Plastic"
+    },
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "Love the vintage look <3",
+        "author": "Johnny"
+      },
+      {
+        "rating": 4,
+        "comment": "This is a good product",
+        "author": "Adora Bergman"
+      },
+      {
+        "rating": 4,
+        "comment": "Never leave home without them",
+        "author": "Dorianna"
+      }
+    ]
   },
   {
     "id": 5,
-    "name": "Product 5",
-    "description": "This is a description of Product 1",
-    "image": "path/to/product5.jpg",
-    "price": 299.99
-  },
-  {
-    "id": 6,
-    "name": "Product 6",
-    "description": "This is a description of Product 1",
-    "image": "path/to/product6.jpg",
-    "price": 399.99
-  },
-  {
-    "id": 7,
-    "name": "Product 7",
-    "description": "This is a description of Product 1",
-    "image": "path/to/product7.jpg",
-    "price": 499.99
-  },
-  {
-    "id": 8,
-    "name": "Product 8",
-    "description": "This is a description of Product 1",
-    "image": "path/to/product8.jpg",
-    "price": 599.99
-  },
-  {
-    "id": 9,
-    "name": "Product 9",
-    "description": "This is a description of Product 1",
-    "image": "path/to/product9.jpg",
-    "price": 699.99
-  },
-  {
-    "id": 10,
-    "name": "Product 10",
-    "description": "This is a description of Product 1",
-    "image": "path/to/product10.jpg",
-    "price": 799.99
+    "name": "Marilyn",
+    "category": "Sunglasses",
+    "description": "These are the sunglasses that Marilyn Monroe wore. You'll look like a movie star with these on. Come with a practical case.",
+    "image": "/src/assets/images/sunglasses/marilyn.jpg",
+    "price": 299.99,
+    "specifications": {
+      "Color": "Powder",
+      "Size": "n/a",
+      "Material": "Plastic"
+    },
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "This is a great product",
+        "author": "John Doe"
+      },
+      {
+        "rating": 5,
+        "comment": "Wow!",
+        "author": "Jane Doe"
+      },
+      {
+        "rating": 5,
+        "comment": "I feel like a movie star",
+        "author": "Sam Doe"
+      },
+      {
+        "rating": 5,
+        "comment": "I feel like a movie star",
+        "author": "Anonymous"
+      },
+      {
+        "rating": 5,
+        "comment": "I also feel just like a movie star",
+        "author": "Piglet"
+      },
+      {
+        "rating": 1,
+        "comment": "These look old",
+        "author": "Orangina"
+      }
+    ]
   }
 ]

@@ -17,14 +17,14 @@ organize json-files
     tops
     dresses
     jackets
-    sunglasses
-    bags
-Make company name in header clickable => home
+
+
 styling for class component-container
 add cta-section at bottom of home-views
 add images to home and about views
 functionality for login & create account
 welcome view - user details, recommended items, 
+implement light/dark theme colors
 
 
 
@@ -37,3 +37,7 @@ Product
 Images
 Cart
 organize json-files
+    bags
+    sunglasses
+    
+Make company name in header clickable => home

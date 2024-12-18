@@ -1,72 +1,327 @@
 [
   {
     "id": 1,
-    "name": "Product 1",
-    "description": "This is a description of Product 1",
-    "image": "path/to/product1.jpg",
-    "price": 29.99
+    "name": "Leather",
+    "category": "Bags",
+    "description": "Brown leather shoulder bag",
+    "image": "/src/assets/images/bags/leather.jpg",
+    "price": 29.99,
+
+    "specifications": {
+      "Color": "Brown",
+      "Size": "n/a",
+      "Material": "Leather"
+    },
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "This is a great product",
+        "author": "John Doe"
+      },
+      {
+        "rating": 4,
+        "comment": "This is a good product",
+        "author": "Jane Doe"
+      },
+      {
+        "rating": 2,
+        "comment": "This is a product",
+        "author": "Sam Doe"
+      },
+      {
+        "rating": 1,
+        "comment": "This is a bad product",
+        "author": "Samantha Doe"
+      }
+    ]
   },
   {
     "id": 2,
-    "name": "Product 2",
-    "description": "This is a description of Product 1",
-    "image": "path/to/product2.jpg",
-    "price": 49.99
+    "name": "Auntie",
+
+    "category": "Bags",
+    "description": "Lovely pink leather bag",
+    "image": "/src/assets/images/bags/auntie.jpg",
+    "price": 49.99,
+
+    "specifications": {
+      "Color": "Pink",
+      "Size": "n/a",
+      "Material": "Leather"
+    },
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "This is a great product",
+        "author": "John Doe"
+      },
+      {
+        "rating": 4,
+        "comment": "This is a good product",
+        "author": "Jane Doe"
+      },
+      {
+        "rating": 2,
+        "comment": "This is a product",
+        "author": "Sam Doe"
+      },
+      {
+        "rating": 1,
+        "comment": "This is a bad product",
+        "author": "Samantha Doe"
+      }
+    ]
   },
   {
     "id": 3,
-    "name": "Product 3",
-    "description": "This is a description of Product 1",
-    "image": "path/to/product3.jpg",
-    "price": 99.99
+    "name": "Anabel",
+    "category": "Bags",
+    "description": "Red handbag with a unique design. Comes with a shoulder strap",
+    "image": "/src/assets/images/bags/anabel.jpg",
+    "price": 99.99,
+
+    "specifications": {
+      "Color": "Red",
+      "Size": "n/a",
+      "Material": "Plastic"
+    },
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "This is a great product",
+        "author": "John Doe"
+      },
+      {
+        "rating": 4,
+        "comment": "This is a good product",
+        "author": "Jane Doe"
+      },
+      {
+        "rating": 2,
+        "comment": "This is a product",
+        "author": "Sam Doe"
+      },
+      {
+        "rating": 1,
+        "comment": "This is a bad product",
+        "author": "Samantha Doe"
+      }
+    ]
   },
   {
     "id": 4,
-    "name": "Product 4",
-    "description": "This is a description of Product 1",
-    "image": "path/to/product4.jpg",
-    "price": 199.99
+    "name": "Snake",
+
+    "category": "Bags",
+    "description": "The fearcest bag you'll ever own. Made from real snakeskin with accents in pink adn gold",
+    "image": "/src/assets/images/bags/snake.jpg",
+    "price": 99.99,
+
+    "specifications": {
+      "Color": "Multi",
+      "Size": "n/a",
+      "Material": "Snakeskin"
+    },
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "This is a great product",
+        "author": "John Doe"
+      },
+      {
+        "rating": 4,
+        "comment": "This is a good product",
+        "author": "Jane Doe"
+      },
+      {
+        "rating": 2,
+        "comment": "This is a product",
+        "author": "Sam Doe"
+      },
+      {
+        "rating": 1,
+        "comment": "This is a bad product",
+        "author": "Samantha Doe"
+      }
+    ]
   },
   {
     "id": 5,
-    "name": "Product 5",
-    "description": "This is a description of Product 1",
-    "image": "path/to/product5.jpg",
-    "price": 299.99
+    "name": "School",
+
+    "category": "Bags",
+    "description": "This is a yellow backpack that will take all of your school supplies, work supplies, and even your lunch. Also great as a carry-on bag",
+    "image": "/src/assets/images/bags/school.jpg",
+    "price": 29.99,
+
+    "specifications": {
+      "Color": "Yellow",
+      "Size": "n/a",
+      "Material": "Cotton"
+    },
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "This is a great product",
+        "author": "John Doe"
+      },
+      {
+        "rating": 4,
+        "comment": "This is a good product",
+        "author": "Jane Doe"
+      },
+      {
+        "rating": 2,
+        "comment": "This is a product",
+        "author": "Sam Doe"
+      },
+      {
+        "rating": 1,
+        "comment": "This is a bad product",
+        "author": "Samantha Doe"
+      }
+    ]
   },
   {
     "id": 6,
-    "name": "Product 6",
-    "description": "This is a description of Product 1",
-    "image": "path/to/product6.jpg",
-    "price": 399.99
+    "name": "Duffel",
+    "category": "Bags",
+    "description": "Will swallow all of your clothes and shoes. Great for a weekend getaway or just for packing your gym clothes",
+    "image": "/src/assets/images/bags/duffel.jpg",
+    "price": 129.99,
+
+    "specifications": {
+      "Color": "Tan",
+      "Size": "n/a",
+      "Material": "Cotton Canvas"
+    },
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "This is a great product",
+        "author": "John Doe"
+      },
+      {
+        "rating": 4,
+        "comment": "This is a good product",
+        "author": "Jane Doe"
+      },
+      {
+        "rating": 2,
+        "comment": "This is a product",
+        "author": "Sam Doe"
+      },
+      {
+        "rating": 1,
+        "comment": "This is a bad product",
+        "author": "Samantha Doe"
+      }
+    ]
   },
   {
     "id": 7,
-    "name": "Product 7",
-    "description": "This is a description of Product 1",
-    "image": "path/to/product7.jpg",
-    "price": 499.99
+    "name": "Clutch",
+
+    "category": "Bags",
+    "description": "Great looking clutch bag. Perfect for a night out on the town. Comes with a chain strap",
+    "image": "/src/assets/images/bags/clutch.jpg",
+    "price": 49.99,
+
+    "specifications": {
+      "Color": "Brown",
+      "Size": "n/a",
+      "Material": "Polyester"
+    },
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "This is a great product",
+        "author": "John Doe"
+      },
+      {
+        "rating": 4,
+        "comment": "This is a good product",
+        "author": "Jane Doe"
+      },
+      {
+        "rating": 2,
+        "comment": "This is a product",
+        "author": "Sam Doe"
+      },
+      {
+        "rating": 1,
+        "comment": "This is a bad product",
+        "author": "Samantha Doe"
+      }
+    ]
   },
   {
     "id": 8,
-    "name": "Product 8",
-    "description": "This is a description of Product 1",
-    "image": "path/to/product8.jpg",
-    "price": 599.99
+    "name": "Mob",
+
+    "category": "Bags",
+    "description": "Glamorous black suede bag with a multitude of chain straps",
+    "image": "/src/assets/images/bags/mob.jpg",
+    "price": 159.99,
+
+    "specifications": {
+      "Color": "Black",
+      "Size": "n/a",
+      "Material": "Suede"
+    },
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "Great product!",
+        "author": "John Doe"
+      },
+      {
+        "rating": 4,
+        "comment": "This is a good product",
+        "author": "-"
+      },
+      {
+        "rating": 2,
+        "comment": "This is a bag",
+        "author": "Sammy"
+      },
+      {
+        "rating": 5,
+        "comment": "Just awesome",
+        "author": "Anonymous"
+      }
+    ]
   },
   {
     "id": 9,
-    "name": "Product 9",
-    "description": "This is a description of Product 1",
-    "image": "path/to/product9.jpg",
-    "price": 699.99
-  },
-  {
-    "id": 10,
-    "name": "Product 10",
-    "description": "This is a description of Product 1",
-    "image": "path/to/product10.jpg",
-    "price": 799.99
+    "name": "Elephant",
+
+    "category": "Bags",
+    "description": "Goes with any outfit. Great for a day out shopping or a day at the beach. Will swallow all of your essentials",
+    "image": "/src/assets/images/bags/elephant.jpg",
+    "price": 69.99,
+
+    "specifications": {
+      "Color": "Red / White",
+      "Size": "n/a",
+      "Material": "Straw"
+    },
+    "reviews": [
+      {
+        "rating": 3,
+        "comment": "This is a bag with an elephant on it",
+        "author": "Jane"
+      },
+      {
+        "rating": 2,
+        "comment": "This is a product",
+        "author": "Sam Doe"
+      },
+      {
+        "rating": 1,
+        "comment": "Looks like shit",
+        "author": "Samantha X"
+      }
+    ]
   }
 ]

@@ -2,6 +2,11 @@
 import { ref, onMounted, onUnmounted } from 'vue';
 import MainNavbar from './MainNavbar.vue';
 
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
+const route = { name: 'Home', path: '/' }
+
 const companyName = ref('Retro Retreat');
 const isScrolled = ref(false);
 const header = ref(null);
@@ -15,6 +20,12 @@ const handleScroll = () => {
   }
 };
 
+const handleRouting = (event, path) => {
+  event.preventDefault();
+  router.push(path);
+  isOpen.value = false;
+};
+
 onMounted(() => {
   window.addEventListener('scroll', handleScroll);
 });
@@ -26,7 +37,10 @@ onUnmounted(() => {
 
 <template>
   <header id="main-header" :class="{ scrolled: isScrolled }" ref="header">
-    <h1 v-if="!isOpen">{{ companyName }}</h1>
+    <a 
+        :href="route.path"
+        @click="(event) => handleRouting(event, route.path)">
+    <h1 v-if="!isOpen">{{ companyName }}</h1></a>
     <MainNavbar @update:isOpen="isOpen = $event" />
   </header>
 </template>
@@ -41,8 +55,17 @@ onUnmounted(() => {
   justify-content: space-between;
 }
 
+#main-header a {
+  color: var(--color-text);
+}
+
+#main-header  a:hover {
+    background-color: transparent;
+  }
+
 #main-header.scrolled {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: var(--color-background-transparent);
+  /* background-color: rgba(0, 0, 0, 0.8); */
   color: white;
 }
 </style>

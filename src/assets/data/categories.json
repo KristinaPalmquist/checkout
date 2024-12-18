@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Bags",
-    "image": "/src/assets/images/bags/alvaro-serrano-pFLNV4gkXsc-unsplash.jpg"
+    "image": "/src/assets/images/bags/leather.jpg"
   },
   {
     "id": 2,
@@ -37,7 +37,7 @@
   {
     "id": 8,
     "name": "Tops",
-    "image": "/src/assets/images/tops/collins-lesulie-QNJo7NRczlU-unsplash.jpg"
+    "image": "/src/assets/images/tops/diva.jpg"
   },
   {
     "id": 9,
