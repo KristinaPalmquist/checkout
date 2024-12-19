@@ -25,6 +25,13 @@ const fetchProduct = async () => {
   }
 };
 
+const resolveImagePath = (product) => {
+  let name = product.name.replace(/ /g, '-').toLowerCase();
+  let path = `../assets/images/${product.category}/${name}.jpg`;
+  console.log(path);
+  return new URL(path, import.meta.url).href;
+};
+
 const formatCurrency = (value) => {
   return new Intl.NumberFormat('en-US', {
     style: 'currency',
@@ -70,7 +77,8 @@ onMounted(() => {
   <div v-if="product" id="product-details" class="component-container">
     <div class="product-details">
       <div class="product-image">
-        <img :src="product.image" :alt="product.name" />
+        <img :src="resolveImagePath(product.name)" :alt="product.name" />
+        <!-- <img :src="product.image" :alt="product.name" /> -->
       </div>
       <div class="product-info">
         <h1>{{ product.name }}</h1>

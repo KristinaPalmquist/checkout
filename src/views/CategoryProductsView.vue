@@ -36,16 +36,17 @@ const formatCurrency = (value) => {
   }).format(value);
 };
 
-const navigateToProduct = (productName) => {
+const navigateToProduct = (name) => {
+  let productName = name.replace(/ /g, '-').toLowerCase();
   router.push({
     name: 'ProductDetails',
     params: { categoryName, productName },
   });
 };
 
-const resolveImagePath = (productName) => {
-  let name = productName.replace(/ /g, '-').toLowerCase();
-  let path = `../assets/images/${categoryName}/${name}.jpg`;
+const resolveImagePath = (name) => {
+  let productName = name.replace(/ /g, '-').toLowerCase();
+  let path = `../assets/images/${categoryName}/${productName}.jpg`;
   console.log(path);
   return new URL(path, import.meta.url).href;
 };

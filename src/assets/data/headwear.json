@@ -1,15 +1,15 @@
 [
   {
     "id": 1,
-    "name": "Product 1",
+    "name": "Acapulco",
     "category": "Headwear",
-    "description": "This is a description of Product 1",
-    "image": "@/assets/images/headwear/angelo-pantazis-h0AnGGgseio-unsplash.jpg",
-    "price": 29.99,
+    "description": "This is a description of Acapulco",
+    "image": "@/assets/images/headwear/acapulco.jpg",
+    "price": 19.99,
     "specifications": {
-      "Color": "Olive",
+      "Color": "Beige",
       "Size": "L",
-      "Material": "Cotton"
+      "Material": "Straw"
     },
     "reviews": [
       {
@@ -36,15 +36,15 @@
   },
   {
     "id": 2,
-    "name": "Product 2",
+    "name": "Beanie",
     "category": "Headwear",
-    "description": "This is a description of Product 1",
-    "image": "@/assets/images/headwear/bluewater-sweden-iKWTVPLk-VY-unsplash.jpg",
-    "price": 49.99,
+    "description": "This is a description of Beanie",
+    "image": "@/assets/images/headwear/beanie.jpg",
+    "price": 9.99,
     "specifications": {
-      "Color": "Olive",
-      "Size": "L",
-      "Material": "Cotton"
+      "Color": "Orange",
+      "Size": "M",
+      "Material": "Polyester"
     },
     "reviews": [
       {
@@ -71,15 +71,15 @@
   },
   {
     "id": 3,
-    "name": "Product 3",
+    "name": "Carl",
     "category": "Headwear",
-    "description": "This is a description of Product 1",
-    "image": "@/assets/images/headwear/giorgi-iremadze-abe5NW1aqvw-unsplash.jpg",
+    "description": "This is a description of Carl",
+    "image": "@/assets/images/headwear/carl.jpg",
     "price": 99.99,
     "specifications": {
       "Color": "Olive",
       "Size": "L",
-      "Material": "Cotton"
+      "Material": "Wool"
     },
     "reviews": [
       {
@@ -106,13 +106,13 @@
   },
   {
     "id": 4,
-    "name": "Product 4",
+    "name": "Foff",
     "category": "Headwear",
-    "description": "This is a description of Product 1",
-    "image": "@/assets/images/headwear/giovanna-gomes-xbSFDSlw2Yc-unsplash.jpg",
-    "price": 199.99,
+    "description": "This is a description of Foff",
+    "image": "@/assets/images/headwear/foff.jpg",
+    "price": 39.99,
     "specifications": {
-      "Color": "Olive",
+      "Color": "Red",
       "Size": "L",
       "Material": "Cotton"
     },
@@ -141,15 +141,15 @@
   },
   {
     "id": 5,
-    "name": "Product 5",
+    "name": "Hugo",
     "category": "Headwear",
-    "description": "This is a description of Product 1",
-    "image": "@/assets/images/headwear/mindy-sabiston-4fy6N_ijF7U-unsplash.jpg",
-    "price": 299.99,
+    "description": "This is a description of Hugo",
+    "image": "@/assets/images/headwear/hugo.jpg",
+    "price": 19.99,
     "specifications": {
-      "Color": "Olive",
-      "Size": "L",
-      "Material": "Cotton"
+      "Color": "White",
+      "Size": "M",
+      "Material": "Felt"
     },
     "reviews": [
       {
@@ -176,15 +176,15 @@
   },
   {
     "id": 6,
-    "name": "Product 6",
+    "name": "Straw",
     "category": "Headwear",
-    "description": "This is a description of Product 1",
-    "image": "@/assets/images/headwear/mykyta-martynenko-9z5ZLLAsxJk-unsplash.jpg",
+    "description": "This is a description of Straw",
+    "image": "@/assets/images/headwear/straw.jpg",
     "price": 399.99,
     "specifications": {
-      "Color": "Olive",
-      "Size": "L",
-      "Material": "Cotton"
+      "Color": "Light brown",
+      "Size": "S",
+      "Material": "Straw"
     },
     "reviews": [
       {
