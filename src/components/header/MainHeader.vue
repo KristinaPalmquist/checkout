@@ -69,6 +69,7 @@ const isAuthenticated = computed(
   color: white;
 }
 #main-header a {
+  text-decoration: none;
   color: var(--color-text);
 }
 

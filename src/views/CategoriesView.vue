@@ -14,19 +14,20 @@ const resolvedCategories = ref([]);
 const resolveImages = async () => {
   resolvedCategories.value = await Promise.all(
     categories.value.map(async (category) => {
-      const image = await import(category.image);
-      return { ...category, image: image.default };
+      const image = new URL(`../assets/images/${category.folder}/${category.imagename}`, import.meta.url).href;
+      return { ...category, image };
     })
   );
+};
+
+const navigateToCategory = (categoryName) => {
+  router.push(`/categories/${categoryName.toLowerCase()}`);
 };
 
 onMounted(() => {
   resolveImages();
 });
 
-const navigateToCategory = (categoryName) => {
-  router.push(`/categories/${categoryName.toLowerCase()}`);
-};
 </script>
 
 <template>

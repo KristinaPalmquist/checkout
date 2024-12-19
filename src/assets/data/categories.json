@@ -2,46 +2,64 @@
   {
     "id": 1,
     "name": "Bags",
+    "folder": "bags",
+    "imagename": "leather.jpg",
     "image": "@/assets/images/bags/leather.jpg"
   },
   {
     "id": 2,
     "name": "Dresses",
+    "folder": "dresses",
+    "imagename": "banana.jpg",
     "image": "@/assets/images/dresses/banana.jpg"
   },
   {
     "id": 3,
     "name": "Footwear",
+    "folder": "footwear",
+    "imagename": "joan-mm-EHuyA_oUCok-unsplash.jpg",
     "image": "@/assets/images/footwear/joan-mm-EHuyA_oUCok-unsplash.jpg"
   },
   {
     "id": 4,
     "name": "Headwear",
+    "folder": "headwear",
+    "imagename": "giovanna-gomes-xbSFDSlw2Yc-unsplash.jpg",
     "image": "@/assets/images/headwear/giovanna-gomes-xbSFDSlw2Yc-unsplash.jpg"
   },
   {
     "id": 5,
     "name": "Jackets",
+    "folder": "jackets",
+    "imagename": "moana.jpg",
     "image": "@/assets/images/jackets/moana.jpg"
   },
   {
     "id": 6,
     "name": "Miscellaneous",
+    "folder": "miscellaneous",
+    "imagename": "coffee-cup.jpg",
     "image": "@/assets/images/miscellaneous/coffee-cup.jpg"
   },
   {
     "id": 7,
     "name": "Sunglasses",
+    "folder": "sunglasses",
+    "imagename": "marilyn.jpg",
     "image": "@/assets/images/sunglasses/marilyn.jpg"
   },
   {
     "id": 8,
     "name": "Tops",
+    "folder": "tops",
+    "imagename": "collins-lesulie-QNJo7NRczlU-unsplash.jpg",
     "image": "@/assets/images/tops/collins-lesulie-QNJo7NRczlU-unsplash.jpg"
   },
   {
     "id": 9,
     "name": "Trousers",
+    "folder": "trousers",
+    "imagename": "jeans.jpg",
     "image": "@/assets/images/trousers/jeans.jpg"
   }
 ]
