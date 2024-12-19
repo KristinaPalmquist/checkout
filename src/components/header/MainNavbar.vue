@@ -116,7 +116,7 @@ onUnmounted(() => {
   top: 1rem;
   left: 0;
   width: calc(100vw - 7rem);
-  background-color: rgba(249, 184, 184, 0.9);
+  background-color: var(--accent-4-background-color);
   border-radius: 1rem;
   height: calc(120px * 8);
 }
@@ -146,8 +146,7 @@ onUnmounted(() => {
 .line {
   width: 30px;
   height: 3px;
-  background: #33eb39;
-  /* background: var(--accent-color); */
+  background: var(--accent-3-color);
   transition: all 0.3s ease;
 }
 

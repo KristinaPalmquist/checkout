@@ -44,11 +44,19 @@ const btnFunction =
 <style scoped>
 button {
   appearance: none;
-  background-color: #fafbfc;
-  background-image: linear-gradient(1deg, #c4c4c4, #fafbfc 99%);
+  background-color: var(--button-1-color);
+
+  background-image: linear-gradient(
+    1deg,
+    var(--button-2-color),
+    var(--button-1-color) 99%
+  );
+
   background-size: calc(100% + 20px) calc(100% + 20px);
   border-radius: 24px;
-  border: 0.5px solid rgba(72, 77, 73, 0.15);
+
+  border: 0.5px solid var(--vt-c-divider-light-2);
+  /* border: 0.5px solid rgba(72, 77, 73, 0.15); */
   box-sizing: border-box;
   color: #24292e;
   display: inline-block;
@@ -75,7 +83,7 @@ button:hover {
 }
 
 button:disabled {
-  background-color: #fafbfc;
+  background-color: var(--button-1-color);
   border-color: rgba(27, 31, 35, 0.15);
   color: #959da5;
   cursor: default;
@@ -95,8 +103,12 @@ button:-webkit-details-marker {
 }
 
 button.cta-btn {
-  background-color: #33eb39;
-  background-image: linear-gradient(1deg, #7ecc10, #dcf7ba 99%);
+  background-color: var(--accent3-color);
+  background-image: linear-gradient(
+    1deg,
+    var(--accent-5-color),
+    var(--accent-6-color) 99%
+  );
 }
 
 button.small-icon {

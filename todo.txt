@@ -1,4 +1,8 @@
 TODO & IDEAS
+Make responsive
+    mobile
+    widescreen
+404 page with link to home
 Color Scheme
 Search function
 View for all Products

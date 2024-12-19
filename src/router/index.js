@@ -9,6 +9,7 @@ import MainCategories from '@/views/CategoriesView.vue';
 import CategoryProductsView from '@/views/CategoryProductsView.vue';
 import ProductDetailsView from '@/views/ProductDetailsView.vue';
 import ShowCart from '@/views/ShowCart.vue';
+import NotFound from '@/views/NotFound.vue';
 
 const routes = [
   {
@@ -43,14 +44,17 @@ const routes = [
   },
   {
     path: '/checkout',
+    name: 'Checkout',
     component: CheckoutForm,
   },
   {
     path: '/contact',
+    name: 'Contact',
     component: ContactUs,
   },
   {
     path: '/login',
+    name: 'Login',
     component: LoginForm,
   },
   // {path: 'products',
@@ -58,7 +62,13 @@ const routes = [
   // },
   {
     path: '/welcome',
+    name: 'Welcome',
     component: WelcomeUser,
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    name: 'NotFound',
+    component: NotFound,
   },
 ];
 

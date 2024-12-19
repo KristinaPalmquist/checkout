@@ -30,8 +30,20 @@
 /* semantic color variables for this project */
 :root {
   accent-color: var(--accent-color);
-  --accent-color: #1bc570;
-  --dark-accent-color: #1eac65;
+  --accent-1-color: #1bc570;
+  --accent-2-color: #1eac65;
+  --accent-3-color: #33eb39;
+  --accent-4-color: #f9b8b8;
+  --accent-5-color: #7ecc10;
+  --accent-6-color: #dcf7ba;
+
+
+
+  --accent1-background-color: rgba(27, 197, 112, 0.9);
+  --accent-4-background-color: rgba(249,184,184,0.9);
+
+--button-1-color: #fafbfc;
+--button-2-color: #c4c4c4;
 
   --color-background: var(--vt-c-white);
   --color-background-soft: var(--vt-c-white-soft);

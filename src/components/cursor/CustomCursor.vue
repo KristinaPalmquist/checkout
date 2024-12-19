@@ -83,7 +83,7 @@ onUnmounted(() => {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: var(--accent-color);
+  background-color: var(--accent-1-color);
   opacity: 0.5;
   pointer-events: none;
   /* transition: transform 0.1s ease; */
@@ -100,7 +100,7 @@ onUnmounted(() => {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background-color: var(--dark-accent-color);
+  background-color: var(--accent-2-color);
   opacity: 1;
   pointer-events: none;
 }
