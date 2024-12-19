@@ -9,17 +9,25 @@ const { categoryName } = route.params;
 const products = ref([]);
 
 const fetchProducts = async () => {
-  console.log(categoryName);
   try {
     const module = await import(`../assets/data/${categoryName}.json`);
     products.value = module.default;
-    console.log(products.value);
   } catch (error) {
     console.error('Error loading products: ', error);
   }
-  console.log(products.value);
-  console.log(products.value[0].image);
 };
+
+// const fetchProducts = async () => {
+//   console.log('categoryName', categoryName);
+//   try {
+//     const module = await import(`../assets/data/${categoryName}.json`);
+//     products.value = module.default;
+//   } catch (error) {
+//     console.error('Error loading products: ', error);
+//   }
+//   console.log('products.value', products.value);
+//   console.log('products.value[0].image', products.value[0].image);
+// };
 
 const formatCurrency = (value) => {
   return new Intl.NumberFormat('en-US', {
@@ -35,8 +43,24 @@ const navigateToProduct = (productName) => {
   });
 };
 
+const resolveImagePath = (productName) => {
+  let name = productName.replace(/ /g, '-').toLowerCase();
+  let path = `../assets/images/${categoryName}/${name}.jpg`;
+  console.log(path);
+  return new URL(path, import.meta.url).href;
+};
+
+// const resolveImages = async () => {
+//   await Promise.all(
+//     products.value.map(async (product) => {
+//       product.image = await resolveImagePath(product.name);
+//     })
+//   );
+// };
+
 onMounted(() => {
   fetchProducts();
+  // resolveImages()
 });
 </script>
 
@@ -50,7 +74,7 @@ onMounted(() => {
         class="product-item"
         @click="navigateToProduct(product.name)"
       >
-        <img :src="product.image" :alt="product.name" />
+        <img :src="resolveImagePath(product.name)" :alt="product.name" />
         <h2>{{ product.name }}</h2>
         <p>{{ formatCurrency(product.price) }}</p>
       </div>
@@ -59,8 +83,6 @@ onMounted(() => {
 </template>
 
 <style scoped>
-
-
 .category-image {
   width: 100%;
   height: auto;
