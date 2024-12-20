@@ -1,72 +1,282 @@
 [
   {
     "id": 1,
-    "name": "Product 1",
-    "description": "This is a description of Product 1",
-    "image": "path/to/product1.jpg",
-    "price": 29.99
+    "name": "Staff",
+    "category": "Tops",
+    "description": "This is a description of Staff",
+    "image": "@/assets/images/tops/staff.jpg",
+    "price": 9.99,
+    "specifications": {
+      "Color": "White / orange",
+      "Size": "S",
+      "Material": "Cotton"
+    },
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "This is a great product",
+        "author": "John Doe"
+      },
+      {
+        "rating": 4,
+        "comment": "This is a good product",
+        "author": "Jane Doe"
+      },
+      {
+        "rating": 2,
+        "comment": "This is a product",
+        "author": "Sam Doe"
+      },
+      {
+        "rating": 1,
+        "comment": "This is a bad product",
+        "author": "Samantha Doe"
+      }
+    ]
   },
   {
     "id": 2,
-    "name": "Product 2",
-    "description": "This is a description of Product 1",
-    "image": "path/to/product2.jpg",
-    "price": 49.99
+    "name": "Pixie",
+    "category": "Tops",
+    "description": "Croptop with a deep V-neck. Easy breezy.",
+    "image": "@/assets/images/tops/pixie.jpg",
+    "price": 4.99,
+    "specifications": {
+      "Color": "Teal",
+      "Size": "S",
+      "Material": "Cotton"
+    },
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "This is a great product",
+        "author": "John Doe"
+      },
+      {
+        "rating": 4,
+        "comment": "This is a good product",
+        "author": "Jane Doe"
+      },
+      {
+        "rating": 2,
+        "comment": "This is a product",
+        "author": "Sam Doe"
+      },
+      {
+        "rating": 1,
+        "comment": "This is a bad product",
+        "author": "Samantha Doe"
+      }
+    ]
   },
   {
     "id": 3,
-    "name": "Product 3",
-    "description": "This is a description of Product 1",
-    "image": "path/to/product3.jpg",
-    "price": 99.99
+    "name": "Ellie",
+    "category": "Tops",
+    "description": "Simple white tee. Goes with anything. Looks crisp and clean.",
+    "image": "@/assets/images/tops/ellie.jpg",
+    "price": 39.99,
+    "specifications": {
+      "Color": "White",
+      "Size": "XS",
+      "Material": "Cotton"
+    },
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "This is a great product",
+        "author": "John Doe"
+      },
+      {
+        "rating": 4,
+        "comment": "This is a good product",
+        "author": "Jane Doe"
+      },
+      {
+        "rating": 2,
+        "comment": "This is a product",
+        "author": "Sam Doe"
+      },
+      {
+        "rating": 1,
+        "comment": "This is a bad product",
+        "author": "Samantha Doe"
+      }
+    ]
   },
   {
     "id": 4,
-    "name": "Product 4",
-    "description": "This is a description of Product 1",
-    "image": "path/to/product4.jpg",
-    "price": 199.99
+    "name": "Business",
+    "category": "Tops",
+    "description": "Loose fitting shirt. Perfect for the office or a more casual look.",
+    "image": "@/assets/images/tops/business.jpg",
+    "price": 59.99,
+    "specifications": {
+      "Color": "White",
+      "Size": "M",
+      "Material": "Silk"
+    },
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "This is a great product",
+        "author": "John Doe"
+      },
+      {
+        "rating": 4,
+        "comment": "This is a good product",
+        "author": "Jane Doe"
+      },
+      {
+        "rating": 2,
+        "comment": "This is a product",
+        "author": "Sam Doe"
+      },
+      {
+        "rating": 1,
+        "comment": "This is a bad product",
+        "author": "Samantha Doe"
+      }
+    ]
   },
   {
     "id": 5,
-    "name": "Product 5",
-    "description": "This is a description of Product 1",
-    "image": "path/to/product5.jpg",
-    "price": 299.99
+    "name": "Stamp",
+    "category": "Tops",
+    "description": "Bold print on a plain red tee. Make a statement.",
+    "image": "@/assets/images/tops/stamp.jpg",
+    "price": 29.99,
+    "specifications": {
+      "Color": "Red",
+      "Size": "M",
+      "Material": "Cotton"
+    },
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "This is a great product",
+        "author": "John Doe"
+      },
+      {
+        "rating": 4,
+        "comment": "This is a good product",
+        "author": "Jane Doe"
+      },
+      {
+        "rating": 2,
+        "comment": "This is a product",
+        "author": "Sam Doe"
+      },
+      {
+        "rating": 1,
+        "comment": "This is a bad product",
+        "author": "Samantha Doe"
+      }
+    ]
   },
   {
     "id": 6,
-    "name": "Product 6",
-    "description": "This is a description of Product 1",
-    "image": "path/to/product6.jpg",
-    "price": 399.99
+    "name": "Sam",
+    "category": "Tops",
+    "description": "V-neck black tee with white and red stripes.",
+    "image": "@/assets/images/tops/sam.jpg",
+    "price": 39.99,
+    "specifications": {
+      "Color": "Black / White / Red",
+      "Size": "M",
+      "Material": "Cotton"
+    },
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "This is a great product",
+        "author": "John Doe"
+      },
+      {
+        "rating": 4,
+        "comment": "This is a good product",
+        "author": "Jane Doe"
+      },
+      {
+        "rating": 2,
+        "comment": "This is a product",
+        "author": "Sam Doe"
+      },
+      {
+        "rating": 1,
+        "comment": "This is a bad product",
+        "author": "Samantha Doe"
+      }
+    ]
   },
   {
     "id": 7,
-    "name": "Product 7",
-    "description": "This is a description of Product 1",
-    "image": "path/to/product7.jpg",
-    "price": 499.99
+    "name": "Wild",
+    "category": "Tops",
+    "description": "Large white print on a basic black t-shirt.",
+    "image": "@/assets/images/tops/wild.jpg",
+    "price": 29.99,
+    "specifications": {
+      "Color": "Black",
+      "Size": "L",
+      "Material": "Cotton"
+    },
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "This is a great product",
+        "author": "John Doe"
+      },
+      {
+        "rating": 4,
+        "comment": "This is a good product",
+        "author": "Jane Doe"
+      },
+      {
+        "rating": 2,
+        "comment": "This is a product",
+        "author": "Sam Doe"
+      },
+      {
+        "rating": 1,
+        "comment": "This is a bad product",
+        "author": "Samantha Doe"
+      }
+    ]
   },
   {
     "id": 8,
-    "name": "Product 8",
-    "description": "This is a description of Product 1",
-    "image": "path/to/product8.jpg",
-    "price": 599.99
-  },
-  {
-    "id": 9,
-    "name": "Product 9",
-    "description": "This is a description of Product 1",
-    "image": "path/to/product9.jpg",
-    "price": 699.99
-  },
-  {
-    "id": 10,
-    "name": "Product 10",
-    "description": "This is a description of Product 1",
-    "image": "path/to/product10.jpg",
-    "price": 799.99
+    "name": "Best",
+    "category": "Tops",
+    "description": "Long sleave, zip up, grey shirt with a large print on the back.",
+    "image": "@/assets/images/tops/best.jpg",
+    "price": 59.99,
+    "specifications": {
+      "Color": "Grey",
+      "Size": "M",
+      "Material": "Cotton / Polyester"
+    },
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "This is a great product",
+        "author": "John Doe"
+      },
+      {
+        "rating": 4,
+        "comment": "This is a good product",
+        "author": "Jane Doe"
+      },
+      {
+        "rating": 2,
+        "comment": "This is a product",
+        "author": "Sam Doe"
+      },
+      {
+        "rating": 1,
+        "comment": "This is a bad product",
+        "author": "Samantha Doe"
+      }
+    ]
   }
 ]

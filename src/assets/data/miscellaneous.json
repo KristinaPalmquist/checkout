@@ -1,73 +1,142 @@
 [
-    {
-      "id": 1,
-      "name": "Product 1",
-      "description": "This is a description of Product 1",
-      "image": "path/to/product1.jpg",
-      "price": 29.99
+  {
+    "id": 1,
+    "name": "Makeup",
+    "category": "Miscellaneous",
+    "description": "All you need in one perfect kit. Carry it with and you are good to go.",
+    "image": "@/assets/images/miscellaneous/makeup.jpg",
+    "price": 59.99,
+    "specifications": {
+      "Color": "Black",
+      "Size": "n/a",
+      "Material": "Plastic"
     },
-    {
-      "id": 2,
-      "name": "Product 2",
-      "description": "This is a description of Product 1",
-      "image": "path/to/product2.jpg",
-      "price": 49.99
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "This is a great product",
+        "author": "John Doe"
+      },
+      {
+        "rating": 4,
+        "comment": "This is a good product",
+        "author": "Jane Doe"
+      },
+      {
+        "rating": 2,
+        "comment": "This is a product",
+        "author": "Sam Doe"
+      },
+      {
+        "rating": 1,
+        "comment": "This is a bad product",
+        "author": "Samantha Doe"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Nailpolish",
+    "category": "Miscellaneous",
+    "description": "Nail polish will brighten up any day. This one is a delightful lavender.",
+    "image": "@/assets/images/miscellaneous/nailpolish.jpg",
+    "price": 6.99,
+    "specifications": {
+      "Color": "Lavender",
+      "Size": "n/a",
+      "Material": "Unknown"
     },
-    {
-      "id": 3,
-      "name": "Product 3",
-      "description": "This is a description of Product 1",
-      "image": "path/to/product3.jpg",
-      "price": 99.99
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "This is a great product",
+        "author": "John Doe"
+      },
+      {
+        "rating": 4,
+        "comment": "This is a good product",
+        "author": "Jane Doe"
+      },
+      {
+        "rating": 2,
+        "comment": "This is a product",
+        "author": "Sam Doe"
+      },
+      {
+        "rating": 1,
+        "comment": "This is a bad product",
+        "author": "Samantha Doe"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Cup",
+    "category": "Miscellaneous",
+    "description": "Hand made cup for your morning coffee, tea, overnight oats or whatever you like.",
+    "image": "@/assets/images/miscellaneous/cup.jpg",
+    "price": 69.99,
+    "specifications": {
+      "Color": "Blue",
+      "Size": "n/a",
+      "Material": "Ceramic"
     },
-    {
-      "id": 4,
-      "name": "Product 4",
-      "description": "This is a description of Product 1",
-      "image": "path/to/product4.jpg",
-      "price": 199.99
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "This is a great product",
+        "author": "John Doe"
+      },
+      {
+        "rating": 4,
+        "comment": "This is a good product",
+        "author": "Jane Doe"
+      },
+      {
+        "rating": 2,
+        "comment": "This is a product",
+        "author": "Sam Doe"
+      },
+      {
+        "rating": 1,
+        "comment": "This is a bad product",
+        "author": "Samantha Doe"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Camera",
+    "category": "Miscellaneous",
+    "description": "Be an artist with this camera. Capture the world around you.",
+    "image": "@/assets/images/miscellaneous/camera.jpg",
+    "price": 149.99,
+    "specifications": {
+      "Color": "Black",
+      "Size": "n/a",
+      "Material": "Plastic"
     },
-    {
-      "id": 5,
-      "name": "Product 5",
-      "description": "This is a description of Product 1",
-      "image": "path/to/product5.jpg",
-      "price": 299.99
-    },
-    {
-      "id": 6,
-      "name": "Product 6",
-      "description": "This is a description of Product 1",
-      "image": "path/to/product6.jpg",
-      "price": 399.99
-    },
-    {
-      "id": 7,
-      "name": "Product 7",
-      "description": "This is a description of Product 1",
-      "image": "path/to/product7.jpg",
-      "price": 499.99
-    },
-    {
-      "id": 8,
-      "name": "Product 8",
-      "description": "This is a description of Product 1",
-      "image": "path/to/product8.jpg",
-      "price": 599.99
-    },
-    {
-      "id": 9,
-      "name": "Product 9",
-      "description": "This is a description of Product 1",
-      "image": "path/to/product9.jpg",
-      "price": 699.99
-    },
-    {
-      "id": 10,
-      "name": "Product 10",
-      "description": "This is a description of Product 1",
-      "image": "path/to/product10.jpg",
-      "price": 799.99
-    }
-  ]
-  
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "This is a great product",
+        "author": "John Doe"
+      },
+      {
+        "rating": 4,
+        "comment": "This is a good product",
+        "author": "Jane Doe"
+      },
+      {
+        "rating": 2,
+        "comment": "This is a product",
+        "author": "Sam Doe"
+      },
+      {
+        "rating": 1,
+        "comment": "This is a bad product",
+        "author": "Samantha Doe"
+      }
+    ]
+  }
+]

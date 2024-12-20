@@ -211,14 +211,14 @@
   },
   {
     "id": 7,
-    "name": "Product 7",
+    "name": "Z",
     "category": "Headwear",
-    "description": "This is a description of Product 1",
-    "image": "@/assets/images/headwear/nice-m-nshuti-hhBk5iSqRE0-unsplash.jpg",
-    "price": 499.99,
+    "description": "This is a description of Z",
+    "image": "@/assets/images/headwear/z.jpg",
+    "price": 14.99,
     "specifications": {
-      "Color": "Olive",
-      "Size": "L",
+      "Color": "Black",
+      "Size": "M",
       "Material": "Cotton"
     },
     "reviews": [

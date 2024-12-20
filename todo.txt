@@ -16,11 +16,9 @@ Database
     orders
 organize json-files
     trousers
-    headwear
-    footwear
-    misc
-    tops
     dresses
+    reviews
+    descriptions
 styling for class component-container
 add cta-section at bottom of home-view
 add images to home and about views
@@ -30,6 +28,7 @@ implement light/dark theme colors
 possibility to leave a review when logged in
 show more clearly which comment is associated to each ranking
 fix cart view for when cart is empty
+Are images showing on top of header? in category products view
 
 
 
@@ -47,5 +46,9 @@ organize json-files
     bags
     sunglasses
     jackets
+    headwear
+    tops
+    misc
+    footwear
     
 Make company name in header clickable => home

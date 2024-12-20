@@ -17,18 +17,6 @@ const fetchProducts = async () => {
   }
 };
 
-// const fetchProducts = async () => {
-//   console.log('categoryName', categoryName);
-//   try {
-//     const module = await import(`../assets/data/${categoryName}.json`);
-//     products.value = module.default;
-//   } catch (error) {
-//     console.error('Error loading products: ', error);
-//   }
-//   console.log('products.value', products.value);
-//   console.log('products.value[0].image', products.value[0].image);
-// };
-
 const formatCurrency = (value) => {
   return new Intl.NumberFormat('en-US', {
     style: 'currency',
@@ -47,21 +35,11 @@ const navigateToProduct = (name) => {
 const resolveImagePath = (name) => {
   let productName = name.replace(/ /g, '-').toLowerCase();
   let path = `../assets/images/${categoryName}/${productName}.jpg`;
-  console.log(path);
   return new URL(path, import.meta.url).href;
 };
 
-// const resolveImages = async () => {
-//   await Promise.all(
-//     products.value.map(async (product) => {
-//       product.image = await resolveImagePath(product.name);
-//     })
-//   );
-// };
-
 onMounted(() => {
   fetchProducts();
-  // resolveImages()
 });
 </script>
 
@@ -84,6 +62,10 @@ onMounted(() => {
 </template>
 
 <style scoped>
+/* #category-products {
+  height: calc(100vh - 70px);
+} */
+
 .category-image {
   width: 100%;
   height: auto;
@@ -91,9 +73,14 @@ onMounted(() => {
 }
 
 .product-list {
+  /* display: grid;
+  grid-template-columns: repeat(1fr, 5); */
+  height: 100%;
   padding-top: 2rem;
+  
   column-count: 4;
   column-gap: 15px;
+  column-width: 15%;
 }
 
 .product-item {
