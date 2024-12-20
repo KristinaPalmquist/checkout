@@ -1,4 +1,5 @@
 <script setup>
+import ProductCard from '@/components/ProductCard.vue';
 import { ref, onMounted } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 
@@ -17,26 +18,27 @@ const fetchProducts = async () => {
   }
 };
 
-const formatCurrency = (value) => {
-  return new Intl.NumberFormat('en-US', {
-    style: 'currency',
-    currency: 'USD',
-  }).format(value);
-};
+// const formatCurrency = (value) => {
+//   return new Intl.NumberFormat('en-US', {
+//     style: 'currency',
+//     currency: 'USD',
+//   }).format(value);
+// };
 
 const navigateToProduct = (name) => {
   let productName = name.replace(/ /g, '-').toLowerCase();
+  console.log(productName);
   router.push({
     name: 'ProductDetails',
     params: { categoryName, productName },
   });
 };
 
-const resolveImagePath = (name) => {
-  let productName = name.replace(/ /g, '-').toLowerCase();
-  let path = `../assets/images/${categoryName}/${productName}.jpg`;
-  return new URL(path, import.meta.url).href;
-};
+// const resolveImagePath = (name) => {
+//   let productName = name.replace(/ /g, '-').toLowerCase();
+//   let path = `../assets/images/${categoryName}/${productName}.jpg`;
+//   return new URL(path, import.meta.url).href;
+// };
 
 onMounted(() => {
   fetchProducts();
@@ -53,9 +55,11 @@ onMounted(() => {
         class="product-item"
         @click="navigateToProduct(product.name)"
       >
-        <img :src="resolveImagePath(product.name)" :alt="product.name" />
+      
+        <ProductCard :product="product" :categoryName="categoryName" />
+        <!-- <img :src="resolveImagePath(product.name)" :alt="product.name" />
         <h2>{{ product.name }}</h2>
-        <p>{{ formatCurrency(product.price) }}</p>
+        <p>{{ formatCurrency(product.price) }}</p> -->
       </div>
     </div>
   </div>
@@ -66,30 +70,32 @@ onMounted(() => {
   height: calc(100vh - 70px);
 } */
 
+.product-list {
+  padding-top: 2rem;
+  column-gap: 1rem;
+  column-count: 4;
+}
+
+/* .product-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 1rem;
+   padding-top: 2rem; 
+  grid-auto-flow: dense;
+} */
+
+.product-item {
+  width: 100%;
+  padding-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
 .category-image {
   width: 100%;
   height: auto;
   margin-bottom: 2rem;
 }
 
-.product-list {
-  /* display: grid;
-  grid-template-columns: repeat(1fr, 5); */
-  height: 100%;
-  padding-top: 2rem;
-  
-  column-count: 4;
-  column-gap: 15px;
-  column-width: 15%;
-}
-
-.product-item {
-  display: inline-block;
-  width: 100%;
-  padding-bottom: 15px;
-  /* width: 200px;
-  transition: transform 0.3s ease; */
-}
 
 .product-item:hover {
   transform: scale(1.05);

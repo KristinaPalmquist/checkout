@@ -20,6 +20,7 @@ const fetchProduct = async () => {
     product.value = products.find(
       (p) => p.name.toLowerCase() === productName.toLowerCase()
     );
+    console.log(product.value);
   } catch (error) {
     console.error('Error loading product:', error);
   }
@@ -27,7 +28,8 @@ const fetchProduct = async () => {
 
 const resolveImagePath = (product) => {
   let name = product.name.replace(/ /g, '-').toLowerCase();
-  let path = `../assets/images/${product.category}/${name}.jpg`;
+  let category = product.category.toLowerCase();
+  let path = `../assets/images/${category}/${name}.jpg`;
   console.log(path);
   return new URL(path, import.meta.url).href;
 };
@@ -77,8 +79,7 @@ onMounted(() => {
   <div v-if="product" id="product-details" class="component-container">
     <div class="product-details">
       <div class="product-image">
-        <img :src="resolveImagePath(product.name)" :alt="product.name" />
-        <!-- <img :src="product.image" :alt="product.name" /> -->
+        <img :src="resolveImagePath(product)" :alt="product.name" />
       </div>
       <div class="product-info">
         <h1>{{ product.name }}</h1>

@@ -1,33 +1,48 @@
 <script setup>
 import { onMounted, ref } from 'vue';
 import { useRouter } from 'vue-router';
-import productCategories from '../assets/data/categories.json';
+// import productCategories from '../assets/data/categories.json';
+import CategoryCard from '@/components/CategoryCard.vue';
 
 const router = useRouter();
 
 const categories = ref([]);
-categories.value = productCategories;
+// categories.value = productCategories;
 
-const resolvedCategories = ref([]);
+// const resolvedCategories = ref([]);
 
-
-const resolveImages = async () => {
-  resolvedCategories.value = await Promise.all(
-    categories.value.map(async (category) => {
-      const image = new URL(`../assets/images/${category.folder}/${category.imagename}`, import.meta.url).href;
-      return { ...category, image };
-    })
-  );
+const fetchCategories = async () => {
+  try {
+    const module = await import('../assets/data/categories.json');
+    categories.value = module.default;
+  } catch (error) {
+    console.error('Error loading categories: ', error);
+  }
 };
 
-const navigateToCategory = (categoryName) => {
-  router.push(`/categories/${categoryName.toLowerCase()}`);
+// const resolveImages = async () => {
+//   resolvedCategories.value = await Promise.all(
+//     categories.value.map(async (category) => {
+//       const image = new URL(`../assets/images/${category.folder}/${category.imagename}`, import.meta.url).href;
+//       return { ...category, image };
+//     })
+//   );
+// };
+
+const navigateToCategory = (name) => {
+  let categoryName = name.replace(/ /g, '-').toLowerCase();
+  router.push({
+    name: 'CategoryProducts',
+    params: { categoryName },
+  });
+
+  // router.push(`/categories/${categoryName.toLowerCase()}`);
 };
 
 onMounted(() => {
-  resolveImages();
+  fetchCategories();
+  // resolveImages();
 });
-
 </script>
 
 <template>
@@ -35,17 +50,18 @@ onMounted(() => {
     <h1>Shop by Category</h1>
     <div class="category-list">
       <div
-        v-for="category in resolvedCategories"
+        v-for="category in categories"
         :key="category.id"
         class="category-item"
         @click="navigateToCategory(category.name)"
       >
-        <div class="category-card">
+        <CategoryCard :category="category" />
+        <!-- <div class="category-card">
           <img :src="category.image" :alt="category.name" />
           <div class="category-info">
             <h2>{{ category.name }}</h2>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
