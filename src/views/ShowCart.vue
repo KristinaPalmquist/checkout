@@ -10,18 +10,19 @@ const store = useStore();
 const cartProducts = computed(() => store.getters.cartProducts);
 const totalPrice = computed(() => store.getters.totalPrice);
 
-let productImagePaths = [];
-
 const resolveImagePath = (product) => {
   if (!product || !product.image) return '';
   try {
-    const imagePath = `src/` + product.image;
-    return new URL(imagePath, import.meta.url).href;
+    const { name, category } = product;
+    const path = `../assets/images/${category.toLowerCase()}/${name.toLowerCase()}.jpg`;
+    return new URL(path, import.meta.url).href;
   } catch (e) {
     console.error(`Image not found for product: ${product.name}`);
     return '';
   }
 };
+
+// https://retroretreat.netlify.app/assets/images/footwear/star.jpg
 
 const formatCurrency = (value) => {
   return new Intl.NumberFormat('en-US', {
@@ -58,26 +59,7 @@ const goToCheckout = () => {
 
 onMounted(() => {
   store.dispatch('loadCart');
-  // console.log('cartProducts: ', cartProducts.value);
-  // console.log(resolveImagePath(cartProducts[0]));
-  // console.log(resolveImagePath(cartProducts[0].value));
-  // console.log(resolveImagePath(cartProducts.value[0]));
-  // if (cartProducts.value.length > 0) {
-  //   console.log('Products in cart');
-  //   console.log('cartProducts: ', cartProducts.value);
-
-  //   console.log('Products: ', cartProducts.value[0].image);
-  //   // console.log(resolveImagePath(cartProducts.value[0]));
-  // } else {
-  //   console.log('No products in cart');
-  // }
-  for (let i = 0; i < cartProducts.value.length; i++) {
-    const path = 'src/' + cartProducts.value[i].image;
-    productImagePaths.push(path);
-  }
 });
-
-// http://localhost:5173/src/views/@/assets/images/footwear/sand.jpg
 </script>
 
 <template>
@@ -89,8 +71,6 @@ onMounted(() => {
         :key="index"
         class="cart-item"
       >
-        <!-- <img :src="productImagePaths[index]" /> -->
-        <!-- <img :src="product.image" :alt="product.name" class="product-image" /> -->
         <img
           :src="resolveImagePath(product)"
           :alt="product.name"

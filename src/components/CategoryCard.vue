@@ -1,5 +1,4 @@
 <script setup>
-import { defineProps } from 'vue';
 import BasicCard from './BasicCard.vue';
 
 const props = defineProps({
@@ -11,19 +10,16 @@ const props = defineProps({
 
 const category = props.category;
 
-const resolveImagePath = (name) => {
-  let categoryName = name.replace(/ /g, '-').toLowerCase();
-  let path = `src/assets/images/${categoryName}/${category.imagename}.jpg`;
+const resolveImagePath = () => {
+  const { name, imagename } = category;
+  let path = `../assets/images/${name.toLowerCase()}/${imagename.toLowerCase()}.jpg`;
   return new URL(path, import.meta.url).href;
 };
 </script>
 
 <template>
   <div id="category-card">
-    <BasicCard
-      :title="category.name"
-      :imageSrc="resolveImagePath(category.name)"
-    />
+    <BasicCard :title="category.name" :imageSrc="resolveImagePath()" />
   </div>
 </template>
 

@@ -50,6 +50,7 @@ const store = createStore({
       const productToSave = {
         id: product.id,
         name: product.name,
+        category: product.category,
         image: product.image,
         price: product.price,
         specifications: product.specifications,
