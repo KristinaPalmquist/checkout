@@ -15,7 +15,8 @@ let productImagePaths = [];
 const resolveImagePath = (product) => {
   if (!product || !product.image) return '';
   try {
-    return new URL(product.image, import.meta.url).href;
+    const imagePath = product.image.replace(/^@/, '..');
+    return new URL(imagePath, import.meta.url).href;
   } catch (e) {
     console.error(`Image not found for product: ${product.name}`);
     return '';
@@ -76,10 +77,7 @@ onMounted(() => {
   }
 });
 
-
-// http://localhost:5173/src/@/assets/images/jackets/moana.jpg
-
-// http://localhost:5173/src/views/@/assets/images/jackets/moana.jpg
+// http://localhost:5173/src/views/@/assets/images/footwear/sand.jpg
 </script>
 
 <template>
@@ -91,7 +89,7 @@ onMounted(() => {
         :key="index"
         class="cart-item"
       >
-        <img :src="productImagePaths[index]" />
+        <!-- <img :src="productImagePaths[index]" /> -->
         <!-- <img :src="product.image" :alt="product.name" class="product-image" /> -->
         <img
           :src="resolveImagePath(product)"
