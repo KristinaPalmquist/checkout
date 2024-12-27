@@ -30,6 +30,7 @@ show more clearly which comment is associated to each ranking
 fix cart view for when cart is empty
 Are images showing on top of header? in category products view
 Image gallery to display alternative images for each product
+click outside menu should close menu
 
 
 

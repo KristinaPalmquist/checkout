@@ -71,10 +71,15 @@ onMounted(() => {
   //   console.log('No products in cart');
   // }
   for (let i = 0; i < cartProducts.value.length; i++) {
-    const path = cartProducts.value[i].image;
+    const path = 'src/' + cartProducts.value[i].image;
     productImagePaths.push(path);
   }
 });
+
+
+// http://localhost:5173/src/@/assets/images/jackets/moana.jpg
+
+// http://localhost:5173/src/views/@/assets/images/jackets/moana.jpg
 </script>
 
 <template>
