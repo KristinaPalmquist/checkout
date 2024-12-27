@@ -15,7 +15,9 @@ let productImagePaths = [];
 const resolveImagePath = (product) => {
   if (!product || !product.image) return '';
   try {
-    const imagePath = product.image.replace(/^@/, '..');
+    const imagePath =
+      // `../../` +
+      product.image;
     return new URL(imagePath, import.meta.url).href;
   } catch (e) {
     console.error(`Image not found for product: ${product.name}`);

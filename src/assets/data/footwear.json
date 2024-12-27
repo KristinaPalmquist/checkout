@@ -4,7 +4,7 @@
     "name": "Miami",
     "category": "Footwear",
     "description": "This is a description of Acapulco",
-    "image": "@/assets/images/footwear/miami.jpg",
+    "image": "../assets/images/footwear/miami.jpg",
     "price": 14.99,
     "specifications": {
       "Color": "Rainbow",
@@ -39,7 +39,7 @@
     "name": "Star",
     "category": "Footwear",
     "description": "Classic light orange sneaker. Perfect for a casual day out.",
-    "image": "@/assets/images/footwear/star.jpg",
+    "image": "../assets/images/footwear/star.jpg",
     "price": 19.99,
     "specifications": {
       "Color": "Orange",
@@ -74,7 +74,7 @@
     "name": "Angel",
     "category": "Footwear",
     "description": "Bold, white sneaker with classic logo on the side.",
-    "image": "@/assets/images/footwear/angel.jpg",
+    "image": "../assets/images/footwear/angel.jpg",
     "price": 99.99,
     "specifications": {
       "Color": "White",
@@ -109,7 +109,7 @@
     "name": "Sand",
     "category": "Footwear",
     "description": "This is a description of Foff",
-    "image": "@/assets/images/footwear/sand.jpg",
+    "image": "../assets/images/footwear/sand.jpg",
     "price": 12.99,
     "specifications": {
       "Color": "Beige",
@@ -144,7 +144,7 @@
     "name": "Tom",
     "category": "Footwear",
     "description": "Compofortable, yet stylish flip-flops.",
-    "image": "@/assets/images/footwear/tom.jpg",
+    "image": "../assets/images/footwear/tom.jpg",
     "price": 17.99,
     "specifications": {
       "Color": "Black",
@@ -179,7 +179,7 @@
     "name": "Outdoor",
     "category": "Footwear",
     "description": "Water resistant sneakers",
-    "image": "@/assets/images/footwear/outdoor.jpg",
+    "image": "../assets/images/footwear/outdoor.jpg",
     "price": 69.99,
     "specifications": {
       "Color": "Green",
