@@ -1,5 +1,5 @@
 <script setup>
-import { computed } from 'vue';
+import { computed, onMounted } from 'vue';
 import { useRouter } from 'vue-router';
 import { useStore } from 'vuex';
 import BasicButton from '@/components/BasicButton.vue';
@@ -10,12 +10,16 @@ const store = useStore();
 const cartProducts = computed(() => store.getters.cartProducts);
 const totalPrice = computed(() => store.getters.totalPrice);
 
+let productImagePaths = [];
+
 const resolveImagePath = (product) => {
-  if (!product || !product.name || !product.category) return '';
-  let name = product.name.replace(/ /g, '-').toLowerCase();
-  let category = product.category.toLowerCase();
-  let path = `@/assets/images/${category}/${name}.jpg`;
-  return new URL(path, import.meta.url).href;
+  if (!product || !product.image) return '';
+  try {
+    return new URL(product.image, import.meta.url).href;
+  } catch (e) {
+    console.error(`Image not found for product: ${product.name}`);
+    return '';
+  }
 };
 
 const formatCurrency = (value) => {
@@ -53,8 +57,23 @@ const goToCheckout = () => {
 
 onMounted(() => {
   store.dispatch('loadCart');
+  // console.log('cartProducts: ', cartProducts.value);
+  // console.log(resolveImagePath(cartProducts[0]));
+  // console.log(resolveImagePath(cartProducts[0].value));
+  // console.log(resolveImagePath(cartProducts.value[0]));
+  // if (cartProducts.value.length > 0) {
+  //   console.log('Products in cart');
+  //   console.log('cartProducts: ', cartProducts.value);
 
-  store.dispatch('getCart');
+  //   console.log('Products: ', cartProducts.value[0].image);
+  //   // console.log(resolveImagePath(cartProducts.value[0]));
+  // } else {
+  //   console.log('No products in cart');
+  // }
+  for (let i = 0; i < cartProducts.value.length; i++) {
+    const path = cartProducts.value[i].image;
+    productImagePaths.push(path);
+  }
 });
 </script>
 
@@ -67,6 +86,8 @@ onMounted(() => {
         :key="index"
         class="cart-item"
       >
+        <img :src="productImagePaths[index]" />
+        <!-- <img :src="product.image" :alt="product.name" class="product-image" /> -->
         <img
           :src="resolveImagePath(product)"
           :alt="product.name"

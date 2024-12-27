@@ -127,7 +127,9 @@ const handleSubmit = () => {
 }
 
 .contact-messages {
-  height: 80vh;
+  /* height: 80vh; */
+  /* height: 100%; */
+  justify-content: flex-end;
 }
 
 .contact-messages > div {
@@ -136,7 +138,6 @@ const handleSubmit = () => {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  padding-bottom: 15%;
   gap: 1rem;
 }
 
@@ -167,5 +168,19 @@ const handleSubmit = () => {
 
 .message-value {
   padding-left: 1rem;
+}
+
+
+@media only screen and (max-width: 740px) {
+  #contact-us {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: max-content;
+}
+/*   
+  .contact-messages {
+    align-items: center;
+  }  */
 }
 </style>

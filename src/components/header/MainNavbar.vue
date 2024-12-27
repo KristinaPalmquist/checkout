@@ -194,4 +194,30 @@ onUnmounted(() => {
   font-style: normal;
   font-size: 4rem;
 }
+
+/* @media screen and (min-width: 740px) {
+
+
+  #main-navbar {
+     flex-direction: row;
+    justify-content: space-between;
+    padding: 0 1rem; 
+  }
+
+  .hamburger {
+    display: none;
+  } 
+
+   .navbar {
+    flex-direction: row;
+    position: relative;
+    padding-top: 0;
+  }
+
+  .navbar a {
+    margin-left: 0;
+    padding: 0.5rem 1rem;
+  } 
+  
+} */
 </style>
