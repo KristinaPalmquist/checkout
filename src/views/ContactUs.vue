@@ -78,10 +78,6 @@ const handleSubmit = () => {
     </div>
     <div class="contact-messages">
       <div v-if="showSentMessage">
-        <div class="message">
-          <p>Thank you for contacting us!</p>
-          <p>We will get back to you shortly.</p>
-        </div>
         <div class="sent-message">
           <h2>Sent message</h2>
           <div
@@ -92,6 +88,10 @@ const handleSubmit = () => {
             <span class="message-key">{{ key }}:</span>
             <span class="message-value">{{ content }}</span>
           </div>
+        </div>
+        <div class="message">
+          <p>Thank you for contacting us!</p>
+          <p>We will get back to you shortly.</p>
         </div>
       </div>
     </div>

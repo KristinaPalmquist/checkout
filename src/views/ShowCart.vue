@@ -1,5 +1,5 @@
 <script setup>
-import { computed, onMounted } from 'vue';
+import { computed } from 'vue';
 import { useRouter } from 'vue-router';
 import { useStore } from 'vuex';
 import BasicButton from '@/components/BasicButton.vue';
@@ -10,9 +10,19 @@ const store = useStore();
 const cartProducts = computed(() => store.getters.cartProducts);
 const totalPrice = computed(() => store.getters.totalPrice);
 
-const removeFromCart = (index) => {
-  store.dispatch('removeFromCart', index);
-  store.dispatch('saveCart');
+const resolveImagePath = (product) => {
+  if (!product || !product.name || !product.category) return '';
+  let name = product.name.replace(/ /g, '-').toLowerCase();
+  let category = product.category.toLowerCase();
+  let path = `@/assets/images/${category}/${name}.jpg`;
+  return new URL(path, import.meta.url).href;
+};
+
+const formatCurrency = (value) => {
+  return new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+  }).format(value);
 };
 
 const increaseQuantity = (index, quantity) => {
@@ -27,20 +37,9 @@ const decreaseQuantity = (index, quantity) => {
   }
 };
 
-onMounted(() => {
-  store.dispatch('loadCart').then(() => {
-    console.log('Cart products from Vuex store:', cartProducts.value);
-    cartProducts.value.forEach((element) => {
-      console.log(element);
-    });
-  });
-});
-
-const formatCurrency = (value) => {
-  return new Intl.NumberFormat('en-US', {
-    style: 'currency',
-    currency: 'USD',
-  }).format(value);
+const removeFromCart = (index) => {
+  store.dispatch('removeFromCart', index);
+  store.dispatch('saveCart');
 };
 
 const goToCategories = () => {
@@ -51,6 +50,12 @@ const goToCheckout = () => {
   store.dispatch('saveCart');
   router.push('/checkout');
 };
+
+onMounted(() => {
+  store.dispatch('loadCart');
+
+  store.dispatch('getCart');
+});
 </script>
 
 <template>
@@ -62,7 +67,11 @@ const goToCheckout = () => {
         :key="index"
         class="cart-item"
       >
-        <img :src="product.image" :alt="product.name" class="product-image" />
+        <img
+          :src="resolveImagePath(product)"
+          :alt="product.name"
+          class="product-image"
+        />
         <p class="product-name">
           <strong>{{ product.name }}</strong>
         </p>
@@ -138,6 +147,7 @@ const goToCheckout = () => {
   left: 75%;
   transform: translateX(-50%);
   padding-top: 2rem;
+  z-index: -10;
 }
 
 #show-cart .total h2 {

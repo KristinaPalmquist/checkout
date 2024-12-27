@@ -14,7 +14,6 @@ const category = props.category;
 const resolveImagePath = (name) => {
   let categoryName = name.replace(/ /g, '-').toLowerCase();
   let path = `../assets/images/${categoryName}/${category.imagename}.jpg`;
-  console.log(path);
   return new URL(path, import.meta.url).href;
 };
 </script>

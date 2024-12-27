@@ -1,5 +1,5 @@
 <script setup>
-import { defineProps, onMounted } from 'vue';
+import { defineProps } from 'vue';
 
 const props = defineProps({
   title: {
@@ -21,16 +21,14 @@ const imageSrc = props.imageSrc;
 const price = props.price;
 
 const formatCurrency = (value) => {
+  console.log('title: ', title);
+  console.log('imageSrc: ', imageSrc);
+  console.log('price: ', price);
   return new Intl.NumberFormat('en-US', {
     style: 'currency',
     currency: 'USD',
   }).format(value);
 };
-
-onMounted(() => {
-  console.log('BasicCard mounted');
-  console.log(imageSrc);
-});
 </script>
 
 <template>

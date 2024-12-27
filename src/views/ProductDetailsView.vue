@@ -30,7 +30,6 @@ const resolveImagePath = (product) => {
   let name = product.name.replace(/ /g, '-').toLowerCase();
   let category = product.category.toLowerCase();
   let path = `../assets/images/${category}/${name}.jpg`;
-  console.log(path);
   return new URL(path, import.meta.url).href;
 };
 
@@ -55,7 +54,6 @@ const addToCart = () => {
   store.dispatch('saveCart');
 
   const items = store.getters.cartProducts;
-  console.log(items);
   message.value = 'Product added to cart!';
   showMessage.value = true;
 };
