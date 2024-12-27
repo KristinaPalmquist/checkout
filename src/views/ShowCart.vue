@@ -22,7 +22,6 @@ const resolveImagePath = (product) => {
   }
 };
 
-// https://retroretreat.netlify.app/assets/images/footwear/star.jpg
 
 const formatCurrency = (value) => {
   return new Intl.NumberFormat('en-US', {

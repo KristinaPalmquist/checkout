@@ -15,8 +15,9 @@ const resolveImagePath = () => {
   console.log('category: ', category);
   console.log('name: ', name);
   console.log('imagename: ', imagename);
-  let path = `../assets/images/${name.toLowerCase()}/${imagename.toLowerCase()}.jpg`;
+  let path = `..src/assets/images/${name.toLowerCase()}/${imagename.toLowerCase()}.jpg`;
   console.log('path: ', path);
+
   return new URL(path, import.meta.url).href;
 };
 </script>

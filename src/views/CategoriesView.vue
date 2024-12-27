@@ -1,15 +1,11 @@
 <script setup>
 import { onMounted, ref } from 'vue';
 import { useRouter } from 'vue-router';
-// import productCategories from '../assets/data/categories.json';
 import CategoryCard from '@/components/CategoryCard.vue';
 
 const router = useRouter();
 
 const categories = ref([]);
-// categories.value = productCategories;
-
-// const resolvedCategories = ref([]);
 
 const fetchCategories = async () => {
   try {
@@ -20,28 +16,16 @@ const fetchCategories = async () => {
   }
 };
 
-// const resolveImages = async () => {
-//   resolvedCategories.value = await Promise.all(
-//     categories.value.map(async (category) => {
-//       const image = new URL(`../assets/images/${category.folder}/${category.imagename}`, import.meta.url).href;
-//       return { ...category, image };
-//     })
-//   );
-// };
-
 const navigateToCategory = (name) => {
   let categoryName = name.replace(/ /g, '-').toLowerCase();
   router.push({
     name: 'CategoryProducts',
     params: { categoryName },
   });
-
-  // router.push(`/categories/${categoryName.toLowerCase()}`);
 };
 
 onMounted(() => {
   fetchCategories();
-  // resolveImages();
 });
 </script>
 
@@ -56,12 +40,6 @@ onMounted(() => {
         @click="navigateToCategory(category.name)"
       >
         <CategoryCard :category="category" />
-        <!-- <div class="category-card">
-          <img :src="category.image" :alt="category.name" />
-          <div class="category-info">
-            <h2>{{ category.name }}</h2>
-          </div>
-        </div> -->
       </div>
     </div>
   </div>

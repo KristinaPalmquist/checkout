@@ -16,9 +16,11 @@ const props = defineProps({
   },
 });
 
-const title = props.title;
-const imageSrc = props.imageSrc;
-const price = props.price;
+const { title, imageSrc, price } = props;
+
+// const title = props.title;
+// const imageSrc = props.imageSrc;
+// const price = props.price;
 
 const formatCurrency = (value) => {
   console.log('title: ', title);
