@@ -18,8 +18,9 @@ const categoryName = props.categoryName;
 
 const resolveImagePath = (name) => {
   let productName = name.replace(/ /g, '-').toLowerCase();
-  let path = `../assets/images/${categoryName}/${productName}.jpg`;
-  return new URL(path, import.meta.url).href;
+  let path = `src/assets/images/${categoryName}/${productName}.jpg`;
+  return path;
+  // return new URL(path, import.meta.url).href;
 };
 </script>
 
