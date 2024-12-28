@@ -6,6 +6,7 @@ const emit = defineEmits(['update:isOpen']);
 const router = useRouter();
 const isOpen = ref(false);
 const windowHeight = ref(window.innerHeight);
+const windowWidth = ref(window.innerWidth);
 
 const routes = [
   { name: 'Home', path: '/' },
@@ -35,24 +36,38 @@ const updateWindowHeight = () => {
 };
 
 const navbarItemStyle = computed(() => {
-  const backgroundHeight = windowHeight.value - 30;
-  const itemHeight = backgroundHeight / routes.length;
-  const fontSize = Math.min(itemHeight * 0.5, 50);
-  const padding = Math.min(itemHeight * 0.05, 3);
-  return {
-    fontSize: `${fontSize}px`,
-    padding: `${padding}px`,
-  };
+  if (windowWidth.value > 600) {
+    const backgroundHeight = windowHeight.value - 30;
+    const itemHeight = backgroundHeight / routes.length;
+    const fontSize = Math.min(itemHeight * 0.5, 50);
+    const padding = Math.min(itemHeight * 0.05, 3);
+    return {
+      fontSize: `${fontSize}px`,
+      padding: `${padding}px`,
+    };
+  } else {
+    return {
+      fontSize: '2.2rem',
+      padding: '0.5rem',
+    };
+  }
 });
 
 const navbarNumbersStyle = computed(() => {
-  const itemHeight = windowHeight.value / routes.length;
-  const fontSize = Math.min(itemHeight * 0.3, 32);
-  const padding = Math.min(itemHeight * 0.05, 4);
-  return {
-    fontSize: `${fontSize}px`,
-    padding: `${padding}px`,
-  };
+  if (windowWidth.value > 600) {
+    const itemHeight = windowHeight.value / routes.length;
+    const fontSize = Math.min(itemHeight * 0.3, 32);
+    const padding = Math.min(itemHeight * 0.05, 4);
+    return {
+      fontSize: `${fontSize}px`,
+      padding: `${padding}px`,
+    };
+  } else {
+    return {
+      fontSize: '2rem',
+      // padding: '0.7rem',
+    };
+  }
 });
 
 const navbarBackgroundStyle = computed(() => {
@@ -195,29 +210,30 @@ onUnmounted(() => {
   font-size: 4rem;
 }
 
-/* @media screen and (min-width: 740px) {
-
-
+@media only screen and (max-width: 600px) {
   #main-navbar {
-     flex-direction: row;
-    justify-content: space-between;
-    padding: 0 1rem; 
+    padding: 0;
+  }
+  #main-navbar .navbar {
+    height: 90%;
+    /* padding: auto 0; */
   }
 
-  .hamburger {
-    display: none;
-  } 
-
-   .navbar {
-    flex-direction: row;
-    position: relative;
-    padding-top: 0;
+  #main-navbar .navbar a,
+  #main-navbar .navbar a span {
+    margin: auto 0;
   }
 
-  .navbar a {
-    margin-left: 0;
-    padding: 0.5rem 1rem;
-  } 
-  
-} */
+  #main-navbar .navbar a {
+    margin-left: -30%;
+  }
+
+  /* .navbar-numbers {
+    font-size: 1.5rem;
+  } */
+
+  .navbar a:hover {
+    font-size: 3rem;
+  }
+}
 </style>

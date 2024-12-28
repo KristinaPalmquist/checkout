@@ -1,6 +1,8 @@
 TODO & IDEAS
 Make responsive
-    mobile
+    mobile  
+        cart
+        navbar menu
     widescreen
 404 page with link to home
 Color Scheme
@@ -53,3 +55,5 @@ organize json-files
     footwear
     
 Make company name in header clickable => home
+Make responsive
+    mobile

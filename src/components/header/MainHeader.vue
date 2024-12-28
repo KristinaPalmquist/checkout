@@ -87,7 +87,16 @@ const isAuthenticated = computed(
 @media only screen and (max-width: 600px) {
   #main-header {
     flex-direction: column;
-    /* padding: 0 5rem; */
+  }
+
+  #main-header h1 {
+    margin-bottom: 0;
+  }
+
+  #main-header .nav-btns {
+    /* display: flex;
+    justify-content: space-evenly; */
+    gap: 3rem;
   }
 }
 </style>

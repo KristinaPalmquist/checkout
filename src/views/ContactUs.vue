@@ -41,7 +41,7 @@ const handleSubmit = () => {
 </script>
 
 <template>
-  <div id="contact-us">
+  <div id="contact-us" class="component-container">
     <div class="contact-form">
       <h1>Contact Us</h1>
       <form @submit.prevent="handleSubmit">
