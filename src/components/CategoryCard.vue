@@ -11,27 +11,11 @@ const props = defineProps({
 const resolveImagePath = (name) => {
   let categoryName = name.replace(/ /g, '-').toLowerCase();
   let path = `/src/assets/images/${categoryName}/${props.category.imagename}.jpg`;
+  console.log(path);
   return new URL(path, import.meta.url).href;
 };
 
-// const category = props.category;
-
-// const resolveImagePath = () => {
-//   const { name, imagename } = category;
-//   console.log('category: ', category);
-//   console.log('name: ', name);
-//   console.log('imagename: ', imagename);
-//   let path = `@/assets/images/${name.toLowerCase()}/${imagename.toLowerCase()}.jpg`;
-//   console.log('path: ', path);
-
-//   return new URL(path, import.meta.url).href;
-// };
-
-// http://localhost:5173/src/src/assets/images/dresses/banana.jpg
-// http://localhost:5173/src/components/@/assets/images/bags/leather.jpg
-
-// https://retroretreat.netlify.app/assets/..src/assets/images/headwear/z.jpg
-// https://retroretreat.netlify.app/src/assets/images/bags/leather.jpg
+// https://retroretreat.netlify.app/assets/@/assets/images/footwear/miami.jpg
 </script>
 
 <template>
