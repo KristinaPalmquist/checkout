@@ -10,16 +10,15 @@ const props = defineProps({
 
 const resolveImagePath = (name) => {
   let categoryName = name.replace(/ /g, '-').toLowerCase();
-  // let path = `/src/assets/images/${categoryName}/${props.category.imagename}.jpg`;
-  let path = `@/assets/img/${categoryName}/${props.category.imagename}.jpg`;
+  let path = `/assets/images/${categoryName}/${props.category.imagename}.jpg`;
   console.log(path);
-  try {
-    return new URL(path, import.meta.url).href;
-    // return require(path);
-  } catch (e) {
-    console.error(`Image not found for category: ${name}`);
-    return '';
-  }
+  return new URL(path, import.meta.url).href;
+  // try {
+  //   return new URL(path, import.meta.url).href;
+  // } catch (e) {
+  //   console.error(`Image not found for category: ${name}`);
+  //   return '';
+  // }
   // return new URL(path, import.meta.url).href;
 };
 
