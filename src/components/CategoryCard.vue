@@ -11,10 +11,11 @@ const props = defineProps({
 const resolveImagePath = (name) => {
   let categoryName = name.replace(/ /g, '-').toLowerCase();
   // let path = `/src/assets/images/${categoryName}/${props.category.imagename}.jpg`;
-  let path = `@/assets/images/${categoryName}/${props.category.imagename}.jpg`;
+  let path = `@/assets/img/${categoryName}/${props.category.imagename}.jpg`;
   console.log(path);
   try {
-    return require(path);
+    return new URL(path, import.meta.url).href;
+    // return require(path);
   } catch (e) {
     console.error(`Image not found for category: ${name}`);
     return '';
@@ -22,7 +23,7 @@ const resolveImagePath = (name) => {
   // return new URL(path, import.meta.url).href;
 };
 
-// https://retroretreat.netlify.app/assets/@/assets/images/footwear/miami.jpg
+// https://retroretreat.netlify.app/src/assets/images/footwear/miami.jpg
 </script>
 
 <template>

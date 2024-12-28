@@ -1,0 +1,232 @@
+[
+  {
+    "id": 1,
+    "name": "Selena",
+    "category": "Jackets",
+    "description": "This is a lovely mustard jacket for any ocassion. Wear it to work or for dinner in a nice restaurant. Will look lovely with a pair of jeans or a nice skirt or even over a summer dress.",
+    "image": "@/assets/images/jackets/selena.jpg",
+    "price": 29.99,
+    "specifications": {
+      "Color": "Mustard",
+      "Size": "M",
+      "Material": "Flax"
+    },
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "This is a great product",
+        "author": "John Doe"
+      },
+      {
+        "rating": 4,
+        "comment": "This is a good product",
+        "author": "Jane Doe"
+      },
+      {
+        "rating": 2,
+        "comment": "This is a product",
+        "author": "Sam Doe"
+      },
+      {
+        "rating": 1,
+        "comment": "This is a bad product",
+        "author": "Samantha Doe"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Nature",
+    "category": "Jackets",
+    "description": "A great outdoor jacket for any tpe of weather. Will look great on anyone. A must have for any wardrobe.",
+    "image": "@/assets/images/jackets/nature.jpg",
+    "price": 39.99,
+    "specifications": {
+      "Color": "Olive",
+      "Size": "L",
+      "Material": "Cotton"
+    },
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "This is great for outdoors activities",
+        "author": "John Doe"
+      },
+      {
+        "rating": 4,
+        "comment": "beautiful jacket",
+        "author": "x"
+      },
+      {
+        "rating": 2,
+        "comment": "This is a jacket",
+        "author": "Dorrie"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Steel",
+    "category": "Jackets",
+    "description": "Percing blue jacket for the winter season. Will keep you warm and looking great.",
+    "image": "@/assets/images/jackets/steel.jpg",
+    "price": 49.99,
+    "specifications": {
+      "Color": "Blue",
+      "Size": "M",
+      "Material": "Polyester"
+    },
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "Warm",
+        "author": "John Doe"
+      },
+      {
+        "rating": 4,
+        "comment": "Comfortable",
+        "author": "Janne Svensson"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Max",
+    "category": "Jackets",
+    "description": "All of the patches makes this one special",
+    "image": "@/assets/images/jackets/max.jpg",
+    "price": 199.99,
+    "specifications": {
+      "Color": "Green",
+      "Size": "XXL",
+      "Material": "Flax"
+    },
+    "reviews": [
+      {
+        "rating": 1,
+        "comment": "-",
+        "author": "Olof Skötkonung"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Varsity",
+    "category": "Jackets",
+    "description": "American sports jacket. You can't go wrong with this one. Will pair with almost anything.",
+    "image": "@/assets/images/jackets/varsity.jpg",
+    "price": 99.99,
+    "specifications": {
+      "Color": "Red / White",
+      "Size": "XL",
+      "Material": "Leather"
+    },
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "This is a great product",
+        "author": "John Doe"
+      },
+      {
+        "rating": 4,
+        "comment": "This is a good product",
+        "author": "Jane Doe"
+      },
+      {
+        "rating": 2,
+        "comment": "This is a product",
+        "author": "Sam Doe"
+      },
+      {
+        "rating": 1,
+        "comment": "This is a bad product",
+        "author": "Samantha Doe"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Dream",
+    "category": "Jackets",
+    "description": "Jean jacket for the summer. Will look great with a pair of shorts or a skirt.",
+    "image": "@/assets/images/jackets/dream.jpg",
+    "price": 39.99,
+    "specifications": {
+      "Color": "Gray",
+      "Size": "M",
+      "Material": "Denim"
+    },
+    "reviews": [
+      {
+        "rating": 3,
+        "comment": "This is a good look",
+        "author": "Hubert"
+      },
+      {
+        "rating": 4,
+        "comment": "-",
+        "author": "Jane"
+      },
+      {
+        "rating": 1,
+        "comment": "Love it!",
+        "author": "Amanda"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Rocket",
+    "category": "Jackets",
+    "description": "Classic denim. The wear just adds to the charm.",
+    "image": "@/assets/images/jackets/rocket.jpg",
+    "price": 499.99,
+    "specifications": {
+      "Color": "Blue",
+      "Size": "L",
+      "Material": "Denim"
+    },
+    "reviews": [
+      {
+        "rating": 2,
+        "comment": "This is not good",
+        "author": "Alex"
+      },
+      {
+        "rating": 1,
+        "comment": "Looks broken",
+        "author": "Rastaman"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Moana",
+    "category": "Jackets",
+    "description": "Pink, fluffy dream that would make anyone jealous",
+    "image": "@/assets/images/jackets/moana.jpg",
+    "price": 99.99,
+    "specifications": {
+      "Color": "Pink",
+      "Size": "S",
+      "Material": "Polyester"
+    },
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "This is so hairy!",
+        "author": "Johnathan"
+      },
+      {
+        "rating": 4,
+        "comment": "Would love to own",
+        "author": "Carl"
+      },
+      {
+        "rating": 5,
+        "comment": "Glamorous",
+        "author": "Fifi"
+      }
+    ]
+  }
+]

@@ -1,0 +1,138 @@
+[
+  {
+    "id": 1,
+    "name": "Product 1",
+    "category": "Dresses",
+    "description": "You'll look stunning in this dress! Just like a happy banana in a tree.",
+    "image": "@/assets/images/dresses/banana.jpg",
+    "price": 29.99,
+    "specifications": {
+      "Color": "Yellow",
+      "Size": "M",
+      "Material": "Cotton"
+    },
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "So sexy",
+        "author": "John Doe"
+      },
+    
+      {
+        "rating": 2,
+        "comment": "Looks cheap",
+        "author": "Amanda"
+      },
+      {
+        "rating": 3,
+        "comment": "OK",
+        "author": "anonymous"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Butterfly",
+    "category": "Dresses",
+    "description": "Long dress with multicolor pattern. This dress will make you feel like a butterfly. It's light and airy.",
+    "image": "@/assets/images/dresses/butterfly.jpg",
+    "price": 39.99,
+    "specifications": {
+      "Color": "Multi",
+      "Size": "S",
+      "Material": "Cotton"
+    },
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "This is a great product",
+        "author": "John Doe"
+      },
+      {
+        "rating": 4,
+        "comment": "This is a good product",
+        "author": "Jane Doe"
+      },
+      {
+        "rating": 2,
+        "comment": "This is a product",
+        "author": "Sam Doe"
+      },
+      {
+        "rating": 1,
+        "comment": "This is a bad product",
+        "author": "Samantha Doe"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Product 3",
+    "category": "Dresses",
+    "description": "This is a description of Product 1",
+    "image": "path/to/product3.jpg",
+    "price": 99.99,
+    "specifications": {
+      "Color": "Mustard",
+      "Size": "M",
+      "Material": "Flax"
+    },
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "This is a great product",
+        "author": "John Doe"
+      },
+      {
+        "rating": 4,
+        "comment": "This is a good product",
+        "author": "Jane Doe"
+      },
+      {
+        "rating": 2,
+        "comment": "This is a product",
+        "author": "Sam Doe"
+      },
+      {
+        "rating": 1,
+        "comment": "This is a bad product",
+        "author": "Samantha Doe"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Product 4",
+    "category": "Dresses",
+    "description": "This is a description of Product 1",
+    "image": "path/to/product4.jpg",
+    "price": 199.99,
+    "specifications": {
+      "Color": "Mustard",
+      "Size": "M",
+      "Material": "Flax"
+    },
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "This is a great product",
+        "author": "John Doe"
+      },
+      {
+        "rating": 4,
+        "comment": "This is a good product",
+        "author": "Jane Doe"
+      },
+      {
+        "rating": 2,
+        "comment": "This is a product",
+        "author": "Sam Doe"
+      },
+      {
+        "rating": 1,
+        "comment": "This is a bad product",
+        "author": "Samantha Doe"
+      }
+    ]
+  }
+]

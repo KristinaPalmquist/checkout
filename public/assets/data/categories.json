@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "name": "Bags",
+    "folder": "bags",
+    "imagename": "leather",
+    "image": "@/assets/images/bags/leather.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Dresses",
+    "folder": "dresses",
+    "imagename": "banana",
+    "image": "@/assets/images/dresses/banana.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Footwear",
+    "folder": "footwear",
+    "imagename": "miami",
+    "image": "@/assets/images/footwear/miami.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Headwear",
+    "folder": "headwear",
+    "imagename": "z",
+    "image": "@/assets/images/headwear/z.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Jackets",
+    "folder": "jackets",
+    "imagename": "moana",
+    "image": "@/assets/images/jackets/moana.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Miscellaneous",
+    "folder": "miscellaneous",
+    "imagename": "cup",
+    "image": "@/assets/images/miscellaneous/cup.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Sunglasses",
+    "folder": "sunglasses",
+    "imagename": "marilyn",
+    "image": "@/assets/images/sunglasses/marilyn.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Tops",
+    "folder": "tops",
+    "imagename": "pixie",
+    "image": "@/assets/images/tops/pixie.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Trousers",
+    "folder": "trousers",
+    "imagename": "jeans",
+    "image": "@/assets/images/trousers/jeans.jpg"
+  }
+]

@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1,
+    "name": "Makeup",
+    "category": "Miscellaneous",
+    "description": "All you need in one perfect kit. Carry it with and you are good to go.",
+    "image": "@/assets/images/miscellaneous/makeup.jpg",
+    "price": 59.99,
+    "specifications": {
+      "Color": "Black",
+      "Size": "n/a",
+      "Material": "Plastic"
+    },
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "This is a great product",
+        "author": "John Doe"
+      },
+      {
+        "rating": 4,
+        "comment": "This is a good product",
+        "author": "Jane Doe"
+      },
+      {
+        "rating": 2,
+        "comment": "This is a product",
+        "author": "Sam Doe"
+      },
+      {
+        "rating": 1,
+        "comment": "This is a bad product",
+        "author": "Samantha Doe"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Nailpolish",
+    "category": "Miscellaneous",
+    "description": "Nail polish will brighten up any day. This one is a delightful lavender.",
+    "image": "@/assets/images/miscellaneous/nailpolish.jpg",
+    "price": 6.99,
+    "specifications": {
+      "Color": "Lavender",
+      "Size": "n/a",
+      "Material": "Unknown"
+    },
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "This is a great product",
+        "author": "John Doe"
+      },
+      {
+        "rating": 4,
+        "comment": "This is a good product",
+        "author": "Jane Doe"
+      },
+      {
+        "rating": 2,
+        "comment": "This is a product",
+        "author": "Sam Doe"
+      },
+      {
+        "rating": 1,
+        "comment": "This is a bad product",
+        "author": "Samantha Doe"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Cup",
+    "category": "Miscellaneous",
+    "description": "Hand made cup for your morning coffee, tea, overnight oats or whatever you like.",
+    "image": "@/assets/images/miscellaneous/cup.jpg",
+    "price": 69.99,
+    "specifications": {
+      "Color": "Blue",
+      "Size": "n/a",
+      "Material": "Ceramic"
+    },
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "This is a great product",
+        "author": "John Doe"
+      },
+      {
+        "rating": 4,
+        "comment": "This is a good product",
+        "author": "Jane Doe"
+      },
+      {
+        "rating": 2,
+        "comment": "This is a product",
+        "author": "Sam Doe"
+      },
+      {
+        "rating": 1,
+        "comment": "This is a bad product",
+        "author": "Samantha Doe"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Camera",
+    "category": "Miscellaneous",
+    "description": "Be an artist with this camera. Capture the world around you.",
+    "image": "@/assets/images/miscellaneous/camera.jpg",
+    "price": 149.99,
+    "specifications": {
+      "Color": "Black",
+      "Size": "n/a",
+      "Material": "Plastic"
+    },
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "This is a great product",
+        "author": "John Doe"
+      },
+      {
+        "rating": 4,
+        "comment": "This is a good product",
+        "author": "Jane Doe"
+      },
+      {
+        "rating": 2,
+        "comment": "This is a product",
+        "author": "Sam Doe"
+      },
+      {
+        "rating": 1,
+        "comment": "This is a bad product",
+        "author": "Samantha Doe"
+      }
+    ]
+  }
+]

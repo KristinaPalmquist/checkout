@@ -1,0 +1,212 @@
+[
+  {
+    "id": 1,
+    "name": "Miami",
+    "category": "Footwear",
+    "description": "This is a description of Acapulco",
+    "image": "../assets/images/footwear/miami.jpg",
+    "price": 14.99,
+    "specifications": {
+      "Color": "Rainbow",
+      "Size": "36",
+      "Material": "Leather"
+    },
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "This is a great product",
+        "author": "John Doe"
+      },
+      {
+        "rating": 4,
+        "comment": "This is a good product",
+        "author": "Jane Doe"
+      },
+      {
+        "rating": 2,
+        "comment": "This is a product",
+        "author": "Sam Doe"
+      },
+      {
+        "rating": 1,
+        "comment": "This is a bad product",
+        "author": "Samantha Doe"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Star",
+    "category": "Footwear",
+    "description": "Classic light orange sneaker. Perfect for a casual day out.",
+    "image": "../assets/images/footwear/star.jpg",
+    "price": 19.99,
+    "specifications": {
+      "Color": "Orange",
+      "Size": "39",
+      "Material": "Canvas"
+    },
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "This is a great product",
+        "author": "John Doe"
+      },
+      {
+        "rating": 4,
+        "comment": "This is a good product",
+        "author": "Jane Doe"
+      },
+      {
+        "rating": 2,
+        "comment": "This is a product",
+        "author": "Sam Doe"
+      },
+      {
+        "rating": 1,
+        "comment": "This is a bad product",
+        "author": "Samantha Doe"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Angel",
+    "category": "Footwear",
+    "description": "Bold, white sneaker with classic logo on the side.",
+    "image": "../assets/images/footwear/angel.jpg",
+    "price": 99.99,
+    "specifications": {
+      "Color": "White",
+      "Size": "36",
+      "Material": "Leather"
+    },
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "This is a great product",
+        "author": "John Doe"
+      },
+      {
+        "rating": 4,
+        "comment": "This is a good product",
+        "author": "Jane Doe"
+      },
+      {
+        "rating": 2,
+        "comment": "This is a product",
+        "author": "Sam Doe"
+      },
+      {
+        "rating": 1,
+        "comment": "This is a bad product",
+        "author": "Samantha Doe"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Sand",
+    "category": "Footwear",
+    "description": "This is a description of Foff",
+    "image": "../assets/images/footwear/sand.jpg",
+    "price": 12.99,
+    "specifications": {
+      "Color": "Beige",
+      "Size": "41",
+      "Material": "Leather"
+    },
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "This is a great product",
+        "author": "John Doe"
+      },
+      {
+        "rating": 4,
+        "comment": "This is a good product",
+        "author": "Jane Doe"
+      },
+      {
+        "rating": 2,
+        "comment": "This is a product",
+        "author": "Sam Doe"
+      },
+      {
+        "rating": 1,
+        "comment": "This is a bad product",
+        "author": "Samantha Doe"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Tom",
+    "category": "Footwear",
+    "description": "Compofortable, yet stylish flip-flops.",
+    "image": "../assets/images/footwear/tom.jpg",
+    "price": 17.99,
+    "specifications": {
+      "Color": "Black",
+      "Size": "42",
+      "Material": "Polyester"
+    },
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "This is a great product",
+        "author": "John Doe"
+      },
+      {
+        "rating": 4,
+        "comment": "This is a good product",
+        "author": "Jane Doe"
+      },
+      {
+        "rating": 2,
+        "comment": "This is a product",
+        "author": "Sam Doe"
+      },
+      {
+        "rating": 1,
+        "comment": "This is a bad product",
+        "author": "Samantha Doe"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Outdoor",
+    "category": "Footwear",
+    "description": "Water resistant sneakers",
+    "image": "../assets/images/footwear/outdoor.jpg",
+    "price": 69.99,
+    "specifications": {
+      "Color": "Green",
+      "Size": "44",
+      "Material": "Leather"
+    },
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "This is a great product",
+        "author": "John Doe"
+      },
+      {
+        "rating": 4,
+        "comment": "This is a good product",
+        "author": "Jane Doe"
+      },
+      {
+        "rating": 2,
+        "comment": "This is a product",
+        "author": "Sam Doe"
+      },
+      {
+        "rating": 1,
+        "comment": "This is a bad product",
+        "author": "Samantha Doe"
+      }
+    ]
+  }
+]

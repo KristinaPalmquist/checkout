@@ -1,0 +1,247 @@
+[
+  {
+    "id": 1,
+    "name": "Acapulco",
+    "category": "Headwear",
+    "description": "This is a description of Acapulco",
+    "image": "@/assets/images/headwear/acapulco.jpg",
+    "price": 19.99,
+    "specifications": {
+      "Color": "Beige",
+      "Size": "L",
+      "Material": "Straw"
+    },
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "This is a great product",
+        "author": "John Doe"
+      },
+      {
+        "rating": 4,
+        "comment": "This is a good product",
+        "author": "Jane Doe"
+      },
+      {
+        "rating": 2,
+        "comment": "This is a product",
+        "author": "Sam Doe"
+      },
+      {
+        "rating": 1,
+        "comment": "This is a bad product",
+        "author": "Samantha Doe"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Beanie",
+    "category": "Headwear",
+    "description": "This is a description of Beanie",
+    "image": "@/assets/images/headwear/beanie.jpg",
+    "price": 9.99,
+    "specifications": {
+      "Color": "Orange",
+      "Size": "M",
+      "Material": "Polyester"
+    },
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "This is a great product",
+        "author": "John Doe"
+      },
+      {
+        "rating": 4,
+        "comment": "This is a good product",
+        "author": "Jane Doe"
+      },
+      {
+        "rating": 2,
+        "comment": "This is a product",
+        "author": "Sam Doe"
+      },
+      {
+        "rating": 1,
+        "comment": "This is a bad product",
+        "author": "Samantha Doe"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Carl",
+    "category": "Headwear",
+    "description": "This is a description of Carl",
+    "image": "@/assets/images/headwear/carl.jpg",
+    "price": 99.99,
+    "specifications": {
+      "Color": "Olive",
+      "Size": "L",
+      "Material": "Wool"
+    },
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "This is a great product",
+        "author": "John Doe"
+      },
+      {
+        "rating": 4,
+        "comment": "This is a good product",
+        "author": "Jane Doe"
+      },
+      {
+        "rating": 2,
+        "comment": "This is a product",
+        "author": "Sam Doe"
+      },
+      {
+        "rating": 1,
+        "comment": "This is a bad product",
+        "author": "Samantha Doe"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Foff",
+    "category": "Headwear",
+    "description": "This is a description of Foff",
+    "image": "@/assets/images/headwear/foff.jpg",
+    "price": 39.99,
+    "specifications": {
+      "Color": "Red",
+      "Size": "L",
+      "Material": "Cotton"
+    },
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "This is a great product",
+        "author": "John Doe"
+      },
+      {
+        "rating": 4,
+        "comment": "This is a good product",
+        "author": "Jane Doe"
+      },
+      {
+        "rating": 2,
+        "comment": "This is a product",
+        "author": "Sam Doe"
+      },
+      {
+        "rating": 1,
+        "comment": "This is a bad product",
+        "author": "Samantha Doe"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Hugo",
+    "category": "Headwear",
+    "description": "This is a description of Hugo",
+    "image": "@/assets/images/headwear/hugo.jpg",
+    "price": 19.99,
+    "specifications": {
+      "Color": "White",
+      "Size": "M",
+      "Material": "Felt"
+    },
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "This is a great product",
+        "author": "John Doe"
+      },
+      {
+        "rating": 4,
+        "comment": "This is a good product",
+        "author": "Jane Doe"
+      },
+      {
+        "rating": 2,
+        "comment": "This is a product",
+        "author": "Sam Doe"
+      },
+      {
+        "rating": 1,
+        "comment": "This is a bad product",
+        "author": "Samantha Doe"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Straw",
+    "category": "Headwear",
+    "description": "This is a description of Straw",
+    "image": "@/assets/images/headwear/straw.jpg",
+    "price": 399.99,
+    "specifications": {
+      "Color": "Light brown",
+      "Size": "S",
+      "Material": "Straw"
+    },
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "This is a great product",
+        "author": "John Doe"
+      },
+      {
+        "rating": 4,
+        "comment": "This is a good product",
+        "author": "Jane Doe"
+      },
+      {
+        "rating": 2,
+        "comment": "This is a product",
+        "author": "Sam Doe"
+      },
+      {
+        "rating": 1,
+        "comment": "This is a bad product",
+        "author": "Samantha Doe"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Z",
+    "category": "Headwear",
+    "description": "This is a description of Z",
+    "image": "@/assets/images/headwear/z.jpg",
+    "price": 14.99,
+    "specifications": {
+      "Color": "Black",
+      "Size": "M",
+      "Material": "Cotton"
+    },
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "This is a great product",
+        "author": "John Doe"
+      },
+      {
+        "rating": 4,
+        "comment": "This is a good product",
+        "author": "Jane Doe"
+      },
+      {
+        "rating": 2,
+        "comment": "This is a product",
+        "author": "Sam Doe"
+      },
+      {
+        "rating": 1,
+        "comment": "This is a bad product",
+        "author": "Samantha Doe"
+      }
+    ]
+  }
+]
