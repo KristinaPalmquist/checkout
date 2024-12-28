@@ -81,11 +81,14 @@ onMounted(() => {
       </div>
       <div class="product-info">
         <div class="name">
-        <h1>{{ product.name }}</h1></div>
+          <h1>{{ product.name }}</h1>
+        </div>
         <div class="description">
-        <p>{{ product.description }}</p></div>
+          <p>{{ product.description }}</p>
+        </div>
         <div class="price">
-        <p>{{ formatCurrency(product.price) }}</p></div>
+          <p>{{ formatCurrency(product.price) }}</p>
+        </div>
         <div class="average-rating">
           <p>
             {{ renderStars(Math.round(averageRating)) }} ({{ averageRating }})
@@ -109,8 +112,8 @@ onMounted(() => {
             </li>
           </ul>
         </details>
-        <div class="message-div">
-          <p class="message" v-show="showMessage">{{ message }}</p>
+        <div class="message-div" v-show="showMessage">
+          <p class="message">{{ message }}</p>
         </div>
         <div class="btn-div">
           <BasicButton :btnText="'Go to Cart'" :btnFunction="goToCart" />
@@ -127,7 +130,8 @@ onMounted(() => {
 
 <style scoped>
 .product-details {
-  width: 90vw;
+  width: 100%;
+  max-width: 90vw;
   margin: 0 auto;
   text-align: center;
   display: grid;
@@ -142,19 +146,16 @@ onMounted(() => {
 }
 .product-image {
   width: 100%;
+  max-height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
   height: auto;
-  /* margin-bottom: 2rem; */
 }
 .product-image img {
-  /* width: 100%; */
   height: auto;
   max-width: 100%;
   max-height: 100%;
-  /* max-width: 300px;
-  max-height: 300px; */
   border-radius: 2rem;
   margin: auto;
   border: 16px solid transparent;
@@ -222,7 +223,7 @@ details[open] summary::after {
 @media only screen and (max-width: 768px) {
   .product-details {
     grid-template-columns: 1fr;
-    grid-template-areas: "";
+    grid-template-areas: '';
   }
 
   .product-image {
@@ -232,15 +233,15 @@ details[open] summary::after {
   .product-info {
     display: grid;
 
-    grid-template-areas: "name"
-                         "price"
-                         "msg"
-                         "btn"
-                         "spec"
-                         "avg"
-                         "desc"
-                         "rev";
-
+    grid-template-areas:
+      'name'
+      'price'
+      'btn'
+      'msg'
+      'spec'
+      'avg'
+      'desc'
+      'rev';
   }
 
   .name {
@@ -253,7 +254,7 @@ details[open] summary::after {
 
   .price {
     grid-area: price;
-    margin: 0
+    margin: 0;
   }
 
   .price p {
@@ -274,6 +275,7 @@ details[open] summary::after {
 
   .message-div {
     grid-area: msg;
+    margin-bottom: 2rem;
   }
 
   .btn-div {

@@ -1,72 +1,177 @@
 [
   {
     "id": 1,
-    "name": "Product 1",
-    "description": "This is a description of Product 1",
-    "image": "path/to/product1.jpg",
-    "price": 29.99
+    "name": "Ornament",
+    "category": "Trousers",
+    "description": "A pair of very special trousers. Ornamented with gold along the side seam and finished with a beautiful belt",
+    "image": "@/assets/images/trousers/ornament.jpg",
+    "price": 129.99,
+
+    "specifications": {
+      "Color": "Black / Gold",
+      "Size": "n/a",
+      "Material": "Cotton canvas"
+    },
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "This is a great product",
+        "author": "John Doe"
+      },
+      {
+        "rating": 5,
+        "comment": "This is a great product",
+        "author": "John Doe"
+      },
+      {
+        "rating": 4,
+        "comment": "This is a good product",
+        "author": "Jane Doe"
+      },
+      {
+        "rating": 2,
+        "comment": "Looks foreign",
+        "author": "Sven"
+      },
+      {
+        "rating": 1,
+        "comment": "Too much decoration for my taste",
+        "author": "Sammy"
+      }
+    ]
   },
   {
     "id": 2,
-    "name": "Product 2",
-    "description": "This is a description of Product 1",
-    "image": "path/to/product2.jpg",
-    "price": 49.99
+    "name": "Stripe",
+    "category": "Trousers",
+    "description": "Wide legged, white trousers with a thin dark stripe",
+    "image": "@/assets/images/trousers/stripe.jpg",
+    "price": 59.99,
+
+    "specifications": {
+      "Color": "White",
+      "Size": "S",
+      "Material": "Cotten / Linen"
+    },
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "This is a great looking pair of trousers",
+        "author": "Johnny Doe"
+      },
+      {
+        "rating": 4,
+        "comment": "Simple and elegant",
+        "author": "Jane Margareth"
+      }
+    ]
   },
   {
     "id": 3,
-    "name": "Product 3",
-    "description": "This is a description of Product 1",
-    "image": "path/to/product3.jpg",
-    "price": 99.99
+    "name": "Jeans",
+    "category": "Trousers",
+    "description": "Fashionably worn jeans that will meke you stand out",
+    "image": "@/assets/images/trousers/jeans.jpg",
+    "price": 19.99,
+
+    "specifications": {
+      "Color": "Blue",
+      "Size": "n/a",
+      "Material": "Denim"
+    },
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "This is a great product",
+        "author": "John Doe"
+      },
+      {
+        "rating": 4,
+        "comment": "This is a good product",
+        "author": "Jane Doe"
+      },
+      {
+        "rating": 2,
+        "comment": "This is a product",
+        "author": "Sam Doe"
+      },
+      {
+        "rating": 1,
+        "comment": "This is a bad product",
+        "author": "Samantha Doe"
+      }
+    ]
   },
   {
     "id": 4,
-    "name": "Product 4",
-    "description": "This is a description of Product 1",
-    "image": "path/to/product4.jpg",
-    "price": 199.99
+    "name": "Utility",
+    "category": "Trousers",
+    "description": "Practical and stylish",
+    "image": "@/assets/images/trousers/utility.jpg",
+    "price": 29.99,
+
+    "specifications": {
+      "Color": "Beige",
+      "Size": "n/a",
+      "Material": "Cotton"
+    },
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "This is a great product",
+        "author": "John Doe"
+      },
+      {
+        "rating": 4,
+        "comment": "This is a good product",
+        "author": "Jane Doe"
+      },
+      {
+        "rating": 2,
+        "comment": "This is a product",
+        "author": "Sam Doe"
+      },
+      {
+        "rating": 1,
+        "comment": "This is a bad product",
+        "author": "Samantha Doe"
+      }
+    ]
   },
   {
     "id": 5,
-    "name": "Product 5",
-    "description": "This is a description of Product 1",
-    "image": "path/to/product5.jpg",
-    "price": 299.99
-  },
-  {
-    "id": 6,
-    "name": "Product 6",
-    "description": "This is a description of Product 1",
-    "image": "path/to/product6.jpg",
-    "price": 399.99
-  },
-  {
-    "id": 7,
-    "name": "Product 7",
-    "description": "This is a description of Product 1",
-    "image": "path/to/product7.jpg",
-    "price": 499.99
-  },
-  {
-    "id": 8,
-    "name": "Product 8",
-    "description": "This is a description of Product 1",
-    "image": "path/to/product8.jpg",
-    "price": 599.99
-  },
-  {
-    "id": 9,
-    "name": "Product 9",
-    "description": "This is a description of Product 1",
-    "image": "path/to/product9.jpg",
-    "price": 699.99
-  },
-  {
-    "id": 10,
-    "name": "Product 10",
-    "description": "This is a description of Product 1",
-    "image": "path/to/product10.jpg",
-    "price": 799.99
+    "name": "Tartan",
+    "category": "Trousers",
+    "description": "Slim fit trousers with a tartan pattern",
+    "image": "@/assets/images/trousers/tartan.jpg",
+    "price": 29.99,
+
+    "specifications": {
+      "Color": "Black / Red",
+      "Size": "M",
+      "Material": "Nylon"
+    },
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "This is a great product",
+        "author": "John Doe"
+      },
+      {
+        "rating": 4,
+        "comment": "This is a good product",
+        "author": "Jane Doe"
+      },
+      {
+        "rating": 2,
+        "comment": "This is a product",
+        "author": "Sam Doe"
+      },
+      {
+        "rating": 1,
+        "comment": "This is a bad product",
+        "author": "Samantha Doe"
+      }
+    ]
   }
 ]

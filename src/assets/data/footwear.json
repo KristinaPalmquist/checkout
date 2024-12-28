@@ -3,7 +3,7 @@
     "id": 1,
     "name": "Miami",
     "category": "Footwear",
-    "description": "This is a description of Acapulco",
+    "description": "This is a pair of leather sandals in all the colors of the rainbow. Will match any outfit",
     "image": "../assets/images/footwear/miami.jpg",
     "price": 14.99,
     "specifications": {
