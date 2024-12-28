@@ -71,11 +71,14 @@ const navbarNumbersStyle = computed(() => {
 });
 
 const navbarBackgroundStyle = computed(() => {
-  const itemHeight = windowHeight.value / routes.length;
-  const paddingMargin = 33;
-  const totalHeight = itemHeight * routes.length - paddingMargin;
+  // const itemHeight = windowHeight.value / routes.length;
+  // const paddingMargin = 33;
+  // const totalHeight = itemHeight * routes.length - paddingMargin;
+  // return {
+  //   height: `${totalHeight}px`,
+  // };
   return {
-    height: `${totalHeight}px`,
+    height: `95vh`,
   };
 });
 
@@ -214,6 +217,14 @@ onUnmounted(() => {
   #main-navbar {
     padding: 0;
   }
+
+  .navbar-background  {
+    width: 90vw;
+    height: 90vh;
+    margin: 1rem auto 1rem 3rem;
+
+}
+
   #main-navbar .navbar {
     height: 90%;
     /* padding: auto 0; */

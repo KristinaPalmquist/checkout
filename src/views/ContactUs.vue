@@ -6,7 +6,6 @@ const name = ref('');
 const email = ref('');
 const subject = ref('');
 const message = ref('');
-// const formContent = ref([]);
 const formContent = ref({
   name: '',
   email: '',
@@ -24,8 +23,6 @@ const clearForm = () => {
 };
 
 const handleSubmit = () => {
-  // Here you would typically handle form submission, e.g., send data to a server
-  // successMessage.value =
   formContent.value = {
     name: name.value,
     email: email.value,
@@ -42,8 +39,8 @@ const handleSubmit = () => {
 
 <template>
   <div id="contact-us" class="component-container">
-    <div class="contact-form">
-      <h1>Contact Us</h1>
+    <h1>Contact Us</h1>
+    <div class="contact-form" v-if="!showSentMessage">
       <form @submit.prevent="handleSubmit">
         <div>
           <label for="name">Name</label>
@@ -170,17 +167,16 @@ const handleSubmit = () => {
   padding-left: 1rem;
 }
 
-
 @media only screen and (max-width: 740px) {
   #contact-us {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: max-content;
-}
-/*   
-  .contact-messages {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-  }  */
+    height: max-content;
+  }
+
+  .contact-messages > div {
+    gap: 5rem;
+  }
 }
 </style>

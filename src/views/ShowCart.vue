@@ -22,7 +22,6 @@ const resolveImagePath = (product) => {
   }
 };
 
-
 const formatCurrency = (value) => {
   return new Intl.NumberFormat('en-US', {
     style: 'currency',
@@ -95,12 +94,13 @@ onMounted(() => {
         <p class="product-total">
           {{ formatCurrency(product.price * product.quantity) }}
         </p>
-
-        <BasicButton
-          :btnText="'Remove'"
-          :btnFunction="() => removeFromCart(index)"
-          :btnClass="'small-text'"
-        />
+        <div class="remove-btn">
+          <BasicButton
+            :btnText="'Remove'"
+            :btnFunction="() => removeFromCart(index)"
+            :btnClass="'small-text'"
+          />
+        </div>
       </li>
     </ul>
 
@@ -186,5 +186,51 @@ onMounted(() => {
 
 .quantity-controls p {
   margin: 0 0.5rem;
+}
+
+@media only screen and (max-width: 600px) {
+  #show-cart .cart-item {
+    grid-template-areas:
+      'img  . name  name . price'
+      'img .  quantity quantity . total'
+      'img . . . .  remove';
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  .product-image {
+    grid-area: img;
+  }
+  .product-name {
+    grid-area: name;
+    font-size: 1.5rem;
+  }
+  .product-price {
+    grid-area: price;
+    text-align: right;
+  }
+  .quantity-controls {
+    grid-area: quantity;
+  }
+  .product-total {
+    grid-area: total;
+    font-size: 1.5rem;
+  }
+  .remove-btn {
+    grid-area: remove;
+  }
+
+  #show-cart .total {
+    left: 50%;
+  }
+
+  .btn-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
 }
 </style>

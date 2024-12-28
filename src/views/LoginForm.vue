@@ -104,7 +104,7 @@ const handleLogin = () => {
         />
       </div>
 
-      <p>Output: {{ output }}</p>
+      <!-- <p>Output: {{ output }}</p> -->
     </form>
   </div>
 </template>
@@ -113,5 +113,12 @@ const handleLogin = () => {
 #login-form form {
   width: clamp(300px, 50%, 800px);
   margin: 0 auto;
+}
+
+#login-form .btn-div {
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 3rem;
 }
 </style>

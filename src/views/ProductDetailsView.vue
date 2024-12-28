@@ -53,7 +53,7 @@ const addToCart = () => {
   store.dispatch('addToCart', product.value);
   store.dispatch('saveCart');
 
-  const items = store.getters.cartProducts;
+  // const items = store.getters.cartProducts;
   message.value = 'Product added to cart!';
   showMessage.value = true;
 };
@@ -80,9 +80,12 @@ onMounted(() => {
         <img :src="resolveImagePath(product)" :alt="product.name" />
       </div>
       <div class="product-info">
-        <h1>{{ product.name }}</h1>
-        <p>{{ product.description }}</p>
-        <p>{{ formatCurrency(product.price) }}</p>
+        <div class="name">
+        <h1>{{ product.name }}</h1></div>
+        <div class="description">
+        <p>{{ product.description }}</p></div>
+        <div class="price">
+        <p>{{ formatCurrency(product.price) }}</p></div>
         <div class="average-rating">
           <p>
             {{ renderStars(Math.round(averageRating)) }} ({{ averageRating }})
@@ -214,5 +217,69 @@ onMounted(() => {
 details[open] summary::after {
   content: 'Close ▲';
   transform: rotate(3600deg);
+}
+
+@media only screen and (max-width: 768px) {
+  .product-details {
+    grid-template-columns: 1fr;
+    grid-template-areas: "";
+  }
+
+  .product-image {
+    margin-top: 2rem;
+  }
+
+  .product-info {
+    display: grid;
+
+    grid-template-areas: "name"
+                         "price"
+                         "msg"
+                         "btn"
+                         "spec"
+                         "avg"
+                         "desc"
+                         "rev";
+
+  }
+
+  .name {
+    grid-area: name;
+  }
+
+  .description {
+    grid-area: desc;
+  }
+
+  .price {
+    grid-area: price;
+    margin: 0
+  }
+
+  .price p {
+    margin: 0;
+  }
+
+  .average-rating {
+    grid-area: avg;
+  }
+
+  .specifications {
+    grid-area: spec;
+  }
+
+  .reviews {
+    grid-area: rev;
+  }
+
+  .message-div {
+    grid-area: msg;
+  }
+
+  .btn-div {
+    grid-area: btn;
+    margin-bottom: 2rem;
+    gap: 2rem;
+  }
 }
 </style>
