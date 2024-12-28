@@ -18,14 +18,7 @@ const props = defineProps({
 
 const { title, imageSrc, price } = props;
 
-// const title = props.title;
-// const imageSrc = props.imageSrc;
-// const price = props.price;
-
 const formatCurrency = (value) => {
-  console.log('title: ', title);
-  console.log('imageSrc: ', imageSrc);
-  console.log('price: ', price);
   return new Intl.NumberFormat('en-US', {
     style: 'currency',
     currency: 'USD',
