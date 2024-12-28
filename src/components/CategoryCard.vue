@@ -15,11 +15,14 @@ const resolveImagePath = () => {
   console.log('category: ', category);
   console.log('name: ', name);
   console.log('imagename: ', imagename);
-  let path = `../src/assets/images/${name.toLowerCase()}/${imagename.toLowerCase()}.jpg`;
+  let path = `@/assets/images/${name.toLowerCase()}/${imagename.toLowerCase()}.jpg`;
   console.log('path: ', path);
 
   return new URL(path, import.meta.url).href;
 };
+
+// http://localhost:5173/src/src/assets/images/dresses/banana.jpg
+// https://retroretreat.netlify.app/assets/..src/assets/images/headwear/z.jpg
 </script>
 
 <template>
