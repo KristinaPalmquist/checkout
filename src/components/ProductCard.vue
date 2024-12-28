@@ -16,11 +16,7 @@ const product = props.product;
 const categoryName = props.categoryName;
 
 const resolveImagePath = (name) => {
-  console.log('name: ', name);
-  console.log('categoryName: ', categoryName);
-  console.log('product: ', product);
   let path = `../assets/images/${categoryName.toLowerCase()}/${name.toLowerCase()}.jpg`;
-  console.log('path: ', path);
   return new URL(path, import.meta.url).href;
 };
 </script>
