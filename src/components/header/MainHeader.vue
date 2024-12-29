@@ -1,5 +1,5 @@
 <script setup>
-import { computed, ref, onMounted, onUnmounted } from 'vue';
+import { computed, ref, onMounted, onUnmounted, onUpdated, watch } from 'vue';
 import { useRouter } from 'vue-router';
 import { useStore } from 'vuex';
 import MainNavbar from '/src/components/header/MainNavbar.vue';
@@ -13,7 +13,11 @@ const companyName = ref('Retro Retreat');
 const isScrolled = ref(false);
 const header = ref(null);
 const isOpen = ref(false);
+const headerHeight = ref(0);
+
 const showLoginBtn = computed(() => !isAuthenticated.value && !isOpen.value);
+
+const emits = defineEmits(['headerHeight']);
 
 const handleScroll = () => {
   if (window.scrollY > 50) {
@@ -29,27 +33,47 @@ const handleRouting = (event, path) => {
   isOpen.value = false;
 };
 
+const isAuthenticated = computed(
+  () => store.getters['auth/IS_USER_AUTHENTICATED']
+);
+
+const updateHeaderHeight = () => {
+  headerHeight.value = document.getElementById('main-header').offsetHeight;
+  emits('headerHeight', headerHeight.value);
+};
+
 onMounted(() => {
   window.addEventListener('scroll', handleScroll);
+
+  updateHeaderHeight();
+});
+
+onUpdated(() => {
+  updateHeaderHeight();
 });
 
 onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll);
 });
 
-const isAuthenticated = computed(
-  () => store.getters['auth/IS_USER_AUTHENTICATED']
-);
+watch(headerHeight, (newHeight) => {
+  emits('headerHeight', newHeight);
+});
 </script>
 
 <template>
   <header id="main-header" :class="{ scrolled: isScrolled }" ref="header">
-    <a :href="route.path" @click="(event) => handleRouting(event, route.path)">
-      <h1 v-if="!isOpen">{{ companyName }}</h1></a
-    >
-    <div class="nav-btns">
-      <LoginButton v-if="showLoginBtn" />
-      <MainNavbar @update:isOpen="isOpen = $event" />
+    <div class="header-content">
+      <a
+        :href="route.path"
+        @click="(event) => handleRouting(event, route.path)"
+      >
+        <h1 v-if="!isOpen">{{ companyName }}</h1></a
+      >
+      <div class="nav-btns">
+        <LoginButton v-if="showLoginBtn" />
+        <MainNavbar @update:isOpen="isOpen = $event" />
+      </div>
     </div>
   </header>
 </template>
@@ -58,15 +82,22 @@ const isAuthenticated = computed(
 #main-header {
   position: fixed;
   width: 100%;
+  /* height: max-content; */
   padding: 0 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
 
 #main-header.scrolled {
   background-color: var(--color-background-transparent);
   color: white;
+}
+
+#main-header .header-content {
+  width: clamp(300px, 80%, 1200px);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0.5rem auto;
 }
 #main-header a {
   text-decoration: none;
@@ -86,8 +117,12 @@ const isAuthenticated = computed(
 
 @media only screen and (max-width: 600px) {
   #main-header {
-    flex-direction: column;
     margin-bottom: 0.5rem;
+  }
+
+  #main-header .header-content {
+    width: 100%;
+    flex-direction: column;
   }
 
   #main-header h1 {
@@ -96,8 +131,6 @@ const isAuthenticated = computed(
   }
 
   #main-header .nav-btns {
-    /* display: flex;
-    justify-content: space-evenly; */
     gap: 3rem;
   }
 }

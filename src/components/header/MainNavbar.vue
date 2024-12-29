@@ -47,7 +47,7 @@ const navbarItemStyle = computed(() => {
     };
   } else {
     return {
-      fontSize: '2.2rem',
+      fontSize: '2rem',
       padding: '0.5rem',
     };
   }
@@ -78,7 +78,7 @@ const navbarBackgroundStyle = computed(() => {
   //   height: `${totalHeight}px`,
   // };
   return {
-    height: `95vh`,
+    height: `93vh`,
   };
 });
 
@@ -132,7 +132,7 @@ onUnmounted(() => {
 .navbar-background {
   position: absolute;
   top: 1rem;
-  left: 0;
+  left: -5rem;
   width: calc(100vw - 7rem);
   background-color: var(--accent-4-background-color);
   border-radius: 1rem;
@@ -213,21 +213,24 @@ onUnmounted(() => {
   font-size: 4rem;
 }
 
+@media only screen and (max-width: 1024px) {
+  .navbar-background {
+    left: -3rem;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   #main-navbar {
     padding: 0;
   }
 
-  .navbar-background  {
+  .navbar-background {
     width: 90vw;
-    height: 90vh;
-    margin: 1rem auto 1rem 3rem;
-
-}
+    left: 1.5rem;
+  }
 
   #main-navbar .navbar {
-    height: 90%;
-    /* padding: auto 0; */
+    height: 95%;
   }
 
   #main-navbar .navbar a,

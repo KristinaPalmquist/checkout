@@ -3,8 +3,6 @@
 #app {
   width: 100vw;
   font-weight: normal;
-  /* background-color: var(--color-background);
-  color: var(--color-text); */
 }
 
 h1 {
@@ -29,7 +27,6 @@ button {
 }
 
 p {
-  /* margin: 0.5rem 0; */
   margin-bottom: 2rem;
 }
 p.large {
@@ -41,9 +38,8 @@ section {
 }
 
 .component-container {
-  /* padding: 2rem; */
   width: clamp(300px, 80%, 1200px);
-  margin: 1rem auto;
+  margin: 0 auto;
 }
 
 .numbers {
@@ -59,14 +55,6 @@ textarea,
 select {
   cursor: none;
 }
-
-/* a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
-} */
 
 .btn-div {
   width: 100%;
@@ -165,8 +153,7 @@ input[type='radio']:focus {
 @media only screen and (max-width: 768px) {
   .component-container {
     width: 100%;
-    padding: 40px 1rem 1rem;
-    /* margin-top: 150px; */
+    padding: 0 1rem;
   }
 }
 
