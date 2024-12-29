@@ -39,10 +39,11 @@ const navbarItemStyle = computed(() => {
   if (windowWidth.value > 600) {
     const backgroundHeight = windowHeight.value - 30;
     const itemHeight = backgroundHeight / routes.length;
-    const fontSize = Math.min(itemHeight * 0.5, 50);
+    // const fontSize = Math.min(itemHeight * 0.5, 50);
     const padding = Math.min(itemHeight * 0.05, 3);
+    const fontSize = 90 / routes.length - padding * 2;
     return {
-      fontSize: `${fontSize}px`,
+      fontSize: `${fontSize}vh`,
       padding: `${padding}px`,
     };
   } else {
@@ -56,10 +57,11 @@ const navbarItemStyle = computed(() => {
 const navbarNumbersStyle = computed(() => {
   if (windowWidth.value > 600) {
     const itemHeight = windowHeight.value / routes.length;
-    const fontSize = Math.min(itemHeight * 0.3, 32);
+    // const fontSize = Math.min(itemHeight * 0.3, 32);
     const padding = Math.min(itemHeight * 0.05, 4);
+    const fontSize = 90 / routes.length - padding * 2;
     return {
-      fontSize: `${fontSize}px`,
+      fontSize: `${fontSize}vh`,
       padding: `${padding}px`,
     };
   } else {

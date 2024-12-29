@@ -38,8 +38,11 @@ const isAuthenticated = computed(
 );
 
 const updateHeaderHeight = () => {
-  headerHeight.value = document.getElementById('main-header').offsetHeight;
-  emits('headerHeight', headerHeight.value);
+  if (!isOpen.value) {
+    headerHeight.value = document.getElementById('main-header').offsetHeight;
+    console.log(headerHeight.value);
+    emits('headerHeight', headerHeight.value);
+  }
 };
 
 onMounted(() => {
