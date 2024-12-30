@@ -40,7 +40,6 @@ const isAuthenticated = computed(
 const updateHeaderHeight = () => {
   if (!isOpen.value) {
     headerHeight.value = document.getElementById('main-header').offsetHeight;
-    console.log(headerHeight.value);
     emits('headerHeight', headerHeight.value);
   }
 };

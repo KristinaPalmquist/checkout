@@ -23,7 +23,6 @@ onMounted(() => {
 });
 
 watch(headerHeight, (newHeight) => {
-  console.log('New: ', newHeight);
   if (mainElement.value) {
     mainElement.value.style.paddingTop = `${newHeight}px`;
   }
