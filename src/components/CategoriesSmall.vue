@@ -165,4 +165,21 @@ watch(categories, () => {
     var(--gradient-end)
   );
 }
+
+@media only screen and (max-width: 600px) {
+  .scroll-button,
+  .fade-left,
+  .fade-right {
+    display: none;
+  }
+
+  .categories-row {
+    justify-content: center;
+  }
+  .categories-container {
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+  }
+}
 </style>

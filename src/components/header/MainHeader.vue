@@ -14,6 +14,7 @@ const isScrolled = ref(false);
 const header = ref(null);
 const isOpen = ref(false);
 const headerHeight = ref(0);
+const titleRef = ref(null);
 
 const showLoginBtn = computed(() => !isAuthenticated.value && !isOpen.value);
 
@@ -22,8 +23,10 @@ const emits = defineEmits(['headerHeight']);
 const handleScroll = () => {
   if (window.scrollY > 50) {
     isScrolled.value = true;
+    header.value.style.transform = `translateY(-${titleRef.value.offsetHeight}px)`;
   } else {
     isScrolled.value = false;
+    header.value.style.transform = 'translateY(0)';
   }
 };
 
@@ -69,6 +72,7 @@ watch(headerHeight, (newHeight) => {
       <a
         :href="route.path"
         @click="(event) => handleRouting(event, route.path)"
+        class="header-title"
       >
         <h1 v-if="!isOpen">{{ companyName }}</h1></a
       >
@@ -84,8 +88,9 @@ watch(headerHeight, (newHeight) => {
 #main-header {
   position: fixed;
   width: 100%;
-  /* height: max-content; */
   padding: 0 2rem;
+  z-index: 10;
+  transition: transform 1s ease-in-out;
 }
 
 #main-header.scrolled {
