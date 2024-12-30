@@ -4,6 +4,7 @@ import { useRouter } from 'vue-router';
 import { useStore } from 'vuex';
 import MainNavbar from '/src/components/header/MainNavbar.vue';
 import LoginButton from '../LoginButton.vue';
+import ThemeToggle from '../ThemeToggle.vue';
 
 const router = useRouter();
 const route = { name: 'Home', path: '/' };
@@ -15,6 +16,7 @@ const header = ref(null);
 const isOpen = ref(false);
 const headerHeight = ref(0);
 const titleRef = ref(null);
+const isMobile = ref(false);
 
 const showLoginBtn = computed(() => !isAuthenticated.value && !isOpen.value);
 
@@ -23,7 +25,9 @@ const emits = defineEmits(['headerHeight']);
 const handleScroll = () => {
   if (window.scrollY > 50) {
     isScrolled.value = true;
-    header.value.style.transform = `translateY(-${titleRef.value.offsetHeight}px)`;
+    if (isMobile.value) {
+      header.value.style.transform = `translateY(-${titleRef.value.offsetHeight}px)`;
+    }
   } else {
     isScrolled.value = false;
     header.value.style.transform = 'translateY(0)';
@@ -72,11 +76,13 @@ watch(headerHeight, (newHeight) => {
       <a
         :href="route.path"
         @click="(event) => handleRouting(event, route.path)"
+        ref="titleRef"
         class="header-title"
       >
         <h1 v-if="!isOpen">{{ companyName }}</h1></a
       >
       <div class="nav-btns">
+        <ThemeToggle />
         <LoginButton v-if="showLoginBtn" />
         <MainNavbar @update:isOpen="isOpen = $event" />
       </div>
@@ -117,7 +123,7 @@ watch(headerHeight, (newHeight) => {
 
 #main-header .nav-btns {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto auto auto auto;
   align-items: center;
   gap: 1rem;
 }
@@ -137,8 +143,8 @@ watch(headerHeight, (newHeight) => {
     margin-bottom: 0;
   }
 
-  #main-header .nav-btns {
+  /* #main-header .nav-btns {
     gap: 3rem;
-  }
+  } */
 }
 </style>

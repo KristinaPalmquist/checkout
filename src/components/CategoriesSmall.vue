@@ -7,6 +7,7 @@ const router = useRouter();
 
 const categories = ref([]);
 const scrollContainer = ref(null);
+const isMobile = ref(false)
 
 const fetchCategories = async () => {
   try {
@@ -40,6 +41,9 @@ const scrollRight = () => {
 };
 
 const handleScroll = () => {
+  if (isMobile.value) return;
+
+  // i want there to be endless scrolling sideways if not on mobile device
   const container = scrollContainer.value;
   if (container) {
     const maxScrollLeft = container.scrollWidth - container.clientWidth;
@@ -51,10 +55,18 @@ const handleScroll = () => {
   }
 };
 
+
+const checkIfMobile = () => {
+  isMobile.value = window.innerWidth <= 600;
+};
+
 onMounted(() => {
   fetchCategories();
+  checkIfMobile();
+  window.addEventListener('resize', checkIfMobile);
+
   const container = scrollContainer.value;
-  if (container) {
+  if (container && !isMobile.value) {
     container.scrollLeft = container.scrollWidth / 2 - container.clientWidth;
     container.addEventListener('scroll', handleScroll);
   }
@@ -62,7 +74,7 @@ onMounted(() => {
 
 watch(categories, () => {
   const container = scrollContainer.value;
-  if (container) {
+  if (container && !isMobile.value) {
     container.scrollLeft = container.scrollWidth / 2 - container.clientWidth;
   }
 });
@@ -101,11 +113,18 @@ watch(categories, () => {
   scroll-behavior: smooth;
   white-space: nowrap;
   flex: 1;
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.categories-row::-webkit-scrollbar {
+  display: none;  /* Safari and Chrome */
 }
 
 .categories-container {
   display: flex;
   flex-wrap: nowrap;
+  height: 215px;
 }
 
 .categories-container > * {
