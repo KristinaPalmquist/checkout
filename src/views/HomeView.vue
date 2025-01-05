@@ -16,7 +16,7 @@ onMounted(() => {
     heroElement.style.height = '100vh';
   }
 
-  const categoriesElement = categoriesRef.value
+  const categoriesElement = categoriesRef.value;
   if (categoriesElement) {
     const updateCategoriesWidth = () => {
       const viewportWidth = window.innerWidth;
@@ -88,14 +88,19 @@ onMounted(() => {
 </template>
 
 <style scoped>
-
+#home-view {
+  background-color: var(--background-color);
+}
 .hero {
+  position: relative;
   text-align: center;
   overflow: hidden;
   z-index: -2;
+  border: none;
 }
 
 .hero-image {
+  background-color: var(--background-color);
   position: absolute;
   top: 0;
   left: 0;
@@ -103,24 +108,23 @@ onMounted(() => {
   height: 100vh;
   object-fit: cover;
   z-index: -2;
+  border: none;
 }
 
 .fade-down {
-
   position: absolute;
   left: 0;
   right: 0;
+  top: 70%;
   height: 30%;
   pointer-events: none;
   z-index: 1;
-
-  top: 70%;
   background: linear-gradient(
     to top,
     var(--gradient-start),
     var(--gradient-end)
   );
-
+  border: none;
 }
 
 .hero-text {
@@ -172,8 +176,5 @@ onMounted(() => {
 .categories-wrapper {
   position: absolute;
   /* overflow: hidden; */
-
 }
-
-
 </style>

@@ -82,7 +82,7 @@ watch(headerHeight, (newHeight) => {
         <h1 v-if="!isOpen">{{ companyName }}</h1></a
       >
       <div class="nav-btns">
-        <ThemeToggle />
+        <ThemeToggle v-if="!isOpen" />
         <LoginButton v-if="showLoginBtn" />
         <MainNavbar @update:isOpen="isOpen = $event" />
       </div>

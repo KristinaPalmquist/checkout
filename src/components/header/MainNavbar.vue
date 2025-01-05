@@ -26,14 +26,19 @@ const handleRouting = (event, path) => {
   emit('update:isOpen', isOpen.value);
 };
 
-const toggleNavbar = () => {
+const toggleMenu = () => {
   isOpen.value = !isOpen.value;
   emit('update:isOpen', isOpen.value);
 };
 
-const updateWindowHeight = () => {
+const updateWindowSize = () => {
   windowHeight.value = window.innerHeight;
+  windowWidth.value = window.innerWidth;
 };
+
+// const updateWindowHeight = () => {
+//   windowHeight.value = window.innerHeight;
+// };
 
 const navbarItemStyle = computed(() => {
   if (windowWidth.value > 600) {
@@ -72,102 +77,101 @@ const navbarNumbersStyle = computed(() => {
   }
 });
 
-const navbarBackgroundStyle = computed(() => {
-  // const itemHeight = windowHeight.value / routes.length;
-  // const paddingMargin = 33;
-  // const totalHeight = itemHeight * routes.length - paddingMargin;
-  // return {
-  //   height: `${totalHeight}px`,
-  // };
-  return {
-    height: `93vh`,
-  };
-});
-
 onMounted(() => {
-  window.addEventListener('resize', updateWindowHeight);
+  window.addEventListener('resize', updateWindowSize);
 });
 
 onUnmounted(() => {
-  window.removeEventListener('resize', updateWindowHeight);
+  window.removeEventListener('resize', updateWindowSize);
 });
 </script>
 
 <template>
-  <div
-    id="main-navbar"
-    :class="{ 'navbar-background': isOpen }"
-    :style="isOpen ? navbarBackgroundStyle : {}"
-  >
-    <button @click="toggleNavbar" class="hamburger">
+  <div id="main-navbar">
+    <Teleport to="body">
+      <div v-if="isOpen" class="modal-overlay">
+        <div class="fullscreen-menu">
+          <nav>
+            <ul>
+              <li v-for="(route, index) in routes" :key="route.name">
+                <a href="#" @click="handleRouting($event, route.path)">
+                  <span
+                    class="numbers navbar-numbers"
+                    :style="navbarNumbersStyle"
+                    >0{{ index + 1 }}.
+                  </span>
+                  <span :style="navbarItemStyle">{{ route.name }}</span>
+                  <!-- {{ route.name }} -->
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </Teleport>
+    <button
+      @click="toggleMenu"
+      :class="['menu-button', { 'menu-button-open': isOpen }]"
+    >
       <span :class="{ line: true, line1: true, open: isOpen }"></span>
       <span :class="{ line: true, line2: true, open: isOpen }"></span>
       <span :class="{ line: true, line3: true, open: isOpen }"></span>
     </button>
-    <nav v-if="isOpen" class="navbar">
-      <a
-        v-for="(route, index) in routes"
-        :key="index"
-        :href="route.path"
-        @click="(event) => handleRouting(event, route.path)"
-        :style="navbarItemStyle"
-      >
-        <span class="numbers navbar-numbers" :style="navbarNumbersStyle"
-          >0{{ index + 1 }}.
-        </span>
-
-        {{ route.name }}</a
-      >
-    </nav>
   </div>
 </template>
 
 <style scoped>
 #main-navbar {
   position: relative;
-  padding: 1rem;
+  padding: 0.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* justify-content: center; */
 }
 
-.navbar-background {
+.menu-button {
   position: absolute;
-  top: 1rem;
-  left: -5rem;
-  width: calc(100vw - 7rem);
-  background-color: var(--accent-4-background-color);
-  border-radius: 1rem;
-  height: calc(120px * 8);
-}
-
-.navbar-background .hamburger {
-  position: absolute;
-  top: 0.8rem;
-  right: 0.8rem;
+  top: 0rem;
+  right: 0rem;
+  transform: translate(50%, -50%);
   z-index: 101;
-}
-
-.hamburger {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 30px;
-  height: 30px;
-  background: none;
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
   border: none;
   padding: 0;
+  z-index: 1000;
 }
 
-.hamburger:focus:not(:active) {
-  box-shadow: none;
+.menu-button-open {
+  transform: translate(3rem, 1rem);
 }
 
 .line {
-  width: 30px;
-  height: 3px;
+  width: 2rem;
+  height: 0.25rem;
   background: var(--accent-3-color);
-  transition: all 0.3s ease;
+  border-radius: 10px;
+  transition: all 0.3s linear;
+  /* position: relative;
+  transform-origin: 1px; */
+}
+
+.line1 {
+  transform: rotate(0);
+}
+
+.line2 {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.line3 {
+  transform: rotate(0);
 }
 
 .line1.open {
@@ -176,43 +180,88 @@ onUnmounted(() => {
 
 .line2.open {
   opacity: 0;
+  /* transform: translateX(20px); */
 }
 
 .line3.open {
   transform: rotate(315deg) translate(7px, -7px);
 }
 
-.navbar {
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--modal-overlay);
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  position: absolute;
-  padding-top: 2rem;
 }
 
-.navbar a {
+.fullscreen-menu {
+  position: fixed;
+  top: 1rem;
+  left: 2rem;
+  bottom: 2rem;
+  right: 2rem;
+  width: calc(100vw - 4rem);
+  height: calc(100vh - 3rem);
+  background-color: var(--accent-4-background-color);
+  color: var(--text-color);
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.fullscreen-menu nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  /* width: max-content; */
+  /* width: calc(min-content + 20vw); */
+  text-align: left;
+}
+
+.fullscreen-menu nav ul li {
+  margin: 1rem 0;
+}
+
+nav ul li a {
   display: flex;
   align-items: center;
   gap: 1rem;
-  width: 60%;
   padding: 0.5rem;
-  margin-left: -20rem;
   text-decoration: none;
-  color: black;
+  color: var(--text-color);
   font-size: 3rem;
-  text-align: center;
 }
 
-.navbar-numbers {
+nav ul li a .navbar-numbers {
   font-size: 2.5rem;
 }
 
-.navbar a:hover {
+nav ul li a:hover {
   background-color: transparent;
   font-family: 'Monoton', sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 4rem;
+  font-size: 5rem;
+}
+
+.fullscreen-menu nav ul li a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.fullscreen-menu nav ul li a:hover {
+  color: var(--color-primary);
 }
 
 @media only screen and (max-width: 1024px) {
