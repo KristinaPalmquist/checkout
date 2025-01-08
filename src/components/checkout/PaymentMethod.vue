@@ -55,6 +55,7 @@ const validateCardExpiration = () => {
     cardExpirationError.value = 'Expiration date is required';
     return;
   }
+
   if (selectedExpYear.value > today.getFullYear().toString()) {
     cardExpirationError.value = '';
   } else if (selectedExpYear.value === today.getFullYear().toString()) {
@@ -68,6 +69,10 @@ const validateCardExpiration = () => {
     cardExpirationError.value = 'Card expiration date must be in the future';
     return;
   }
+
+  if (selectedExpMonth.value !== '' && selectedExpYear.value !== '') {
+    cardExpiration.value = `${selectedExpMonth.value}/${selectedExpYear.value}`;
+  }
   if (cardExpirationError.value === '') {
     emitPaymentMethod();
   }
@@ -76,7 +81,6 @@ const validateCardExpiration = () => {
 const validateCCV = () => {
   let ccv = cardCCV.value;
   cardCCVError.value = ccv.length === 3 ? '' : 'CCV must be 3 digits';
-  // emitPaymentMethod();
 };
 
 const validatePaymentMethod = () => {
@@ -88,27 +92,27 @@ const validatePaymentMethod = () => {
     paymentMethod = ['card', cardNumber, cardHolder, cardExpiration, cardCCV];
     emitPaymentMethod();
   } else if (paymentMethod === 'swish') {
-    // console.log('Swish payment method selected.');
-
     paymentMethod = ['swish', telephoneNumber];
     emitPaymentMethod();
   } else {
-    // console.log('Invoice payment method selected.');
     emitPaymentMethod();
   }
 
-  emitPaymentMethod();
+  // emitPaymentMethod();
 };
 
 watch([selectedExpMonth, selectedExpYear], () => {
-  if (selectedExpMonth.value !== '' && selectedExpYear.value !== '') {
-    cardExpiration.value = `${selectedExpMonth.value}/${selectedExpYear.value}`;
-  }
+  validateCardExpiration();
 });
 
 const emitPaymentMethod = () => {
+  validatePaymentMethod();
   emit('paymentMethod', paymentMethod.value);
 };
+
+// const handleSubmit = () => {
+//   validatePaymentMethod();
+// };
 </script>
 
 <template>

@@ -1,4 +1,9 @@
 TODO & IDEAS
+Error handling
+
+Search functionality
+    Debounce - only make latest call
+     Throttle - only make call every... (period)
 Make responsive
     mobile  
         cart
@@ -37,10 +42,7 @@ infinite scroll in CategoriesSmall does not work
 store light/dark setting in store ?
 
 
-
-
-
-DONE 
+SOMEWHAT DONE 
 Custom Pointer
 Navbar
 Fonts
@@ -60,3 +62,4 @@ organize json-files
 Make company name in header clickable => home
 Make responsive
     mobile
+Remove event listeners

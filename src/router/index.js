@@ -10,6 +10,7 @@ import CategoryProductsView from '@/views/CategoryProductsView.vue';
 import ProductDetailsView from '@/views/ProductDetailsView.vue';
 import ShowCart from '@/views/ShowCart.vue';
 import NotFound from '@/views/NotFound.vue';
+import ProductsView from '@/views/ProductsView.vue';
 
 const routes = [
   {
@@ -57,9 +58,7 @@ const routes = [
     name: 'Login',
     component: LoginForm,
   },
-  // {path: 'products',
-  //   component: ProductsView,
-  // },
+  { path: '/products', name: 'Products', component: ProductsView },
   {
     path: '/welcome',
     name: 'Welcome',

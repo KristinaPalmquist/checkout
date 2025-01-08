@@ -7,7 +7,7 @@ const router = useRouter();
 
 const categories = ref([]);
 const scrollContainer = ref(null);
-const isMobile = ref(false)
+const isMobile = ref(false);
 
 const fetchCategories = async () => {
   try {
@@ -54,7 +54,6 @@ const handleScroll = () => {
     }
   }
 };
-
 
 const checkIfMobile = () => {
   isMobile.value = window.innerWidth <= 600;
@@ -113,23 +112,24 @@ watch(categories, () => {
   scroll-behavior: smooth;
   white-space: nowrap;
   flex: 1;
-  -ms-overflow-style: none;  /* Internet Explorer 10+ */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
 }
 
 .categories-row::-webkit-scrollbar {
-  display: none;  /* Safari and Chrome */
+  display: none; /* Safari and Chrome */
 }
 
 .categories-container {
   display: flex;
   flex-wrap: nowrap;
   height: 215px;
+  gap: 1rem;
 }
 
 .categories-container > * {
   flex: 0 0 auto;
-  margin-right: 1rem;
+  /* margin-right: 1rem; */
   max-width: 200px;
 }
 
@@ -193,12 +193,24 @@ watch(categories, () => {
   }
 
   .categories-row {
+    display: flex;
+    overflow-x: hidden;
+    /* scroll-behavior: smooth; */
+    white-space: nowrap;
+    flex: 1;
+  }
+
+  .categories-row {
     justify-content: center;
   }
   .categories-container {
     flex-direction: column;
     justify-content: center;
     /* align-items: center; */
+  }
+
+  .categories-container > * {
+    max-height: max-content;
   }
 }
 </style>

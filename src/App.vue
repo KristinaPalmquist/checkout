@@ -2,6 +2,7 @@
 import { ref, onMounted, watch } from 'vue';
 import CustomCursor from './components/cursor/CustomCursor.vue';
 import MainHeader from './components/header/MainHeader.vue';
+import MainFooter from './components/MainFooter.vue';
 
 const mainElement = ref(null);
 const headerHeight = ref(0);
@@ -35,11 +36,12 @@ watch(headerHeight, (newHeight) => {
   <main>
     <router-view></router-view>
   </main>
+  <MainFooter />
 </template>
 
 <style scoped>
-/* main {
-  padding-top: 70px;
-  min-height: 100vh;
-} */
+main {
+  min-height: 50vh;
+  /* flex: 1; */
+}
 </style>

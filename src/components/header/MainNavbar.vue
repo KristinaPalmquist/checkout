@@ -13,7 +13,7 @@ const routes = [
   { name: 'About', path: '/about' },
   { name: 'Contact', path: '/contact' },
   { name: 'Categories', path: '/categories' },
-  // { name: 'Products', path: '/products' },
+  { name: 'Products', path: '/products' },
   { name: 'Cart', path: '/cart' },
   { name: 'Checkout', path: '/checkout' },
   { name: 'Login', path: '/login' },

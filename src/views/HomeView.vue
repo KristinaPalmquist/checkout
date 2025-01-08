@@ -45,12 +45,14 @@ onMounted(() => {
         class="hero-image"
       />
       <div class="fade-down"></div>
-      <div class="hero-text">
-        <h1>Welcome to {{ companyName }}</h1>
-        <p>
-          Discover a treasure trove of preworn fashion, second-hand, and vintage
-          clothing. We are delighted to have you here.
-        </p>
+      <div class="glass-card">
+        <div class="hero-text">
+          <h1>Welcome to {{ companyName }}</h1>
+          <p>
+            Discover a treasure trove of preworn fashion, second-hand, and
+            vintage clothing. We are delighted to have you here.
+          </p>
+        </div>
       </div>
     </div>
     <section class="introduction">
@@ -97,6 +99,9 @@ onMounted(() => {
   overflow: hidden;
   z-index: -2;
   border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-image {
@@ -127,15 +132,24 @@ onMounted(() => {
   border: none;
 }
 
-.hero-text {
+.glass-card {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /* background-color: rgba(0, 0, 0, 0.5); */
-  color: white;
-  /* padding: 1rem; */
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
   border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+  width: clamp(300px, 50%, 900px);
+  /* height: max-content; */
+  text-align: center;
+}
+
+.hero-text {
+  color: white;
+  /* border-radius: 1rem; */
   z-index: 1;
 }
 

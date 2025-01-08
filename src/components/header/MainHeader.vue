@@ -34,6 +34,10 @@ const handleScroll = () => {
   }
 };
 
+const checkIfMobile = () => {
+  isMobile.value = window.innerWidth <= 600;
+};
+
 const handleRouting = (event, path) => {
   event.preventDefault();
   router.push(path);
@@ -53,7 +57,8 @@ const updateHeaderHeight = () => {
 
 onMounted(() => {
   window.addEventListener('scroll', handleScroll);
-
+  window.addEventListener('resize', checkIfMobile);
+  checkIfMobile();
   updateHeaderHeight();
 });
 
@@ -63,6 +68,7 @@ onUpdated(() => {
 
 onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll);
+  window.removeEventListener('resize', checkIfMobile);
 });
 
 watch(headerHeight, (newHeight) => {

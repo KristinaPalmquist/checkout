@@ -2,6 +2,7 @@
 
 #app {
   width: 100vw;
+  min-height: 100vh;
   font-weight: normal;
 }
 
@@ -54,6 +55,14 @@ input,
 textarea,
 select {
   cursor: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--accent-3-color);
+  font-weight: 600;
+  transition: color 0.3s ease;
+  line-height: 1.2rem;
 }
 
 .btn-div {
@@ -146,7 +155,9 @@ input[type='radio']:focus {
 
 @media (hover: hover) {
   a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
+    /* background-color: hsla(160, 100%, 37%, 0.2); */
+    font-size: 1.2rem;
+    color: var(--accent-2-color);
   }
 }
 

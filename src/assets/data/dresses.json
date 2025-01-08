@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "name": "Product 1",
+    "name": "Banana",
     "category": "Dresses",
     "description": "You'll look stunning in this dress! Just like a happy banana in a tree.",
     "image": "@/assets/images/dresses/banana.jpg",
@@ -17,7 +17,7 @@
         "comment": "So sexy",
         "author": "John Doe"
       },
-    
+
       {
         "rating": 2,
         "comment": "Looks cheap",
@@ -67,15 +67,15 @@
   },
   {
     "id": 3,
-    "name": "Product 3",
+    "name": "Leopard",
     "category": "Dresses",
-    "description": "This is a description of Product 1",
-    "image": "path/to/product3.jpg",
+    "description": "This is a midi dress with a leopard pattern.",
+    "image": "path/to/leopard.jpg",
     "price": 99.99,
     "specifications": {
-      "Color": "Mustard",
-      "Size": "M",
-      "Material": "Flax"
+      "Color": "Beige / Black",
+      "Size": "XS",
+      "Material": "Poly"
     },
     "reviews": [
       {
@@ -102,15 +102,15 @@
   },
   {
     "id": 4,
-    "name": "Product 4",
+    "name": "Shawna",
     "category": "Dresses",
-    "description": "This is a description of Product 1",
-    "image": "path/to/product4.jpg",
+    "description": "A little peach colored delightful dress for the warmest summer days. It has a collar and a wrap tie.",
+    "image": "path/to/shawna.jpg",
     "price": 199.99,
     "specifications": {
-      "Color": "Mustard",
-      "Size": "M",
-      "Material": "Flax"
+      "Color": "Red",
+      "Size": "S",
+      "Material": "Msulin"
     },
     "reviews": [
       {
