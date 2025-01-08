@@ -7,9 +7,9 @@
     "image": "../assets/images/footwear/miami.jpg",
     "price": 14.99,
     "specifications": {
-      "Color": "Rainbow",
-      "Size": "36",
-      "Material": "Leather"
+      "color": "Rainbow",
+      "size": "36",
+      "material": "Leather"
     },
     "reviews": [
       {
@@ -42,9 +42,9 @@
     "image": "../assets/images/footwear/star.jpg",
     "price": 19.99,
     "specifications": {
-      "Color": "Orange",
-      "Size": "39",
-      "Material": "Canvas"
+      "color": "Orange",
+      "size": "39",
+      "material": "Canvas"
     },
     "reviews": [
       {
@@ -77,9 +77,9 @@
     "image": "../assets/images/footwear/angel.jpg",
     "price": 99.99,
     "specifications": {
-      "Color": "White",
-      "Size": "36",
-      "Material": "Leather"
+      "color": "White",
+      "size": "36",
+      "material": "Leather"
     },
     "reviews": [
       {
@@ -112,9 +112,9 @@
     "image": "../assets/images/footwear/sand.jpg",
     "price": 12.99,
     "specifications": {
-      "Color": "Beige",
-      "Size": "41",
-      "Material": "Leather"
+      "color": "Beige",
+      "size": "41",
+      "material": "Leather"
     },
     "reviews": [
       {
@@ -147,9 +147,9 @@
     "image": "../assets/images/footwear/tom.jpg",
     "price": 17.99,
     "specifications": {
-      "Color": "Black",
-      "Size": "42",
-      "Material": "Polyester"
+      "color": "Black",
+      "size": "42",
+      "material": "Polyester"
     },
     "reviews": [
       {
@@ -182,9 +182,9 @@
     "image": "../assets/images/footwear/outdoor.jpg",
     "price": 69.99,
     "specifications": {
-      "Color": "Green",
-      "Size": "44",
-      "Material": "Leather"
+      "color": "Green",
+      "size": "44",
+      "material": "Leather"
     },
     "reviews": [
       {

@@ -1,6 +1,14 @@
 <script setup>
-import { ref, onMounted } from 'vue';
+import { computed, ref, onMounted } from 'vue';
+import { useRouter } from 'vue-router';
+import { useStore } from 'vuex';
 import ProductCard from '@/components/ProductCard.vue';
+
+
+
+const emit = defineEmits(['productClicked']);
+const store = useStore();
+const router = useRouter();
 
 const categories = ref([]);
 const products = ref([]);
@@ -8,13 +16,10 @@ const products = ref([]);
 const fetchProducts = async () => {
   try {
     const module = await import('../assets/data/categories.json');
-    // console.log(module);
-    // console.log(module.default);
     module.default.forEach((element) => {
       element.name = element.name.replace(/ /g, '-').toLowerCase();
       categories.value.push(element.name);
     });
-    // console.log(categories.value);
     const productPromises = categories.value.map((category) =>
       import(`../assets/data/${category}.json`)
     );
@@ -34,6 +39,39 @@ const shuffleArray = (array) => {
   return array;
 };
 
+const filteredProducts = computed(() => {
+  if (!store.getters.searchQuery) {
+    return products.value;
+  } else {
+    const query = store.getters.searchQuery.toLowerCase();
+    return products.value.filter(
+      (product) =>
+        product.name.toLowerCase().includes(query) ||
+        product.description.toLowerCase().includes(query) ||
+        product.category.toLowerCase().includes(query) ||
+        (product.specifications &&
+          product.specifications.color &&
+          product.specifications.color.toLowerCase().includes(query)) ||
+        (product.specifications &&
+          product.specifications.material &&
+          product.specifications.material.toLowerCase().includes(query)) ||
+        (product.specifications &&
+          product.specifications.size &&
+          product.specifications.size.toLowerCase().includes(query))
+    );
+  }
+});
+
+const navigateToProduct = (name, category) => {
+  let categoryName = category.replace(/ /g, '-').toLowerCase();
+  let productName = name.replace(/ /g, '-').toLowerCase();
+  emit('productClicked');
+  router.push({
+    name: 'ProductDetails',
+    params: { categoryName, productName },
+  });
+};
+
 onMounted(() => {
   fetchProducts();
 });
@@ -41,9 +79,14 @@ onMounted(() => {
 
 <template>
   <div id="products-view" class="component-container">
-    <h1>All Products</h1>
+    <h1>Products</h1>
     <div class="product-list">
-      <div v-for="product in products" :key="product.id" class="product-item">
+      <div
+        v-for="product in filteredProducts"
+        :key="product.category + product.id"
+        class="product-item"
+        @click="navigateToProduct(product.name, product.category)"
+      >
         <ProductCard
           :product="product"
           :category-name="product.category.toLowerCase()"
@@ -57,17 +100,6 @@ onMounted(() => {
 #products-view {
   padding: 2rem;
 }
-
-/* .product-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 1rem;
-}
-
-.product-item {
-  display: flex;
-  justify-content: center;
-} */
 
 .product-list {
   padding-top: 2rem;

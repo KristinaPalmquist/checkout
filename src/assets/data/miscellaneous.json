@@ -7,9 +7,9 @@
     "image": "@/assets/images/miscellaneous/makeup.jpg",
     "price": 59.99,
     "specifications": {
-      "Color": "Black",
-      "Size": "n/a",
-      "Material": "Plastic"
+      "color": "Black",
+      "size": "n/a",
+      "material": "Plastic"
     },
     "reviews": [
       {
@@ -42,9 +42,9 @@
     "image": "@/assets/images/miscellaneous/nailpolish.jpg",
     "price": 6.99,
     "specifications": {
-      "Color": "Lavender",
-      "Size": "n/a",
-      "Material": "Unknown"
+      "color": "Lavender",
+      "size": "n/a",
+      "material": "Unknown"
     },
     "reviews": [
       {
@@ -77,9 +77,9 @@
     "image": "@/assets/images/miscellaneous/cup.jpg",
     "price": 69.99,
     "specifications": {
-      "Color": "Blue",
-      "Size": "n/a",
-      "Material": "Ceramic"
+      "color": "Blue",
+      "size": "n/a",
+      "material": "Ceramic"
     },
     "reviews": [
       {
@@ -112,9 +112,9 @@
     "image": "@/assets/images/miscellaneous/camera.jpg",
     "price": 149.99,
     "specifications": {
-      "Color": "Black",
-      "Size": "n/a",
-      "Material": "Plastic"
+      "color": "Black",
+      "size": "n/a",
+      "material": "Plastic"
     },
     "reviews": [
       {

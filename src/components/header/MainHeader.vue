@@ -5,6 +5,7 @@ import { useStore } from 'vuex';
 import MainNavbar from '/src/components/header/MainNavbar.vue';
 import LoginButton from '../LoginButton.vue';
 import ThemeToggle from '../ThemeToggle.vue';
+import SearchBar from '../SearchBar.vue';
 
 const router = useRouter();
 const route = { name: 'Home', path: '/' };
@@ -88,6 +89,7 @@ watch(headerHeight, (newHeight) => {
         <h1 v-if="!isOpen">{{ companyName }}</h1></a
       >
       <div class="nav-btns">
+        <SearchBar v-if="!isOpen" />
         <ThemeToggle v-if="!isOpen" />
         <LoginButton v-if="showLoginBtn" />
         <MainNavbar @update:isOpen="isOpen = $event" />

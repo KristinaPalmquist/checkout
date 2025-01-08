@@ -7,9 +7,9 @@
     "image": "@/assets/images/jackets/selena.jpg",
     "price": 29.99,
     "specifications": {
-      "Color": "Mustard",
-      "Size": "M",
-      "Material": "Flax"
+      "color": "Mustard",
+      "size": "M",
+      "material": "Flax"
     },
     "reviews": [
       {
@@ -42,9 +42,9 @@
     "image": "@/assets/images/jackets/nature.jpg",
     "price": 39.99,
     "specifications": {
-      "Color": "Olive",
-      "Size": "L",
-      "Material": "Cotton"
+      "color": "Olive",
+      "size": "L",
+      "material": "Cotton"
     },
     "reviews": [
       {
@@ -72,9 +72,9 @@
     "image": "@/assets/images/jackets/steel.jpg",
     "price": 49.99,
     "specifications": {
-      "Color": "Blue",
-      "Size": "M",
-      "Material": "Polyester"
+      "color": "Blue",
+      "size": "M",
+      "material": "Polyester"
     },
     "reviews": [
       {
@@ -97,9 +97,9 @@
     "image": "@/assets/images/jackets/max.jpg",
     "price": 199.99,
     "specifications": {
-      "Color": "Green",
-      "Size": "XXL",
-      "Material": "Flax"
+      "color": "Green",
+      "size": "XXL",
+      "material": "Flax"
     },
     "reviews": [
       {
@@ -117,9 +117,9 @@
     "image": "@/assets/images/jackets/varsity.jpg",
     "price": 99.99,
     "specifications": {
-      "Color": "Red / White",
-      "Size": "XL",
-      "Material": "Leather"
+      "color": "Red / White",
+      "size": "XL",
+      "material": "Leather"
     },
     "reviews": [
       {
@@ -152,9 +152,9 @@
     "image": "@/assets/images/jackets/dream.jpg",
     "price": 39.99,
     "specifications": {
-      "Color": "Gray",
-      "Size": "M",
-      "Material": "Denim"
+      "color": "Gray",
+      "size": "M",
+      "material": "Denim"
     },
     "reviews": [
       {
@@ -182,9 +182,9 @@
     "image": "@/assets/images/jackets/rocket.jpg",
     "price": 499.99,
     "specifications": {
-      "Color": "Blue",
-      "Size": "L",
-      "Material": "Denim"
+      "color": "Blue",
+      "size": "L",
+      "material": "Denim"
     },
     "reviews": [
       {
@@ -207,9 +207,9 @@
     "image": "@/assets/images/jackets/moana.jpg",
     "price": 99.99,
     "specifications": {
-      "Color": "Pink",
-      "Size": "S",
-      "Material": "Polyester"
+      "color": "Pink",
+      "size": "S",
+      "material": "Polyester"
     },
     "reviews": [
       {

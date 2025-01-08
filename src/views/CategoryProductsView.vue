@@ -18,13 +18,6 @@ const fetchProducts = async () => {
   }
 };
 
-// const formatCurrency = (value) => {
-//   return new Intl.NumberFormat('en-US', {
-//     style: 'currency',
-//     currency: 'USD',
-//   }).format(value);
-// };
-
 const navigateToProduct = (name) => {
   let productName = name.replace(/ /g, '-').toLowerCase();
   console.log(productName);
@@ -34,11 +27,6 @@ const navigateToProduct = (name) => {
   });
 };
 
-// const resolveImagePath = (name) => {
-//   let productName = name.replace(/ /g, '-').toLowerCase();
-//   let path = `../assets/images/${categoryName}/${productName}.jpg`;
-//   return new URL(path, import.meta.url).href;
-// };
 
 onMounted(() => {
   fetchProducts();

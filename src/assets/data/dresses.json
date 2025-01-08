@@ -7,9 +7,9 @@
     "image": "@/assets/images/dresses/banana.jpg",
     "price": 29.99,
     "specifications": {
-      "Color": "Yellow",
-      "Size": "M",
-      "Material": "Cotton"
+      "color": "Yellow",
+      "size": "M",
+      "material": "Cotton"
     },
     "reviews": [
       {
@@ -38,9 +38,9 @@
     "image": "@/assets/images/dresses/butterfly.jpg",
     "price": 39.99,
     "specifications": {
-      "Color": "Multi",
-      "Size": "S",
-      "Material": "Cotton"
+      "color": "Multi",
+      "size": "S",
+      "material": "Cotton"
     },
     "reviews": [
       {
@@ -73,9 +73,9 @@
     "image": "path/to/leopard.jpg",
     "price": 99.99,
     "specifications": {
-      "Color": "Beige / Black",
-      "Size": "XS",
-      "Material": "Poly"
+      "color": "Beige / Black",
+      "size": "XS",
+      "material": "Poly"
     },
     "reviews": [
       {
@@ -108,9 +108,9 @@
     "image": "path/to/shawna.jpg",
     "price": 199.99,
     "specifications": {
-      "Color": "Red",
-      "Size": "S",
-      "Material": "Msulin"
+      "color": "Red",
+      "size": "S",
+      "material": "Msulin"
     },
     "reviews": [
       {

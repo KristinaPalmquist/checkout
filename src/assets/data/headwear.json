@@ -7,9 +7,9 @@
     "image": "@/assets/images/headwear/acapulco.jpg",
     "price": 19.99,
     "specifications": {
-      "Color": "Beige",
-      "Size": "L",
-      "Material": "Straw"
+      "color": "Beige",
+      "size": "L",
+      "material": "Straw"
     },
     "reviews": [
       {
@@ -42,9 +42,9 @@
     "image": "@/assets/images/headwear/beanie.jpg",
     "price": 9.99,
     "specifications": {
-      "Color": "Orange",
-      "Size": "M",
-      "Material": "Polyester"
+      "color": "Orange",
+      "size": "M",
+      "material": "Polyester"
     },
     "reviews": [
       {
@@ -77,9 +77,9 @@
     "image": "@/assets/images/headwear/carl.jpg",
     "price": 99.99,
     "specifications": {
-      "Color": "Olive",
-      "Size": "L",
-      "Material": "Wool"
+      "color": "Olive",
+      "size": "L",
+      "material": "Wool"
     },
     "reviews": [
       {
@@ -112,9 +112,9 @@
     "image": "@/assets/images/headwear/foff.jpg",
     "price": 39.99,
     "specifications": {
-      "Color": "Red",
-      "Size": "L",
-      "Material": "Cotton"
+      "color": "Red",
+      "size": "L",
+      "material": "Cotton"
     },
     "reviews": [
       {
@@ -147,9 +147,9 @@
     "image": "@/assets/images/headwear/hugo.jpg",
     "price": 19.99,
     "specifications": {
-      "Color": "White",
-      "Size": "M",
-      "Material": "Felt"
+      "color": "White",
+      "size": "M",
+      "material": "Felt"
     },
     "reviews": [
       {
@@ -182,9 +182,9 @@
     "image": "@/assets/images/headwear/straw.jpg",
     "price": 399.99,
     "specifications": {
-      "Color": "Light brown",
-      "Size": "S",
-      "Material": "Straw"
+      "color": "Light brown",
+      "size": "S",
+      "material": "Straw"
     },
     "reviews": [
       {
@@ -217,9 +217,9 @@
     "image": "@/assets/images/headwear/z.jpg",
     "price": 14.99,
     "specifications": {
-      "Color": "Black",
-      "Size": "M",
-      "Material": "Cotton"
+      "color": "Black",
+      "size": "M",
+      "material": "Cotton"
     },
     "reviews": [
       {

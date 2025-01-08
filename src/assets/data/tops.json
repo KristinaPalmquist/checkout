@@ -7,9 +7,9 @@
     "image": "@/assets/images/tops/staff.jpg",
     "price": 9.99,
     "specifications": {
-      "Color": "White / orange",
-      "Size": "S",
-      "Material": "Cotton"
+      "color": "White / orange",
+      "size": "S",
+      "material": "Cotton"
     },
     "reviews": [
       {
@@ -42,9 +42,9 @@
     "image": "@/assets/images/tops/pixie.jpg",
     "price": 4.99,
     "specifications": {
-      "Color": "Teal",
-      "Size": "S",
-      "Material": "Cotton"
+      "color": "Teal",
+      "size": "S",
+      "material": "Cotton"
     },
     "reviews": [
       {
@@ -77,9 +77,9 @@
     "image": "@/assets/images/tops/ellie.jpg",
     "price": 39.99,
     "specifications": {
-      "Color": "White",
-      "Size": "XS",
-      "Material": "Cotton"
+      "color": "White",
+      "size": "XS",
+      "material": "Cotton"
     },
     "reviews": [
       {
@@ -112,9 +112,9 @@
     "image": "@/assets/images/tops/business.jpg",
     "price": 59.99,
     "specifications": {
-      "Color": "White",
-      "Size": "M",
-      "Material": "Silk"
+      "color": "White",
+      "size": "M",
+      "material": "Silk"
     },
     "reviews": [
       {
@@ -147,9 +147,9 @@
     "image": "@/assets/images/tops/stamp.jpg",
     "price": 29.99,
     "specifications": {
-      "Color": "Red",
-      "Size": "M",
-      "Material": "Cotton"
+      "color": "Red",
+      "size": "M",
+      "material": "Cotton"
     },
     "reviews": [
       {
@@ -182,9 +182,9 @@
     "image": "@/assets/images/tops/sam.jpg",
     "price": 39.99,
     "specifications": {
-      "Color": "Black / White / Red",
-      "Size": "M",
-      "Material": "Cotton"
+      "color": "Black / White / Red",
+      "size": "M",
+      "material": "Cotton"
     },
     "reviews": [
       {
@@ -217,9 +217,9 @@
     "image": "@/assets/images/tops/wild.jpg",
     "price": 29.99,
     "specifications": {
-      "Color": "Black",
-      "Size": "L",
-      "Material": "Cotton"
+      "color": "Black",
+      "size": "L",
+      "material": "Cotton"
     },
     "reviews": [
       {
@@ -252,9 +252,9 @@
     "image": "@/assets/images/tops/best.jpg",
     "price": 59.99,
     "specifications": {
-      "Color": "Grey",
-      "Size": "M",
-      "Material": "Cotton / Polyester"
+      "color": "Grey",
+      "size": "M",
+      "material": "Cotton / Polyester"
     },
     "reviews": [
       {

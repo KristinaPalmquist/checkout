@@ -1,10 +1,10 @@
 import { createStore } from 'vuex';
-import {
-  SET_AUTHENTICATION,
-  IS_USER_AUTHENTICATED,
-  SET_USERNAME,
-  GET_USERNAME,
-} from './storeconstants';
+// import {
+//   SET_AUTHENTICATION,
+//   IS_USER_AUTHENTICATED,
+//   SET_USERNAME,
+//   GET_USERNAME,
+// } from './storeconstants';
 import auth from './auth/index';
 
 // import auth from './modules/auth'; // Assuming you have an auth module
@@ -14,6 +14,7 @@ const store = createStore({
     isAuthenticated: false,
     username: '',
     cart: [],
+    searchQuery: '',
   },
   mutations: {
     SET_AUTHENTICATION(state, isAuthenticated) {
@@ -42,6 +43,9 @@ const store = createStore({
       if (state.cart[index]) {
         state.cart[index].quantity = quantity;
       }
+    },
+    SET_SEARCH_QUERY(state, query) {
+      state.searchQuery = query;
     },
   },
   actions: {
@@ -79,6 +83,12 @@ const store = createStore({
       commit('SET_AUTHENTICATION', isAuthenticated);
       commit('SET_USERNAME', username);
     },
+    updateSearchQuery({ commit }, query) {
+      commit('SET_SEARCH_QUERY', query);
+    },
+    resetSearchQuery({ commit }) {
+      commit('SET_SEARCH_QUERY', '');
+    },
   },
   getters: {
     IS_USER_AUTHENTICATED(state) {
@@ -93,6 +103,7 @@ const store = createStore({
         (total, product) => total + product.price * product.quantity,
         0
       ),
+      searchQuery: (state) => state.searchQuery,
   },
   modules: {
     auth,

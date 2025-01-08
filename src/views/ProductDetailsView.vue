@@ -52,8 +52,6 @@ const averageRating = computed(() => {
 const addToCart = () => {
   store.dispatch('addToCart', product.value);
   store.dispatch('saveCart');
-
-  // const items = store.getters.cartProducts;
   message.value = 'Product added to cart!';
   showMessage.value = true;
 };
@@ -132,7 +130,7 @@ onMounted(() => {
 .product-details {
   width: 100%;
   max-width: 90vw;
-  margin: 0 auto;
+  margin: 0 auto 3rem;
   text-align: center;
   display: grid;
   grid-template-columns: 1fr 1fr;

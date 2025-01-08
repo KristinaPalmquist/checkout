@@ -8,9 +8,9 @@
     "price": 129.99,
 
     "specifications": {
-      "Color": "Black / Gold",
-      "Size": "n/a",
-      "Material": "Cotton canvas"
+      "color": "Black / Gold",
+      "size": "n/a",
+      "material": "Cotton canvas"
     },
     "reviews": [
       {
@@ -49,9 +49,9 @@
     "price": 59.99,
 
     "specifications": {
-      "Color": "White",
-      "Size": "S",
-      "Material": "Cotten / Linen"
+      "color": "White",
+      "size": "S",
+      "material": "Cotten / Linen"
     },
     "reviews": [
       {
@@ -75,9 +75,9 @@
     "price": 19.99,
 
     "specifications": {
-      "Color": "Blue",
-      "Size": "n/a",
-      "Material": "Denim"
+      "color": "Blue",
+      "size": "n/a",
+      "material": "Denim"
     },
     "reviews": [
       {
@@ -111,9 +111,9 @@
     "price": 29.99,
 
     "specifications": {
-      "Color": "Beige",
-      "Size": "n/a",
-      "Material": "Cotton"
+      "color": "Beige",
+      "size": "n/a",
+      "material": "Cotton"
     },
     "reviews": [
       {
@@ -147,9 +147,9 @@
     "price": 29.99,
 
     "specifications": {
-      "Color": "Black / Red",
-      "Size": "M",
-      "Material": "Nylon"
+      "color": "Black / Red",
+      "size": "M",
+      "material": "Nylon"
     },
     "reviews": [
       {

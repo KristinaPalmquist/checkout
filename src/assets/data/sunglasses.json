@@ -7,9 +7,9 @@
     "image": "@/assets/images/sunglasses/diva.jpg",
     "price": 29.99,
     "specifications": {
-      "Color": "Pink",
-      "Size": "n/a",
-      "Material": "Plastic / Metal"
+      "color": "Pink",
+      "size": "n/a",
+      "material": "Plastic / Metal"
     },
     "reviews": [
       {
@@ -37,9 +37,9 @@
     "image": "@/assets/images/sunglasses/cool.jpg",
     "price": 49.99,
     "specifications": {
-      "Color": "Gold",
-      "Size": "n/a",
-      "Material": "Metal"
+      "color": "Gold",
+      "size": "n/a",
+      "material": "Metal"
     },
     "reviews": [
       {
@@ -67,9 +67,9 @@
     "image": "@/assets/images/sunglasses/aviator.jpg",
     "price": 9.99,
     "specifications": {
-      "Color": "Gold",
-      "Size": "n/a",
-      "Material": "Metal"
+      "color": "Gold",
+      "size": "n/a",
+      "material": "Metal"
     },
     "reviews": [
       {
@@ -87,9 +87,9 @@
     "image": "@/assets/images/sunglasses/turtoise.jpg",
     "price": 39.99,
     "specifications": {
-      "Color": "Brown",
-      "Size": "n/a",
-      "Material": "Plastic"
+      "color": "Brown",
+      "size": "n/a",
+      "material": "Plastic"
     },
     "reviews": [
       {
@@ -117,9 +117,9 @@
     "image": "@/assets/images/sunglasses/marilyn.jpg",
     "price": 299.99,
     "specifications": {
-      "Color": "Powder",
-      "Size": "n/a",
-      "Material": "Plastic"
+      "color": "Powder",
+      "size": "n/a",
+      "material": "Plastic"
     },
     "reviews": [
       {
