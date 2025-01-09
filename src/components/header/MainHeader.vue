@@ -155,14 +155,12 @@ a {
 @media only screen and (max-width: 980px) {
   #main-header {
     background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  
-  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
-  border: none;
+    backdrop-filter: blur(10px);
+
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    border: none;
   }
   .header-content {
- 
-
     margin: 1rem auto;
   }
   .company-name {
@@ -173,12 +171,15 @@ a {
   }
 }
 
+@media only screen and (max-width: 980px) {
+  .company-name {
+    font-size: 1.8rem;
+  }}
+
 @media only screen and (max-width: 600px) {
   #main-header {
     height: auto;
     padding: 1rem;
-    /* height: 100px;
-    gap: 1rem; */
     margin-bottom: 0.5rem;
   }
 
@@ -187,15 +188,9 @@ a {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-    /* width: 100%;
-    height: 100%;
-    flex-direction: column; */
   }
 
-  /* .header-title {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-  } */
+
   .company-name {
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
@@ -205,17 +200,8 @@ a {
     width: 100%;
     justify-content: space-around;
     flex-wrap: wrap;
-    /* display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between; */
-    /* gap: 1rem; */
   }
-  /* .nav-btns div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  } */
+ 
   .nav-btns > * {
     margin-left: 0;
     margin-bottom: 0.5rem;
@@ -231,8 +217,6 @@ a {
   .nav-btns .login {
     display: none;
   }
-
-  
 }
 
 @media only screen and (max-width: 420px) {

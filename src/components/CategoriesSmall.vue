@@ -101,6 +101,7 @@ watch(categories, () => {
 <style scoped>
 .categories-small {
   position: relative;
+  width: 100%;
   display: flex;
   align-items: center;
   overflow: hidden;
