@@ -20,10 +20,21 @@ onMounted(() => {
   if (categoriesElement) {
     const updateCategoriesWidth = () => {
       const viewportWidth = window.innerWidth;
-      const offsetLeft = categoriesElement.getBoundingClientRect().left;
-      categoriesElement.style.position = 'relative';
-      categoriesElement.style.left = `-${offsetLeft}px`;
-      categoriesElement.style.width = `${viewportWidth}px`;
+      if (viewportWidth > 600) {
+        const offsetLeft = categoriesElement.getBoundingClientRect().left;
+        categoriesElement.style.position = 'relative';
+        categoriesElement.style.left = `-${offsetLeft}px`;
+        categoriesElement.style.width = `${viewportWidth}px`;
+      } else {
+        categoriesElement.style.position = 'relative';
+        categoriesElement.style.left = '0';
+        categoriesElement.style.width = '100%';
+      }
+      // const viewportWidth = window.innerWidth;
+      // const offsetLeft = categoriesElement.getBoundingClientRect().left;
+      // categoriesElement.style.position = 'relative';
+      // categoriesElement.style.left = `-${offsetLeft}px`;
+      // categoriesElement.style.width = `${viewportWidth}px`;
     };
 
     updateCategoriesWidth();
@@ -189,8 +200,9 @@ onMounted(() => {
 }
 
 .categories-wrapper {
-  position: absolute;
-  width: 100%;
+  /* position: absolute;
+  width: 100%; */
+  /* max-width: 100vw; */
   overflow: hidden;
 }
 
@@ -211,8 +223,9 @@ onMounted(() => {
   align-items: center;
   justify-content: center;
 } */
-  .categories-wrapper {
-    left: 0;
-  }
+  /* .categories-wrapper {
+    left: 1rem;
+    max-width: calc(100vw - 2rem);
+  } */
 }
 </style>
