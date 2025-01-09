@@ -132,7 +132,6 @@ onUnmounted(() => {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* justify-content: center; */
 }
 
 .menu-button {
@@ -143,6 +142,7 @@ onUnmounted(() => {
   z-index: 101;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: space-around;
   width: 2rem;
   height: 2rem;
@@ -283,6 +283,10 @@ nav ul li a:hover {
   .navbar-background {
     width: 90vw;
     left: 1.5rem;
+  }
+
+  .menu-button {
+    margin: 3px 0;
   }
 
   #main-navbar .navbar {

@@ -4,8 +4,6 @@ import { useRouter } from 'vue-router';
 import { useStore } from 'vuex';
 import ProductCard from '@/components/ProductCard.vue';
 
-
-
 const emit = defineEmits(['productClicked']);
 const store = useStore();
 const router = useRouter();
@@ -44,7 +42,7 @@ const filteredProducts = computed(() => {
     return products.value;
   } else {
     const query = store.getters.searchQuery.toLowerCase();
-    return products.value.filter(
+    const searchResult = products.value.filter(
       (product) =>
         product.name.toLowerCase().includes(query) ||
         product.description.toLowerCase().includes(query) ||
@@ -59,6 +57,7 @@ const filteredProducts = computed(() => {
           product.specifications.size &&
           product.specifications.size.toLowerCase().includes(query))
     );
+    return searchResult;
   }
 });
 
@@ -91,6 +90,9 @@ onMounted(() => {
           :product="product"
           :category-name="product.category.toLowerCase()"
         />
+      </div>
+      <div v-if="filteredProducts.length === 0" class="empty-search message">
+        No products found for your search
       </div>
     </div>
   </div>
@@ -155,6 +157,10 @@ onMounted(() => {
   margin: 0;
   font-size: 1.2rem;
   color: #333;
+}
+
+.empty-search {
+  margin-bottom: 2rem;
 }
 
 @media only screen and (min-width: 1200px) {

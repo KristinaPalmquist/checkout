@@ -28,7 +28,7 @@ const handleScroll = () => {
     isScrolled.value = true;
     if (isMobile.value) {
       header.value.style.transform = `translateY(-${
-        titleRef.value.offsetHeight + 24
+        titleRef.value.offsetHeight + 32
       }px)`;
     }
   } else {
@@ -146,21 +146,23 @@ a {
 .nav-btns {
   display: flex;
   align-items: center;
-  /* display: grid;
-  grid-template-columns: auto auto auto auto;
-  align-items: center;
-  gap: 1rem; */
 }
 
 .nav-btns > * {
   margin-left: 1rem;
-  /* display: flex;
-  align-items: center;
-  justify-content: center; */
 }
 
 @media only screen and (max-width: 980px) {
+  #main-header {
+    background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+  border: none;
+  }
   .header-content {
+ 
+
     margin: 1rem auto;
   }
   .company-name {
@@ -229,11 +231,13 @@ a {
   .nav-btns .login {
     display: none;
   }
+
+  
 }
 
 @media only screen and (max-width: 420px) {
   .company-name {
-    font-size: 1.6rem;
+    font-size: 2rem;
     margin-bottom: 0.5rem;
   }
 }
