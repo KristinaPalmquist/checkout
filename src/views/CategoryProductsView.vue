@@ -1,6 +1,6 @@
 <script setup>
 import ProductCard from '@/components/ProductCard.vue';
-import { ref, onMounted } from 'vue';
+import { computed, ref, onMounted } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 
 const route = useRoute();
@@ -8,6 +8,11 @@ const router = useRouter();
 const { categoryName } = route.params;
 
 const products = ref([]);
+
+const capitalizedCategoryName = computed(() => {
+  if (!categoryName) return '';
+  return categoryName.charAt(0).toUpperCase() + categoryName.slice(1);
+});
 
 const fetchProducts = async () => {
   try {
@@ -27,7 +32,6 @@ const navigateToProduct = (name) => {
   });
 };
 
-
 onMounted(() => {
   fetchProducts();
 });
@@ -35,7 +39,7 @@ onMounted(() => {
 
 <template>
   <div id="category-products" class="component-container">
-    <h1>Products in {{ categoryName }}</h1>
+    <h1>{{ capitalizedCategoryName }}</h1>
     <div class="product-list">
       <div
         v-for="product in products"
@@ -43,7 +47,6 @@ onMounted(() => {
         class="product-item"
         @click="navigateToProduct(product.name)"
       >
-      
         <ProductCard :product="product" :categoryName="categoryName" />
         <!-- <img :src="resolveImagePath(product.name)" :alt="product.name" />
         <h2>{{ product.name }}</h2>
@@ -83,7 +86,6 @@ onMounted(() => {
   height: auto;
   margin-bottom: 2rem;
 }
-
 
 .product-item:hover {
   transform: scale(1.05);

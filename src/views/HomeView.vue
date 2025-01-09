@@ -185,10 +185,34 @@ onMounted(() => {
 
 .categories {
   position: relative;
+  max-width: 100%;
 }
 
 .categories-wrapper {
   position: absolute;
-  /* overflow: hidden; */
+  width: 100%;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 600px) {
+  .glass-card {
+    padding: 1rem;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+  /* .categories {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+  .categories-wrapper {
+    left: 0;
+  }
 }
 </style>

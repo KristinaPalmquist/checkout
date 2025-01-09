@@ -39,7 +39,7 @@ section {
 }
 
 .component-container {
-  width: clamp(300px, 80%, 1200px);
+  width: clamp(300px, 80vw, 1200px);
   margin: 0 auto 3rem;
 }
 
@@ -165,6 +165,12 @@ input[type='radio']:focus {
   .component-container {
     width: 100%;
     padding: 0 1rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .component-container {
+    margin-top: 1rem
   }
 }
 

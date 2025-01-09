@@ -3,7 +3,6 @@ import { ref, watch } from 'vue';
 import { useStore } from 'vuex';
 import { useDebounce } from '@vueuse/core';
 
-
 const store = useStore();
 const localSearchQuery = ref(store.getters.searchQuery);
 const debouncedSearchQuery = useDebounce(localSearchQuery, 300);
@@ -12,12 +11,12 @@ watch(debouncedSearchQuery, (newQuery) => {
   store.dispatch('updateSearchQuery', newQuery);
 });
 
-
-watch(() => store.getters.searchQuery, (newQuery) => {
-  localSearchQuery.value = newQuery;
-});
-
-
+watch(
+  () => store.getters.searchQuery,
+  (newQuery) => {
+    localSearchQuery.value = newQuery;
+  }
+);
 </script>
 
 <template>
@@ -25,6 +24,7 @@ watch(() => store.getters.searchQuery, (newQuery) => {
     <input
       class="input-field"
       type="text"
+      name="search"
       v-model="localSearchQuery"
       placeholder="Search products..."
     />
@@ -53,5 +53,12 @@ watch(() => store.getters.searchQuery, (newQuery) => {
   background: var(--color-background);
   border: 1px solid var(--accent-3-color);
   outline: 1px solid var(--accent-3-color);
+}
+
+@media only screen and (max-width: 600px) {
+  #search-bar .input-field {
+    width: 200px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+  }
 }
 </style>

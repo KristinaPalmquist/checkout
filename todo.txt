@@ -1,16 +1,18 @@
 TODO & IDEAS
 Error handling
-
 Make responsive
     mobile  
         cart
         navbar menu
+        footer
     widescreen
-read on netlify how to get 404-page working
+figure out how to get 404-page working
+style 404-page
 Color Scheme
-Search function
-View for all Products
-Make categories clickable from each product detail view
+from product detail, create buttons or links to
+    - products
+    - categories
+    - category
 components 
     card
     input
@@ -55,14 +57,15 @@ organize json-files
     headwear
     tops
     misc
-    footwear
-    
+    footwear  
 Make company name in header clickable => home
 Make responsive
     mobile
 Remove event listeners
 styling for class component-container
-
 Search functionality
     Debounce - only make latest call
 404 page with link to home
+Search function
+View for all Products
+read on netlify how to get access to routes directly (not only through starting from landing page)

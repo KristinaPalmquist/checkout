@@ -207,6 +207,9 @@ watch(categories, () => {
     flex-direction: column;
     justify-content: center;
     /* align-items: center; */
+    height: max-content;
+    gap: 2rem;
+    margin-bottom: 1rem;;
   }
 
   .categories-container > * {

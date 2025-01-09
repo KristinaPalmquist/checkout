@@ -27,7 +27,9 @@ const handleScroll = () => {
   if (window.scrollY > 50) {
     isScrolled.value = true;
     if (isMobile.value) {
-      header.value.style.transform = `translateY(-${titleRef.value.offsetHeight}px)`;
+      header.value.style.transform = `translateY(-${
+        titleRef.value.offsetHeight + 24
+      }px)`;
     }
   } else {
     isScrolled.value = false;
@@ -52,6 +54,8 @@ const isAuthenticated = computed(
 const updateHeaderHeight = () => {
   if (!isOpen.value) {
     headerHeight.value = document.getElementById('main-header').offsetHeight;
+
+    console.log('headerHeight', headerHeight.value);
     emits('headerHeight', headerHeight.value);
   }
 };
@@ -86,13 +90,19 @@ watch(headerHeight, (newHeight) => {
         ref="titleRef"
         class="header-title"
       >
-        <h1 v-if="!isOpen">{{ companyName }}</h1></a
+        <h1 v-if="!isOpen" class="company-name">{{ companyName }}</h1></a
       >
       <div class="nav-btns">
-        <SearchBar v-if="!isOpen" />
-        <ThemeToggle v-if="!isOpen" />
-        <LoginButton v-if="showLoginBtn" />
-        <MainNavbar @update:isOpen="isOpen = $event" />
+        <div class="search">
+          <SearchBar v-if="!isOpen" />
+        </div>
+        <div class="theme">
+          <ThemeToggle v-if="!isOpen" />
+        </div>
+        <div class="login">
+          <LoginButton v-if="showLoginBtn" />
+        </div>
+        <MainNavbar @update:isOpen="isOpen = $event" class="nav" />
       </div>
     </div>
   </header>
@@ -101,7 +111,8 @@ watch(headerHeight, (newHeight) => {
 <style scoped>
 #main-header {
   position: fixed;
-  width: 100%;
+  width: 100vw;
+  color: var(--color-text);
   padding: 0 2rem;
   z-index: 10;
   transition: transform 1s ease-in-out;
@@ -109,50 +120,121 @@ watch(headerHeight, (newHeight) => {
 
 #main-header.scrolled {
   background-color: var(--color-background-transparent);
-  color: white;
 }
 
-#main-header .header-content {
-  width: clamp(300px, 80%, 1200px);
-
+.header-content {
+  width: clamp(300px, 80vw, 1200px);
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 0.5rem auto;
 }
-#main-header a {
+a {
   text-decoration: none;
   color: var(--color-text);
 }
 
-#main-header a:hover {
-  background-color: transparent;
+.header-title {
+  transition: transform 0.5s ease-in-out;
+  color: var(--color-text);
 }
 
-#main-header .nav-btns {
-  display: grid;
+/* a:hover {
+  background-color: transparent;
+} */
+
+.nav-btns {
+  display: flex;
+  align-items: center;
+  /* display: grid;
   grid-template-columns: auto auto auto auto;
   align-items: center;
-  gap: 1rem;
+  gap: 1rem; */
+}
+
+.nav-btns > * {
+  margin-left: 1rem;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+}
+
+@media only screen and (max-width: 980px) {
+  .header-content {
+    margin: 1rem auto;
+  }
+  .company-name {
+    font-size: 2.5rem;
+  }
+  .login {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 600px) {
   #main-header {
+    height: auto;
+    padding: 1rem;
+    /* height: 100px;
+    gap: 1rem; */
     margin-bottom: 0.5rem;
   }
 
-  #main-header .header-content {
+  .header-content {
     width: 100%;
     flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    /* width: 100%;
+    height: 100%;
+    flex-direction: column; */
   }
 
-  #main-header h1 {
-    font-size: 2.7rem;
-    margin-bottom: 0;
-  }
-
-  /* #main-header .nav-btns {
-    gap: 3rem;
+  /* .header-title {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
   } */
+  .company-name {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .nav-btns {
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    /* display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; */
+    /* gap: 1rem; */
+  }
+  /* .nav-btns div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  } */
+  .nav-btns > * {
+    margin-left: 0;
+    margin-bottom: 0.5rem;
+  }
+  .nav-btns .search {
+    margin: 0;
+  }
+
+  .nav-btns .theme {
+    display: none;
+  }
+
+  .nav-btns .login {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .company-name {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+  }
 }
 </style>

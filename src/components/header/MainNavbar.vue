@@ -51,9 +51,14 @@ const navbarItemStyle = computed(() => {
       fontSize: `${fontSize}vh`,
       padding: `${padding}px`,
     };
-  } else {
+  } else if (windowWidth.value > 380) {
     return {
       fontSize: '2rem',
+      padding: '0.5rem',
+    };
+  } else {
+    return {
+      fontSize: '1.5rem',
       padding: '0.5rem',
     };
   }
