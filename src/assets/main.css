@@ -40,7 +40,7 @@ section {
 
 .component-container {
   width: clamp(300px, 80%, 1200px);
-  margin: 0 auto;
+  margin: 0 auto 3rem;
 }
 
 .numbers {

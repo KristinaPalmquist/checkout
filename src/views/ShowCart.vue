@@ -130,6 +130,9 @@ onMounted(() => {
   display: grid;
   gap: 1rem;
 } */
+ #show-cart {
+  margin-bottom: 3rem;
+ }
 
 #show-cart ul {
   list-style-type: none;

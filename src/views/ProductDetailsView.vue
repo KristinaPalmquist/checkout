@@ -73,7 +73,6 @@ onMounted(() => {
 
 <template>
   <div v-if="product" id="product-details" class="component-container">
-    <div class="product-details">
       <div class="product-image">
         <img :src="resolveImagePath(product)" :alt="product.name" />
       </div>
@@ -122,15 +121,12 @@ onMounted(() => {
           />
         </div>
       </div>
-    </div>
   </div>
 </template>
 
 <style scoped>
-.product-details {
-  width: 100%;
-  max-width: 90vw;
-  margin: 0 auto 3rem;
+#product-details {
+  
   text-align: center;
   display: grid;
   grid-template-columns: 1fr 1fr;
