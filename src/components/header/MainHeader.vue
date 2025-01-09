@@ -53,11 +53,14 @@ const isAuthenticated = computed(
 
 const updateHeaderHeight = () => {
   if (!isOpen.value) {
-    headerHeight.value = document.getElementById('main-header').offsetHeight;
-
-    console.log('headerHeight', headerHeight.value);
-    emits('headerHeight', headerHeight.value);
+    emits('headerHeight', document.getElementById('main-header').offsetHeight);
+    // headerHeight.value = document.getElementById('main-header').offsetHeight;
+    // emits('headerHeight', headerHeight.value);
   }
+};
+
+const resetSearchQuery = () => {
+  store.dispatch('resetSearchQuery');
 };
 
 onMounted(() => {
@@ -86,7 +89,12 @@ watch(headerHeight, (newHeight) => {
     <div class="header-content">
       <a
         :href="route.path"
-        @click="(event) => handleRouting(event, route.path)"
+        @click="
+          (event) => {
+            handleRouting(event, route.path);
+            resetSearchQuery();
+          }
+        "
         ref="titleRef"
         class="header-title"
       >
@@ -156,7 +164,12 @@ a {
   #main-header {
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
-
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    border: none;
+  }
+  #main-header.scrolled {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
     border: none;
   }
@@ -165,6 +178,10 @@ a {
   }
   .company-name {
     font-size: 2.5rem;
+    /* color: rgb(51, 235, 57);
+    text-shadow: 0px 0px 12px rgba(0, 0, 0, 0.9); */
+    text-shadow: 0px 0px 16px rgb(51, 235, 57);
+    /* text-shadow: 0px 0px 12px rgba(51, 235, 57, 0.9); */
   }
   .login {
     display: none;
@@ -174,7 +191,8 @@ a {
 @media only screen and (max-width: 980px) {
   .company-name {
     font-size: 1.8rem;
-  }}
+  }
+}
 
 @media only screen and (max-width: 600px) {
   #main-header {
@@ -190,7 +208,6 @@ a {
     gap: 1rem;
   }
 
-
   .company-name {
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
@@ -201,7 +218,7 @@ a {
     justify-content: space-around;
     flex-wrap: wrap;
   }
- 
+
   .nav-btns > * {
     margin-left: 0;
     margin-bottom: 0.5rem;
@@ -221,7 +238,7 @@ a {
 
 @media only screen and (max-width: 420px) {
   .company-name {
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin-bottom: 0.5rem;
   }
 }
