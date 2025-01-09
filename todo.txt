@@ -1,15 +1,12 @@
 TODO & IDEAS
 Error handling
 
-Search functionality
-    Debounce - only make latest call
-     Throttle - only make call every... (period)
 Make responsive
     mobile  
         cart
         navbar menu
     widescreen
-404 page with link to home
+read on netlify how to get 404-page working
 Color Scheme
 Search function
 View for all Products
@@ -26,7 +23,6 @@ organize json-files
     dresses
     reviews
     descriptions
-styling for class component-container
 add cta-section at bottom of home-view
 add images to home and about views
 functionality for login & create account
@@ -40,6 +36,8 @@ Image gallery to display alternative images for each product
 click outside menu should close menu
 infinite scroll in CategoriesSmall does not work
 store light/dark setting in store ?
+Sale component
+New arrivals component
 
 
 SOMEWHAT DONE 
@@ -63,3 +61,8 @@ Make company name in header clickable => home
 Make responsive
     mobile
 Remove event listeners
+styling for class component-container
+
+Search functionality
+    Debounce - only make latest call
+404 page with link to home

@@ -11,7 +11,7 @@ const userName = ref(store.getters[`auth/${GET_USERNAME}`] || 'User');
   <div id="welcome-user" class="component-container">
     <h1>Welcome, {{ userName }}!</h1>
     <p>
-      We're thrilled to have you back at Retro Retreat, your go-to destination for sustainable fashion. Explore our curated collection of pre-loved clothing and accessories, and find unique pieces that suit your style.
+      We're thrilled to have you here at Retro Retreat, your go-to destination for sustainable fashion. Explore our curated collection of pre-loved clothing and accessories, and find unique pieces that suit your style.
     </p>
     <!-- <section class="quick-links">
       <h2>Quick Links</h2>

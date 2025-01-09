@@ -20,7 +20,6 @@ const fetchProduct = async () => {
     product.value = products.find(
       (p) => p.name.toLowerCase() === productName.toLowerCase()
     );
-    console.log(product.value);
   } catch (error) {
     console.error('Error loading product:', error);
   }
@@ -73,60 +72,59 @@ onMounted(() => {
 
 <template>
   <div v-if="product" id="product-details" class="component-container">
-      <div class="product-image">
-        <img :src="resolveImagePath(product)" :alt="product.name" />
+    <div class="product-image">
+      <img :src="resolveImagePath(product)" :alt="product.name" />
+    </div>
+    <div class="product-info">
+      <div class="name">
+        <h1>{{ product.name }}</h1>
       </div>
-      <div class="product-info">
-        <div class="name">
-          <h1>{{ product.name }}</h1>
-        </div>
-        <div class="description">
-          <p>{{ product.description }}</p>
-        </div>
-        <div class="price">
-          <p>{{ formatCurrency(product.price) }}</p>
-        </div>
-        <div class="average-rating">
-          <p>
-            {{ renderStars(Math.round(averageRating)) }} ({{ averageRating }})
-          </p>
-        </div>
-        <div class="specifications">
-          <ul>
-            <li v-for="(value, key) in product.specifications" :key="key">
-              <strong>{{ key }}:</strong> {{ value }}
-            </li>
-          </ul>
-        </div>
-        <details class="reviews">
-          <summary>
-            <h3>Reviews</h3>
-          </summary>
-          <ul>
-            <li v-for="review in product.reviews" :key="review.id">
-              <strong>{{ review.author }}:</strong> {{ review.comment }}
-              <p>{{ renderStars(review.rating) }}</p>
-            </li>
-          </ul>
-        </details>
-        <div class="message-div" v-show="showMessage">
-          <p class="message">{{ message }}</p>
-        </div>
-        <div class="btn-div">
-          <BasicButton :btnText="'Go to Cart'" :btnFunction="goToCart" />
-          <BasicButton
-            :btnText="'Add to Cart'"
-            :btnFunction="addToCart"
-            :btnClass="'cta-btn'"
-          />
-        </div>
+      <div class="description">
+        <p>{{ product.description }}</p>
       </div>
+      <div class="price">
+        <p>{{ formatCurrency(product.price) }}</p>
+      </div>
+      <div class="average-rating">
+        <p>
+          {{ renderStars(Math.round(averageRating)) }} ({{ averageRating }})
+        </p>
+      </div>
+      <div class="specifications">
+        <ul>
+          <li v-for="(value, key) in product.specifications" :key="key">
+            <strong>{{ key }}:</strong> {{ value }}
+          </li>
+        </ul>
+      </div>
+      <details class="reviews">
+        <summary>
+          <h3>Reviews</h3>
+        </summary>
+        <ul>
+          <li v-for="review in product.reviews" :key="review.id">
+            <strong>{{ review.author }}:</strong> {{ review.comment }}
+            <p>{{ renderStars(review.rating) }}</p>
+          </li>
+        </ul>
+      </details>
+      <div class="message-div" v-show="showMessage">
+        <p class="message">{{ message }}</p>
+      </div>
+      <div class="btn-div">
+        <BasicButton :btnText="'Go to Cart'" :btnFunction="goToCart" />
+        <BasicButton
+          :btnText="'Add to Cart'"
+          :btnFunction="addToCart"
+          :btnClass="'cta-btn'"
+        />
+      </div>
+    </div>
   </div>
 </template>
 
 <style scoped>
 #product-details {
-  
   text-align: center;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -153,7 +151,7 @@ onMounted(() => {
   border-radius: 2rem;
   margin: auto;
   border: 16px solid transparent;
-  outline: 3px solid hotpink;
+  outline: 3px solid var(--accent-7-color);
 }
 
 .product-info h1 {
