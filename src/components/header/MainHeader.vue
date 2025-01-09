@@ -54,8 +54,6 @@ const isAuthenticated = computed(
 const updateHeaderHeight = () => {
   if (!isOpen.value) {
     emits('headerHeight', document.getElementById('main-header').offsetHeight);
-    // headerHeight.value = document.getElementById('main-header').offsetHeight;
-    // emits('headerHeight', headerHeight.value);
   }
 };
 
@@ -85,7 +83,7 @@ watch(headerHeight, (newHeight) => {
 </script>
 
 <template>
-  <header id="main-header" :class="{ scrolled: isScrolled }" ref="header">
+  <header id="main-header" :class="{ scrolled: isScrolled, open: isOpen }" ref="header">
     <div class="header-content">
       <a
         :href="route.path"
@@ -130,6 +128,13 @@ watch(headerHeight, (newHeight) => {
   background-color: var(--color-background-transparent);
 }
 
+#main-header.open {
+     background: transparent;
+     backdrop-filter: none;
+     box-shadow: none;
+     border: none;
+   }
+
 .header-content {
   width: clamp(300px, 80vw, 1200px);
   display: flex;
@@ -173,6 +178,12 @@ a {
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
     border: none;
   }
+  /* #main-header.open {
+     background: transparent;
+     backdrop-filter: none;
+     box-shadow: none;
+     border: none;
+   } */
   .header-content {
     margin: 1rem auto;
   }
